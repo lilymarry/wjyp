@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GCustomerServiceType">
+            <connections>
+                <outlet property="tableView" destination="Ugv-aE-cEA" id="dDX-Ev-Uzr"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ugv-aE-cEA">
+                    <rect key="frame" x="0.0" y="64.5" width="375" height="602.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="mBa-Py-mhv"/>
+                        <outlet property="delegate" destination="-1" id="msx-wF-qhh"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2zU-UG-DhQ">
+                    <rect key="frame" x="0.0" y="64" width="375" height="0.5"/>
+                    <color key="backgroundColor" red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="t1t-7P-joT"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Ugv-aE-cEA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64.5" id="5UC-hc-DjL"/>
+                <constraint firstAttribute="trailing" secondItem="Ugv-aE-cEA" secondAttribute="trailing" id="BHQ-jb-eAC"/>
+                <constraint firstAttribute="bottom" secondItem="Ugv-aE-cEA" secondAttribute="bottom" id="CbW-kB-vvi"/>
+                <constraint firstItem="2zU-UG-DhQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="RsK-He-ZQW"/>
+                <constraint firstItem="Ugv-aE-cEA" firstAttribute="top" secondItem="2zU-UG-DhQ" secondAttribute="bottom" id="VJh-Kb-gDW"/>
+                <constraint firstAttribute="trailing" secondItem="2zU-UG-DhQ" secondAttribute="trailing" id="cLj-kl-Z1x"/>
+                <constraint firstItem="Ugv-aE-cEA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gun-o7-wwH"/>
+            </constraints>
+            <point key="canvasLocation" x="34.5" y="88.5"/>
+        </view>
+    </objects>
+</document>

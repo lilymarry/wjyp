@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OsManagerBflist">
+            <connections>
+                <outlet property="FriendBtn" destination="qH1-9U-b89" id="WXX-OU-DnX"/>
+                <outlet property="butView" destination="iQF-tM-DhB" id="Pj1-Ca-sh6"/>
+                <outlet property="exChangBtn" destination="esj-n3-xOa" id="V1s-7P-vlI"/>
+                <outlet property="mTable" destination="StB-t9-ILK" id="Mhh-GG-PKb"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="StB-t9-ILK">
+                    <rect key="frame" x="0.0" y="64" width="320" height="438"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="64f-7z-ddK"/>
+                        <outlet property="delegate" destination="-1" id="9K0-OS-5lw"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m6g-pK-zO9">
+                    <rect key="frame" x="0.0" y="502" width="320" height="66"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZa-Cw-GYQ">
+                            <rect key="frame" x="0.0" y="0.0" width="160" height="66"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="gZa-Cw-GYQ" secondAttribute="height" multiplier="80:33" id="5gh-vM-pXG"/>
+                            </constraints>
+                            <inset key="titleEdgeInsets" minX="-38" minY="34" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="61" minY="-24" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="分组管理" image="分组管理">
+                                <color key="titleColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            </state>
+                            <connections>
+                                <action selector="cateManagerPress:" destination="-1" eventType="touchUpInside" id="1qu-Zl-6H7"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwP-o9-25o">
+                            <rect key="frame" x="160" y="0.0" width="160" height="66"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="dwP-o9-25o" secondAttribute="height" multiplier="80:33" id="32S-iU-7t5"/>
+                            </constraints>
+                            <inset key="titleEdgeInsets" minX="-38" minY="34" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="61" minY="-24" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="添加商友" image="添加分组">
+                                <color key="titleColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            </state>
+                            <connections>
+                                <action selector="AddShopFriendPress:" destination="-1" eventType="touchUpInside" id="nxc-fF-M4S"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="dwP-o9-25o" firstAttribute="top" secondItem="m6g-pK-zO9" secondAttribute="top" id="2C1-rh-hc2"/>
+                        <constraint firstItem="dwP-o9-25o" firstAttribute="leading" secondItem="gZa-Cw-GYQ" secondAttribute="trailing" id="4pG-Tf-dVo"/>
+                        <constraint firstAttribute="bottom" secondItem="gZa-Cw-GYQ" secondAttribute="bottom" id="KZD-t6-Cg1"/>
+                        <constraint firstItem="dwP-o9-25o" firstAttribute="width" secondItem="gZa-Cw-GYQ" secondAttribute="width" id="P2d-lL-SGO"/>
+                        <constraint firstItem="gZa-Cw-GYQ" firstAttribute="leading" secondItem="m6g-pK-zO9" secondAttribute="leading" id="Wvw-qT-xr1"/>
+                        <constraint firstItem="dwP-o9-25o" firstAttribute="leading" secondItem="gZa-Cw-GYQ" secondAttribute="trailing" id="ZVK-Lc-ngA"/>
+                        <constraint firstAttribute="bottom" secondItem="dwP-o9-25o" secondAttribute="bottom" id="nV0-gs-J0h"/>
+                        <constraint firstAttribute="trailing" secondItem="dwP-o9-25o" secondAttribute="trailing" id="qn6-CZ-Sq0"/>
+                        <constraint firstItem="dwP-o9-25o" firstAttribute="height" secondItem="gZa-Cw-GYQ" secondAttribute="height" id="rkp-TH-F7G"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6xe-HL-wgr">
+                    <rect key="frame" x="0.0" y="502" width="320" height="0.5"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="7wV-Zg-VB0"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iQF-tM-DhB">
+                    <rect key="frame" x="169" y="64" width="151" height="139"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="会员互换背景图" translatesAutoresizingMaskIntoConstraints="NO" id="aco-Gc-aK0">
+                            <rect key="frame" x="0.0" y="0.0" width="143" height="139"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qH1-9U-b89">
+                            <rect key="frame" x="0.0" y="89" width="143" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="EWh-P3-bsB"/>
+                            </constraints>
+                            <state key="normal" title="新的好友">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="newfriend:" destination="-1" eventType="touchUpInside" id="qmc-wN-Csb"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esj-n3-xOa">
+                            <rect key="frame" x="0.0" y="33" width="143" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="M5e-Db-OXF"/>
+                            </constraints>
+                            <state key="normal" title="会员互换">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="exChangHuiYuang:" destination="-1" eventType="touchUpInside" id="g7k-iW-Kj7"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="151" id="CiO-t4-AsT"/>
+                        <constraint firstAttribute="height" constant="139" id="IYr-Xq-9mJ"/>
+                        <constraint firstItem="esj-n3-xOa" firstAttribute="leading" secondItem="iQF-tM-DhB" secondAttribute="leading" id="JzJ-hN-nTO"/>
+                        <constraint firstItem="esj-n3-xOa" firstAttribute="top" secondItem="iQF-tM-DhB" secondAttribute="top" constant="33" id="KZi-ND-DsK"/>
+                        <constraint firstItem="aco-Gc-aK0" firstAttribute="leading" secondItem="iQF-tM-DhB" secondAttribute="leading" id="MWC-vM-3TZ"/>
+                        <constraint firstAttribute="trailing" secondItem="qH1-9U-b89" secondAttribute="trailing" constant="8" id="UBf-z8-STR"/>
+                        <constraint firstItem="qH1-9U-b89" firstAttribute="leading" secondItem="iQF-tM-DhB" secondAttribute="leading" id="Zin-Gz-LkE"/>
+                        <constraint firstAttribute="trailing" secondItem="aco-Gc-aK0" secondAttribute="trailing" constant="8" id="c84-Fl-Sve"/>
+                        <constraint firstAttribute="bottom" secondItem="aco-Gc-aK0" secondAttribute="bottom" id="cy6-UL-2GZ"/>
+                        <constraint firstItem="aco-Gc-aK0" firstAttribute="top" secondItem="iQF-tM-DhB" secondAttribute="top" id="ice-u0-K3h"/>
+                        <constraint firstAttribute="trailing" secondItem="esj-n3-xOa" secondAttribute="trailing" constant="8" id="ksz-Q0-gdc"/>
+                        <constraint firstAttribute="bottom" secondItem="qH1-9U-b89" secondAttribute="bottom" constant="20" id="p4m-RL-gRo"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="StB-t9-ILK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2mF-gW-1B1"/>
+                <constraint firstAttribute="trailing" secondItem="m6g-pK-zO9" secondAttribute="trailing" id="AEi-nC-CAW"/>
+                <constraint firstItem="6xe-HL-wgr" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="GNQ-dh-XhI"/>
+                <constraint firstAttribute="trailing" secondItem="StB-t9-ILK" secondAttribute="trailing" id="GZL-AG-MHd"/>
+                <constraint firstItem="6xe-HL-wgr" firstAttribute="top" secondItem="StB-t9-ILK" secondAttribute="bottom" id="IEF-Hf-MBF"/>
+                <constraint firstItem="iQF-tM-DhB" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="NqZ-0S-A9x"/>
+                <constraint firstItem="6xe-HL-wgr" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="Ov6-W7-ZRh"/>
+                <constraint firstAttribute="bottom" secondItem="m6g-pK-zO9" secondAttribute="bottom" id="csL-sf-CZg"/>
+                <constraint firstItem="m6g-pK-zO9" firstAttribute="top" secondItem="StB-t9-ILK" secondAttribute="bottom" id="hCH-Kh-LIL"/>
+                <constraint firstItem="m6g-pK-zO9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="knb-ey-08v"/>
+                <constraint firstItem="iQF-tM-DhB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="nDz-NN-R7a"/>
+                <constraint firstItem="StB-t9-ILK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="xaa-eg-nc6"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="133.125" y="141.5492957746479"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="会员互换背景图" width="143" height="121"/>
+        <image name="分组管理" width="35" height="35"/>
+        <image name="添加分组" width="35" height="35"/>
+    </resources>
+</document>

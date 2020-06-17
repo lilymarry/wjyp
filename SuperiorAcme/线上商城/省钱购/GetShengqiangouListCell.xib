@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="NKf-xS-SNf" customClass="GetShengqiangouListCell">
+            <rect key="frame" x="0.0" y="0.0" width="227" height="302"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="227" height="302"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cBi-w9-SEb">
+                        <rect key="frame" x="0.0" y="0.0" width="227" height="302"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="海鸥手表男士自动机械表海鸥手表男士自动机械表海鸥手表男士自动机械表海鸥手表男士自动机械表表男士自动机械表海鸥手表男士自动机械表海鸥手表男士自动机械表" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VTi-5y-wVf">
+                                <rect key="frame" x="8" y="212" width="211" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="HZt-Ky-X7K"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="赠品券价 ¥99.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTe-fz-Yun">
+                                <rect key="frame" x="8" y="279.5" width="211" height="14.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14.5" id="IFk-OK-q1T"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5nv-JF-0hN">
+                                <rect key="frame" x="8" y="4" width="206" height="206"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5nv-JF-0hN" secondAttribute="height" multiplier="1:1" id="Age-V6-rxJ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="海鸥手表男士自动机械表海鸥手表男士自动机械表海鸥手表男士自动机械表海鸥手表男士自动机械表表男士自动机械表海鸥手表男士自动机械表海鸥手表男士自动机械表" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMn-9y-HuO">
+                                <rect key="frame" x="8" y="256" width="211" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="AH6-gc-iud"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.94117647059999998" green="0.16078431369999999" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="VTi-5y-wVf" secondAttribute="trailing" constant="8" id="0o2-Er-zUN"/>
+                            <constraint firstItem="hTe-fz-Yun" firstAttribute="leading" secondItem="cBi-w9-SEb" secondAttribute="leading" constant="8" id="Epc-Sj-l6Z"/>
+                            <constraint firstItem="VTi-5y-wVf" firstAttribute="top" secondItem="5nv-JF-0hN" secondAttribute="bottom" constant="2" id="FJk-4Y-lB7"/>
+                            <constraint firstItem="VTi-5y-wVf" firstAttribute="leading" secondItem="cBi-w9-SEb" secondAttribute="leading" constant="8" id="MR9-99-9wu"/>
+                            <constraint firstItem="WMn-9y-HuO" firstAttribute="top" secondItem="VTi-5y-wVf" secondAttribute="bottom" constant="7" id="OLj-Iq-qvN"/>
+                            <constraint firstItem="5nv-JF-0hN" firstAttribute="top" secondItem="cBi-w9-SEb" secondAttribute="top" constant="4" id="Sk0-qz-Pk8"/>
+                            <constraint firstAttribute="trailing" secondItem="WMn-9y-HuO" secondAttribute="trailing" constant="8" id="XOt-jE-CAj"/>
+                            <constraint firstItem="WMn-9y-HuO" firstAttribute="leading" secondItem="cBi-w9-SEb" secondAttribute="leading" constant="8" id="ZAY-Ef-oJr"/>
+                            <constraint firstAttribute="trailing" secondItem="hTe-fz-Yun" secondAttribute="trailing" constant="8" id="g8j-vV-rc0"/>
+                            <constraint firstAttribute="trailing" secondItem="5nv-JF-0hN" secondAttribute="trailing" constant="13" id="jJh-WV-cU9"/>
+                            <constraint firstItem="5nv-JF-0hN" firstAttribute="leading" secondItem="cBi-w9-SEb" secondAttribute="leading" constant="8" id="jgw-HZ-OWH"/>
+                            <constraint firstItem="hTe-fz-Yun" firstAttribute="top" secondItem="WMn-9y-HuO" secondAttribute="bottom" constant="8.5" id="jl3-ze-I5L"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="cBi-w9-SEb" secondAttribute="trailing" id="2My-Pi-7Tl"/>
+                <constraint firstAttribute="bottom" secondItem="cBi-w9-SEb" secondAttribute="bottom" id="4nk-bf-J0V"/>
+                <constraint firstItem="cBi-w9-SEb" firstAttribute="top" secondItem="NKf-xS-SNf" secondAttribute="top" id="rEr-Lv-viC"/>
+                <constraint firstItem="cBi-w9-SEb" firstAttribute="leading" secondItem="NKf-xS-SNf" secondAttribute="leading" id="yax-2V-7XY"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="6dG-sv-ZtE"/>
+            <size key="customSize" width="227" height="302"/>
+            <connections>
+                <outlet property="picImaView" destination="5nv-JF-0hN" id="ziW-QW-eE4"/>
+                <outlet property="priceLab" destination="WMn-9y-HuO" id="s1J-OI-qv4"/>
+                <outlet property="titleLab" destination="VTi-5y-wVf" id="jnv-je-MmS"/>
+                <outlet property="xiaoliangLab" destination="hTe-fz-Yun" id="aqM-Oy-zjV"/>
+            </connections>
+            <point key="canvasLocation" x="159.19999999999999" y="84.557721139430285"/>
+        </collectionViewCell>
+    </objects>
+</document>

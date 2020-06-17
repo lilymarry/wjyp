@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SDA_Next_top">
+            <connections>
+                <outlet property="headerImage" destination="8fo-wn-C7v" id="lpN-Tc-4vQ"/>
+                <outlet property="thisR" destination="DfW-yd-nJs" id="4tA-3T-Brj"/>
+                <outlet property="thisRBtn" destination="Plr-Ld-RDo" id="GqZ-0G-16j"/>
+                <outlet property="thisView" destination="iN0-l3-epB" id="tDW-Oj-vZH"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ct-HX-NmH">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="213"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="拓展商底纹" translatesAutoresizingMaskIntoConstraints="NO" id="FOi-QN-HKA">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="213"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fyr-UD-UGW">
+                            <rect key="frame" x="275" y="163" width="100" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="14i-5D-XJX"/>
+                                <constraint firstAttribute="height" constant="50" id="HHT-iY-AjG"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                            <state key="normal" title="编辑">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="职位：销售部 大经理" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWG-in-dZT">
+                            <rect key="frame" x="113" y="121" width="123" height="13"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="13" id="K4I-xw-k4I"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" id="Ra8-Yg-oTO"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="头像2" translatesAutoresizingMaskIntoConstraints="NO" id="8fo-wn-C7v">
+                            <rect key="frame" x="10" y="74" width="70" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="70" id="Pms-26-7Cu"/>
+                                <constraint firstAttribute="width" constant="70" id="jww-2F-MzA"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="lllllllllllll  15018756138" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EBT-et-zD9">
+                            <rect key="frame" x="90" y="84" width="163.5" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="zGq-th-uHo"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="拓展员管理-职位-白" translatesAutoresizingMaskIntoConstraints="NO" id="UOR-v9-wuF">
+                            <rect key="frame" x="90" y="121" width="13" height="13"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="13" id="LnL-l6-XQd"/>
+                                <constraint firstAttribute="height" constant="13" id="o3P-oO-Cni"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已解除" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DfW-yd-nJs">
+                            <rect key="frame" x="263.5" y="84" width="35" height="20"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="35" id="Q15-zu-6gw"/>
+                                <constraint firstAttribute="height" constant="20" id="W1i-J3-YRM"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                            <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Plr-Ld-RDo">
+                            <rect key="frame" x="90" y="178" width="130" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="Xdq-ai-QQe"/>
+                                <constraint firstAttribute="width" constant="130" id="omf-AC-fx0"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="负责的联盟商家  &gt;">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Fyr-UD-UGW" secondAttribute="bottom" id="3m1-99-Qez"/>
+                        <constraint firstItem="FOi-QN-HKA" firstAttribute="top" secondItem="7ct-HX-NmH" secondAttribute="top" id="56v-Nh-zc2"/>
+                        <constraint firstItem="EWG-in-dZT" firstAttribute="bottom" secondItem="8fo-wn-C7v" secondAttribute="bottom" constant="-10" id="74R-0Y-iWU"/>
+                        <constraint firstAttribute="trailing" secondItem="FOi-QN-HKA" secondAttribute="trailing" id="A3g-CS-7KN"/>
+                        <constraint firstItem="UOR-v9-wuF" firstAttribute="bottom" secondItem="8fo-wn-C7v" secondAttribute="bottom" constant="-10" id="LIk-1U-PTK"/>
+                        <constraint firstItem="DfW-yd-nJs" firstAttribute="leading" secondItem="EBT-et-zD9" secondAttribute="trailing" constant="10" id="RFl-6U-D4h"/>
+                        <constraint firstItem="EBT-et-zD9" firstAttribute="top" secondItem="7ct-HX-NmH" secondAttribute="top" constant="84" id="Uzf-Rs-PTb"/>
+                        <constraint firstItem="DfW-yd-nJs" firstAttribute="top" secondItem="7ct-HX-NmH" secondAttribute="top" constant="84" id="adP-Um-Hcs"/>
+                        <constraint firstItem="UOR-v9-wuF" firstAttribute="leading" secondItem="8fo-wn-C7v" secondAttribute="trailing" constant="10" id="c1w-vo-9kR"/>
+                        <constraint firstItem="FOi-QN-HKA" firstAttribute="leading" secondItem="7ct-HX-NmH" secondAttribute="leading" id="d9L-Ib-vg9"/>
+                        <constraint firstItem="Plr-Ld-RDo" firstAttribute="leading" secondItem="UOR-v9-wuF" secondAttribute="leading" id="dQ9-eV-U8T"/>
+                        <constraint firstAttribute="trailing" secondItem="Fyr-UD-UGW" secondAttribute="trailing" id="gjv-Ki-tvb"/>
+                        <constraint firstItem="8fo-wn-C7v" firstAttribute="top" secondItem="7ct-HX-NmH" secondAttribute="top" constant="74" id="gru-VD-sKI"/>
+                        <constraint firstItem="EBT-et-zD9" firstAttribute="leading" secondItem="8fo-wn-C7v" secondAttribute="trailing" constant="10" id="iN4-OJ-diw"/>
+                        <constraint firstItem="EWG-in-dZT" firstAttribute="leading" secondItem="UOR-v9-wuF" secondAttribute="trailing" constant="10" id="rRd-MG-QzL"/>
+                        <constraint firstAttribute="bottom" secondItem="Plr-Ld-RDo" secondAttribute="bottom" constant="10" id="rc9-2d-33U"/>
+                        <constraint firstItem="8fo-wn-C7v" firstAttribute="leading" secondItem="7ct-HX-NmH" secondAttribute="leading" constant="10" id="u8A-BJ-hf9"/>
+                        <constraint firstAttribute="bottom" secondItem="FOi-QN-HKA" secondAttribute="bottom" id="vek-Hx-dUD"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XAI-wH-LbB">
+                    <rect key="frame" x="0.0" y="223" width="375" height="50"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="拓展员管理-下级机构" translatesAutoresizingMaskIntoConstraints="NO" id="UVo-bc-sqf">
+                            <rect key="frame" x="10" y="13.5" width="23" height="23"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="23" id="hlx-03-Skq"/>
+                                <constraint firstAttribute="height" constant="23" id="mal-aL-7PM"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="直属下级 4 位" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jja-1t-f3d">
+                            <rect key="frame" x="43" y="0.0" width="322" height="50"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Jja-1t-f3d" secondAttribute="bottom" id="L28-2j-7DS"/>
+                        <constraint firstItem="Jja-1t-f3d" firstAttribute="top" secondItem="XAI-wH-LbB" secondAttribute="top" id="NIF-8Z-yXR"/>
+                        <constraint firstAttribute="trailing" secondItem="Jja-1t-f3d" secondAttribute="trailing" constant="10" id="hBH-lx-3Tm"/>
+                        <constraint firstAttribute="height" constant="50" id="jKG-cF-yEh"/>
+                        <constraint firstItem="Jja-1t-f3d" firstAttribute="leading" secondItem="UVo-bc-sqf" secondAttribute="trailing" constant="10" id="k3s-2C-bQO"/>
+                        <constraint firstItem="UVo-bc-sqf" firstAttribute="centerY" secondItem="XAI-wH-LbB" secondAttribute="centerY" id="l1C-Nx-5j0"/>
+                        <constraint firstItem="UVo-bc-sqf" firstAttribute="leading" secondItem="XAI-wH-LbB" secondAttribute="leading" constant="10" id="tcp-mE-nLK"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="7ct-HX-NmH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="MyA-6Q-r4j"/>
+                <constraint firstAttribute="trailing" secondItem="XAI-wH-LbB" secondAttribute="trailing" id="Qes-3X-MDA"/>
+                <constraint firstItem="7ct-HX-NmH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="SJS-6s-TCo"/>
+                <constraint firstItem="XAI-wH-LbB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Tr3-ua-fkn"/>
+                <constraint firstItem="7ct-HX-NmH" firstAttribute="width" secondItem="7ct-HX-NmH" secondAttribute="height" multiplier="125:71" id="fDh-Ih-8TB"/>
+                <constraint firstItem="XAI-wH-LbB" firstAttribute="top" secondItem="7ct-HX-NmH" secondAttribute="bottom" constant="10" id="pNM-pr-K9C"/>
+                <constraint firstAttribute="trailing" secondItem="7ct-HX-NmH" secondAttribute="trailing" id="vkD-D6-waB"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="头像2" width="29" height="29"/>
+        <image name="拓展员管理-下级机构" width="23" height="23"/>
+        <image name="拓展员管理-职位-白" width="13" height="13"/>
+        <image name="拓展商底纹" width="414" height="213"/>
+    </resources>
+</document>

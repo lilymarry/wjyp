@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CommodityMerchant">
+            <connections>
+                <outlet property="oneBtn" destination="3Ve-HX-gnR" id="yDv-M2-UOM"/>
+                <outlet property="thisContent" destination="iN0-l3-epB" id="0qr-pe-Akt"/>
+                <outlet property="twoBtn" destination="HYf-3g-msh" id="3Zy-h4-qiK"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HYw-vN-BbH">
+                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="商品商家" translatesAutoresizingMaskIntoConstraints="NO" id="Uha-r5-X43">
+                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ve-HX-gnR">
+                            <rect key="frame" x="0.0" y="0.0" width="80" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="dM1-FG-Ex2"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <inset key="contentEdgeInsets" minX="0.0" minY="15" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="    商品">
+                                <color key="titleColor" red="0.90588235289999997" green="0.29803921570000003" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HYf-3g-msh">
+                            <rect key="frame" x="0.0" y="40" width="77" height="35"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="    商家">
+                                <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="3Ve-HX-gnR" firstAttribute="top" secondItem="HYw-vN-BbH" secondAttribute="top" id="4wX-m3-Aas"/>
+                        <constraint firstItem="HYf-3g-msh" firstAttribute="leading" secondItem="HYw-vN-BbH" secondAttribute="leading" id="8fp-31-gRB"/>
+                        <constraint firstItem="Uha-r5-X43" firstAttribute="leading" secondItem="HYw-vN-BbH" secondAttribute="leading" id="Fj2-Hz-7ah"/>
+                        <constraint firstAttribute="height" constant="80" id="G9r-2d-YBk"/>
+                        <constraint firstAttribute="width" constant="80" id="LuH-fR-RHq"/>
+                        <constraint firstAttribute="trailing" secondItem="3Ve-HX-gnR" secondAttribute="trailing" id="dkD-MT-2mw"/>
+                        <constraint firstItem="Uha-r5-X43" firstAttribute="top" secondItem="HYw-vN-BbH" secondAttribute="top" id="eoX-wd-9CQ"/>
+                        <constraint firstAttribute="trailing" secondItem="HYf-3g-msh" secondAttribute="trailing" constant="3" id="lnq-F6-n3n"/>
+                        <constraint firstItem="3Ve-HX-gnR" firstAttribute="leading" secondItem="HYw-vN-BbH" secondAttribute="leading" id="mSp-2H-EeG"/>
+                        <constraint firstAttribute="bottom" secondItem="HYf-3g-msh" secondAttribute="bottom" constant="5" id="p4R-aZ-m2a"/>
+                        <constraint firstItem="HYf-3g-msh" firstAttribute="top" secondItem="3Ve-HX-gnR" secondAttribute="bottom" id="ufW-RE-Bz2"/>
+                        <constraint firstAttribute="trailing" secondItem="Uha-r5-X43" secondAttribute="trailing" id="vHb-fe-PgB"/>
+                        <constraint firstAttribute="bottom" secondItem="Uha-r5-X43" secondAttribute="bottom" id="wSH-DE-5u4"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="HYw-vN-BbH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ZYb-2A-zRT"/>
+                <constraint firstItem="HYw-vN-BbH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="web-wR-Eyf"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="84.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="商品商家" width="69" height="56"/>
+    </resources>
+</document>

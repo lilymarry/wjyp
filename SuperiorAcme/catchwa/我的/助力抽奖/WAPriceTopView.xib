@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WAPriceTopView">
+            <connections>
+                <outlet property="priceView" destination="HHS-X6-9WE" id="FA7-ud-XDn"/>
+                <outlet property="thisView" destination="i5M-Pr-FkT" id="1vV-Ic-osP"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="奖back_top" translatesAutoresizingMaskIntoConstraints="NO" id="0eu-7E-OcQ">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="171"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="0eu-7E-OcQ" secondAttribute="height" multiplier="46:19" id="492-ek-dnk"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HHS-X6-9WE">
+                    <rect key="frame" x="0.0" y="171" width="414" height="382"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="奖back_middle" translatesAutoresizingMaskIntoConstraints="NO" id="WEh-LE-qVY">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="382"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="WEh-LE-qVY" secondAttribute="bottom" id="14H-4b-lLc"/>
+                        <constraint firstItem="WEh-LE-qVY" firstAttribute="leading" secondItem="HHS-X6-9WE" secondAttribute="leading" id="7s3-zS-Wvq"/>
+                        <constraint firstAttribute="width" secondItem="WEh-LE-qVY" secondAttribute="height" multiplier="207:191" id="hZD-h1-8kS"/>
+                        <constraint firstAttribute="trailing" secondItem="WEh-LE-qVY" secondAttribute="trailing" id="p96-Ww-kLi"/>
+                        <constraint firstItem="WEh-LE-qVY" firstAttribute="top" secondItem="HHS-X6-9WE" secondAttribute="top" id="pVp-Po-2cV"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qOB-Px-DeK">
+                    <rect key="frame" x="16" y="588" width="382" height="37"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="其他中奖" translatesAutoresizingMaskIntoConstraints="NO" id="hOQ-ga-IBa">
+                            <rect key="frame" x="35" y="-21" width="312" height="38"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="38" id="6GJ-P9-KU3"/>
+                            </constraints>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Shp-4b-C1i">
+                            <rect key="frame" x="0.0" y="36" width="382" height="1"/>
+                            <color key="backgroundColor" red="0.98039215690000003" green="0.17254901959999999" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.81568627450980391" green="0.17647058823529413" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="hOQ-ga-IBa" firstAttribute="leading" secondItem="qOB-Px-DeK" secondAttribute="leading" constant="35" id="0A9-e1-LEt"/>
+                        <constraint firstItem="hOQ-ga-IBa" firstAttribute="centerX" secondItem="Shp-4b-C1i" secondAttribute="centerX" id="DWQ-Xh-Bsz"/>
+                        <constraint firstItem="hOQ-ga-IBa" firstAttribute="top" secondItem="qOB-Px-DeK" secondAttribute="top" constant="-21" id="OEJ-7n-HjW"/>
+                        <constraint firstAttribute="height" constant="37" id="OWn-VY-5Ze"/>
+                        <constraint firstAttribute="bottom" secondItem="Shp-4b-C1i" secondAttribute="bottom" id="WYh-jC-ENY"/>
+                        <constraint firstItem="Shp-4b-C1i" firstAttribute="leading" secondItem="qOB-Px-DeK" secondAttribute="leading" id="cnl-fs-ris"/>
+                        <constraint firstItem="Shp-4b-C1i" firstAttribute="top" secondItem="hOQ-ga-IBa" secondAttribute="bottom" constant="19" id="duz-Ve-3Ad"/>
+                        <constraint firstAttribute="trailing" secondItem="Shp-4b-C1i" secondAttribute="trailing" id="lpV-5y-VCQ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.98039215686274506" green="0.20392156862745098" blue="0.32156862745098042" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="0eu-7E-OcQ" firstAttribute="trailing" secondItem="HHS-X6-9WE" secondAttribute="trailing" id="0sw-il-osa"/>
+                <constraint firstItem="qOB-Px-DeK" firstAttribute="top" secondItem="HHS-X6-9WE" secondAttribute="bottom" constant="35" id="798-tf-95Z"/>
+                <constraint firstItem="qOB-Px-DeK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="BJe-E2-FiW"/>
+                <constraint firstItem="0eu-7E-OcQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="EfY-S8-HUY"/>
+                <constraint firstItem="HHS-X6-9WE" firstAttribute="top" secondItem="0eu-7E-OcQ" secondAttribute="bottom" id="lCu-Hy-wRh"/>
+                <constraint firstItem="HHS-X6-9WE" firstAttribute="centerX" secondItem="qOB-Px-DeK" secondAttribute="centerX" id="m1a-jR-bAc"/>
+                <constraint firstItem="0eu-7E-OcQ" firstAttribute="leading" secondItem="HHS-X6-9WE" secondAttribute="leading" id="nT4-SF-kzi"/>
+                <constraint firstItem="0eu-7E-OcQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uJ5-Fh-Ao4"/>
+                <constraint firstAttribute="trailing" secondItem="qOB-Px-DeK" secondAttribute="trailing" constant="16" id="vVw-py-XCO"/>
+            </constraints>
+            <point key="canvasLocation" x="133.33333333333334" y="123.91304347826087"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="其他中奖" width="590" height="74"/>
+        <image name="奖back_middle" width="720" height="746"/>
+        <image name="奖back_top" width="720" height="312"/>
+    </resources>
+</document>

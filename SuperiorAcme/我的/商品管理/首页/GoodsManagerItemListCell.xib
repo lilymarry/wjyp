@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="GoodsManagerItemListCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0U-Hv-iYm">
+                        <rect key="frame" x="10" y="11" width="243" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytV-8M-x1d">
+                        <rect key="frame" x="0.0" y="42.5" width="320" height="0.5"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="18D-vW-dIZ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uif-C6-OHI">
+                        <rect key="frame" x="258" y="6" width="49" height="30"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="49" id="CIE-LZ-q45"/>
+                        </constraints>
+                        <state key="normal" title="编辑">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <connections>
+                            <action selector="bianJIPress:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="zG0-Zg-yN8"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="uif-C6-OHI" secondAttribute="trailing" constant="13" id="0tU-2R-nBm"/>
+                    <constraint firstItem="ytV-8M-x1d" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="3L0-LV-hEJ"/>
+                    <constraint firstAttribute="bottom" secondItem="ytV-8M-x1d" secondAttribute="bottom" constant="0.5" id="5Ia-qy-GJK"/>
+                    <constraint firstItem="ytV-8M-x1d" firstAttribute="top" secondItem="uif-C6-OHI" secondAttribute="bottom" constant="6.5" id="GZi-Wf-R0e"/>
+                    <constraint firstItem="uif-C6-OHI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="VHe-zZ-qd8"/>
+                    <constraint firstItem="H0U-Hv-iYm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="WAC-la-zw4"/>
+                    <constraint firstAttribute="bottom" secondItem="H0U-Hv-iYm" secondAttribute="bottom" constant="11.5" id="dXB-gI-qo1"/>
+                    <constraint firstAttribute="trailing" secondItem="ytV-8M-x1d" secondAttribute="trailing" id="eXE-4p-OCm"/>
+                    <constraint firstItem="uif-C6-OHI" firstAttribute="leading" secondItem="H0U-Hv-iYm" secondAttribute="trailing" constant="5" id="mvp-tg-DGN"/>
+                    <constraint firstItem="H0U-Hv-iYm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="zJn-sM-7wh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="bianjibtn" destination="uif-C6-OHI" id="cHu-Uc-jAF"/>
+                <outlet property="nameLab" destination="H0U-Hv-iYm" id="vU1-4q-UW7"/>
+            </connections>
+            <point key="canvasLocation" x="132.80000000000001" y="154.72263868065968"/>
+        </tableViewCell>
+    </objects>
+</document>

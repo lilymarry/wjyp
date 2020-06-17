@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ExchangeSuccessView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DQG-q8-3Nw">
+                    <rect key="frame" x="39.5" y="152" width="295" height="362"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="兑换成功" translatesAutoresizingMaskIntoConstraints="NO" id="KOu-0l-oWM">
+                            <rect key="frame" x="0.0" y="0.0" width="295" height="362"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHo-at-a5w">
+                            <rect key="frame" x="29" y="308" width="101" height="33"/>
+                            <color key="backgroundColor" red="1" green="0.63137254901960782" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="lHo-at-a5w" secondAttribute="height" multiplier="126:41" id="X6A-yd-NH6"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="查看订单">
+                                <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2c-vr-tEo">
+                            <rect key="frame" x="165" y="308" width="101" height="33"/>
+                            <color key="backgroundColor" red="0.94901960784313721" green="0.18823529411764706" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="s2c-vr-tEo" secondAttribute="height" multiplier="126:41" id="UG1-Si-I52"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="返回首页">
+                                <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="s2c-vr-tEo" firstAttribute="width" secondItem="s2c-vr-tEo" secondAttribute="height" multiplier="126:41" id="1nk-dQ-gdU"/>
+                        <constraint firstAttribute="width" secondItem="DQG-q8-3Nw" secondAttribute="height" multiplier="326:400" id="3fE-QF-S7f"/>
+                        <constraint firstItem="lHo-at-a5w" firstAttribute="leading" secondItem="KOu-0l-oWM" secondAttribute="leading" constant="29" id="5E1-j8-ofy"/>
+                        <constraint firstItem="KOu-0l-oWM" firstAttribute="centerX" secondItem="DQG-q8-3Nw" secondAttribute="centerX" id="8Wi-lv-Imp"/>
+                        <constraint firstAttribute="bottom" secondItem="KOu-0l-oWM" secondAttribute="bottom" id="EM1-2z-0JL"/>
+                        <constraint firstItem="KOu-0l-oWM" firstAttribute="centerY" secondItem="DQG-q8-3Nw" secondAttribute="centerY" id="JaI-2T-ChU"/>
+                        <constraint firstAttribute="trailing" secondItem="KOu-0l-oWM" secondAttribute="trailing" id="O8E-1i-jUu"/>
+                        <constraint firstItem="s2c-vr-tEo" firstAttribute="trailing" secondItem="KOu-0l-oWM" secondAttribute="trailing" constant="-29" id="dNF-Sp-bRj"/>
+                        <constraint firstItem="s2c-vr-tEo" firstAttribute="centerY" secondItem="lHo-at-a5w" secondAttribute="centerY" id="hBa-UQ-iAR"/>
+                        <constraint firstItem="lHo-at-a5w" firstAttribute="bottom" secondItem="KOu-0l-oWM" secondAttribute="bottom" constant="-21" id="hLw-X6-h4h"/>
+                        <constraint firstItem="KOu-0l-oWM" firstAttribute="leading" secondItem="DQG-q8-3Nw" secondAttribute="leading" id="vXR-le-TyH"/>
+                        <constraint firstItem="KOu-0l-oWM" firstAttribute="top" secondItem="DQG-q8-3Nw" secondAttribute="top" id="zgk-nh-m0a"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="7"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.24739940068493149" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="DQG-q8-3Nw" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="0be-cB-nQ6"/>
+                <constraint firstItem="DQG-q8-3Nw" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="326:414" id="lJd-E6-6eR"/>
+                <constraint firstItem="DQG-q8-3Nw" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="rN3-mC-avJ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="backHome" destination="s2c-vr-tEo" id="OgO-Y9-CPc"/>
+                <outlet property="backImageView" destination="KOu-0l-oWM" id="uzA-4i-gTs"/>
+                <outlet property="checkOrders" destination="lHo-at-a5w" id="pNO-O1-ESp"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="兑换成功" width="316" height="390"/>
+    </resources>
+</document>

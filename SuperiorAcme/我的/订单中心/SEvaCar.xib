@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SEvaCar">
+            <connections>
+                <outlet property="mCollect" destination="LMD-fp-xVc" id="bHW-5n-RGD"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="LMD-fp-xVc">
+                    <rect key="frame" x="0.0" y="74.5" width="375" height="592.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gbB-Gx-uqc">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="T2i-Ci-MxQ"/>
+                        <outlet property="delegate" destination="-1" id="mNs-oh-cTF"/>
+                    </connections>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xQN-lD-jd9">
+                    <rect key="frame" x="0.0" y="64.5" width="375" height="10"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="eUo-td-yTC"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="LMD-fp-xVc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4Nu-9A-6Rq"/>
+                <constraint firstAttribute="bottom" secondItem="LMD-fp-xVc" secondAttribute="bottom" id="knO-Iz-NZO"/>
+                <constraint firstItem="xQN-lD-jd9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="krF-tC-oSC"/>
+                <constraint firstAttribute="trailing" secondItem="xQN-lD-jd9" secondAttribute="trailing" id="q0B-7y-oU9"/>
+                <constraint firstItem="LMD-fp-xVc" firstAttribute="top" secondItem="xQN-lD-jd9" secondAttribute="bottom" id="vfC-Ns-Oh0"/>
+                <constraint firstItem="LMD-fp-xVc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="74.5" id="w4P-5v-KKX"/>
+                <constraint firstAttribute="trailing" secondItem="LMD-fp-xVc" secondAttribute="trailing" id="ymN-em-sbA"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

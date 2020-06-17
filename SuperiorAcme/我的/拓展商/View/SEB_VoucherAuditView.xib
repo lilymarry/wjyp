@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SEB_VoucherAuditView">
+            <connections>
+                <outlet property="mTable" destination="dzp-SC-EKV" id="Gve-st-DgK"/>
+                <outlet property="thisView" destination="iN0-l3-epB" id="rNN-Z8-OWm"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="dzp-SC-EKV">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="kkJ-4D-sk7"/>
+                        <outlet property="delegate" destination="-1" id="u8q-kv-0qA"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="dzp-SC-EKV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="1aU-S6-Rfe"/>
+                <constraint firstAttribute="bottom" secondItem="dzp-SC-EKV" secondAttribute="bottom" id="Bqd-TT-cbR"/>
+                <constraint firstItem="dzp-SC-EKV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Uvb-cQ-XPO"/>
+                <constraint firstAttribute="trailing" secondItem="dzp-SC-EKV" secondAttribute="trailing" id="tob-Of-D7T"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

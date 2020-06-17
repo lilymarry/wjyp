@@ -1,0 +1,119 @@
+//
+//  PrefixHeader.pch
+//  SuperiorAcme
+//
+//  Created by GYM on 2017/7/6.
+//  Copyright © 2017年 GYM. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#ifdef __OBJC__
+
+#import "AppDelegate.h"
+#import "MJExtension.h"
+#import "MJRefresh.h"
+#import "UIImageView+WebCache.h"
+#import "UIButton+WebCache.h"
+#import "MBProgressHUD.h"
+#import "MBProgressHUD+YF.h"
+#import "UINavigationBar+Awesome.h"
+#import "TopWindow.h"
+#import <AVFoundation/AVFoundation.h>
+#import <UIKit/UIKit.h>
+#import "SuperiorAcme_Url.h"
+#import "HttpManager.h"
+#import "SRegisterLogin.h"
+#import "SLand.h"
+#import <Hyphenate/Hyphenate.h>
+#import "EaseMessageViewController.h"
+#import "SGoodsInfor_first.h"
+#import "SHyphenateList.h"//环信列表
+
+//优化部分可删
+#import "SALoginRegosterURLConstant.h"
+
+#endif
+
+#pragma mark - 百度apk
+#define BaiDuKey @"BMBtDsRIlWXtuAGR9nKrOSIBU8Vu0LmL"
+#define BaiDuId 10193598
+
+#pragma mark -屏幕宽高
+#define ScreenW [UIScreen mainScreen].bounds.size.width
+#define ScreenH [UIScreen mainScreen].bounds.size.height
+
+#pragma mark - 文字黑
+#define WordColor [UIColor colorWithRed:60/255.0 green:60/255.0 blue:60/255.0 alpha:1]
+#pragma mark - 文字浅黑
+#define WordColor_sub [UIColor colorWithRed:60/255.0 green:60/255.0 blue:60/255.0 alpha:0.7]
+#pragma mark - 背景浅黑
+#define WordColor_sub_sub [UIColor colorWithRed:60/255.0 green:60/255.0 blue:60/255.0 alpha:0.5]
+#define WordColor_30 [UIColor colorWithRed:60/255.0 green:60/255.0 blue:60/255.0 alpha:0.3]
+#pragma mark - 背景浅黑_sub
+#define WordColor_sub_sub_sub [UIColor colorWithRed:60/255.0 green:60/255.0 blue:60/255.0 alpha:0.1]
+#pragma mark - 线
+#define MyLine [UIColor colorWithRed:232/255.0 green:232/255.0 blue:232/255.0 alpha:1]
+#pragma mark - 蓝色
+#define MyBlue [UIColor colorWithRed:89/255.0 green:159/255.0 blue:251/255.0 alpha:1]
+#pragma mark - 粉色
+#define MyPowder [UIColor colorWithRed:236/255.0 green:110/255.0 blue:221/255.0 alpha:1]
+#pragma mark - 绿色
+#define MyGreen [UIColor colorWithRed:87/255.0 green:188/255.0 blue:122/255.0 alpha:1]
+#pragma mark - 黄色
+#define MyYellow [UIColor colorWithRed:247/255.0 green:205/255.0 blue:62/255.0 alpha:1]
+#pragma mark - 浅黄色
+#define MyYellow_sub [UIColor colorWithRed:247/255.0 green:205/255.0 blue:62/255.0 alpha:0.7]
+
+#define  adjustsScrollViewInsets_NO(scrollView,vc)\
+do { \
+_Pragma("clang diagnostic push") \
+_Pragma("clang diagnostic ignored \"-Warc-performSelector-leaks\"") \
+if ([UIScrollView instancesRespondToSelector:NSSelectorFromString(@"setContentInsetAdjustmentBehavior:")]) {\
+[scrollView   performSelector:NSSelectorFromString(@"setContentInsetAdjustmentBehavior:") withObject:@(2)];\
+} else {\
+vc.automaticallyAdjustsScrollViewInsets = NO;\
+}\
+_Pragma("clang diagnostic pop") \
+} while (0)
+
+
+#define isIOS11 [[UIDevice currentDevice].systemVersion floatValue] >= 11
+
+/**
+ 导航栏titleView尽可能充满屏幕，余留的边距
+ iPhone5s/iPhone6(iOS8/iOS9/iOS10) margin = 8
+ iPhone6p(iOS8/iOS9/iOS10) margin = 12
+ 
+ iPhone5s/iPhone6(iOS11) margin = 16
+ iPhone6p(iOS11) margin = 20
+ */
+#define NavigationBarTitleViewMargin \
+(isIOS11? ([UIScreen mainScreen].bounds.size.width > 375 ? 20 : [UIScreen mainScreen].bounds.size.width > 320 ? 16 : 8) : \
+([UIScreen mainScreen].bounds.size.width > 375 ? 12 : 8))
+
+/**
+ 导航栏左右navigationBarItem余留的边距
+ iPhone5s/iPhone6(iOS8/iOS9/iOS10) margin = 16
+ iPhone6p(iOS8/iOS9/iOS10) margin = 20
+ */
+#define NavigationBarItemMargin ([UIScreen mainScreen].bounds.size.width > 375 ? 20 : 16)
+
+/**
+ 导航栏titleView和navigationBarItem之间的间距
+ iPhone5s/iPhone6/iPhone6p(iOS8/iOS9/iOS10) iterItemSpace = 6
+ */
+#define NavigationBarInterItemSpace 6
+
+#define MORE_BUTTON_FRAME CGRectMake(ScreenW/5*2, ScreenH - TAB_BAR_HEIGHT, ScreenW/5, 49)
+
+
+#define NOTNULL(x) ((![x isKindOfClass:[NSNull class]])&&x)
+#define SWNOTEmptyArr(X) (NOTNULL(X)&&[X isKindOfClass:[NSArray class]]&&[X count])
+#define SWNOTEmptyDictionary(X) (NOTNULL(X)&&[X isKindOfClass:[NSDictionary class]]&&[[X allKeys]count])
+#define SWNOTEmptyStr(X) (NOTNULL(X)&&[X isKindOfClass:[NSString class]]&&((NSString *)X).length)
+
+#endif /* PrefixHeader_pch */

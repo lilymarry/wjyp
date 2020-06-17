@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SSPurchase_footer">
+            <connections>
+                <outlet property="groundView" destination="ex3-jG-zOE" id="560-6s-V92"/>
+                <outlet property="submitBtn" destination="WJH-oK-s8M" id="hMG-Sf-tBj"/>
+                <outlet property="thisView" destination="iN0-l3-epB" id="Au3-VH-krl"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ex3-jG-zOE">
+                    <rect key="frame" x="0.0" y="-5" width="375" height="75"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="75" id="vmU-yH-PFQ"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJH-oK-s8M">
+                    <rect key="frame" x="10" y="10" width="355" height="50"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Qwa-kf-Qdm"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="立即购买">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="WJH-oK-s8M" secondAttribute="trailing" constant="10" id="32w-sn-k0P"/>
+                <constraint firstItem="WJH-oK-s8M" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="5Jp-tB-fGm"/>
+                <constraint firstItem="ex3-jG-zOE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Gkk-sM-Lqh"/>
+                <constraint firstAttribute="trailing" secondItem="ex3-jG-zOE" secondAttribute="trailing" id="Ufq-Mk-ftr"/>
+                <constraint firstItem="ex3-jG-zOE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-5" id="fiK-4A-YLa"/>
+                <constraint firstItem="WJH-oK-s8M" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="zeQ-Ht-ZXK"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="54.5"/>
+        </view>
+    </objects>
+</document>

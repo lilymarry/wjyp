@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SShopAround">
+            <connections>
+                <outlet property="mCollect" destination="ZWw-67-0Fb" id="sqc-jy-dkl"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1qg-GD-iMx">
+                    <rect key="frame" x="0.0" y="64" width="375" height="0.5"/>
+                    <color key="backgroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="q6s-jw-bJZ"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ZWw-67-0Fb">
+                    <rect key="frame" x="0.0" y="64.5" width="375" height="602.5"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eFx-4G-IW9">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="iaA-aw-Efh"/>
+                        <outlet property="delegate" destination="-1" id="nSV-d7-ceZ"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="1qg-GD-iMx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2Tp-hg-5Zu"/>
+                <constraint firstAttribute="trailing" secondItem="ZWw-67-0Fb" secondAttribute="trailing" id="FUB-di-Oec"/>
+                <constraint firstItem="1qg-GD-iMx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="SnF-bO-RFX"/>
+                <constraint firstAttribute="bottom" secondItem="ZWw-67-0Fb" secondAttribute="bottom" id="WDT-m7-LO0"/>
+                <constraint firstItem="ZWw-67-0Fb" firstAttribute="top" secondItem="1qg-GD-iMx" secondAttribute="bottom" id="c13-Yl-xau"/>
+                <constraint firstItem="ZWw-67-0Fb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="iBn-qf-JJ7"/>
+                <constraint firstAttribute="trailing" secondItem="1qg-GD-iMx" secondAttribute="trailing" id="j4A-ja-9Zn"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,63 @@
+//
+//  SMateriel.m
+//  SuperiorAcme
+//
+//  Created by GYM on 2018/1/20.
+//  Copyright © 2018年 GYM. All rights reserved.
+//
+
+#import "SMateriel.h"
+#import "SMaterielNum.h"
+
+@interface SMateriel ()
+
+@property (weak, nonatomic) IBOutlet UIButton *submitBtn;
+@end
+
+@implementation SMateriel
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view from its nib.
+    [self createNav];
+    _submitBtn.layer.masksToBounds = YES;
+    _submitBtn.layer.cornerRadius = 5;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self.navigationController.navigationBar lt_setBackgroundColor:[UIColor whiteColor]];
+    //    self.automaticallyAdjustsScrollViewInsets = NO;
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;//设置系统时间颜色为亮白
+    
+    self.title = @"物料申请";
+    [self.navigationController.navigationBar setTitleTextAttributes:
+     @{NSFontAttributeName:[UIFont systemFontOfSize:17],
+       NSForegroundColorAttributeName:[UIColor blackColor]}];
+    
+}
+- (void)createNav {
+    
+    UIButton * lefthBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    lefthBtn.frame = CGRectMake(0, 0, 44, 50);
+    UIBarButtonItem * leftBtnItem = [[UIBarButtonItem alloc] initWithCustomView:lefthBtn];
+    self.navigationItem.leftBarButtonItem = leftBtnItem;
+    
+    [lefthBtn setImage:[UIImage imageNamed:@"黑色返回"] forState:UIControlStateNormal];
+    lefthBtn.imageEdgeInsets = UIEdgeInsetsMake(0,  -10, 0, 0);
+    
+    [lefthBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [lefthBtn addTarget:self action:@selector(lefthBtnClick) forControlEvents:UIControlEventTouchUpInside];
+}
+- (void)lefthBtnClick {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+- (IBAction)choiceBtn:(UIButton *)sender {
+    SMaterielNum * num = [[SMaterielNum alloc] init];
+    [self.navigationController pushViewController:num animated:YES];
+}
+
+- (IBAction)submitBtn:(UIButton *)sender {
+}
+@end

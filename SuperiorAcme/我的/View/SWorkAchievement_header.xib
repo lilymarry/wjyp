@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SWorkAchievement_header">
+            <connections>
+                <outlet property="addressBtn" destination="8OR-Rn-5eP" id="yJf-j8-Cxc"/>
+                <outlet property="classView" destination="0di-Bo-Dse" id="kfO-gK-Ikn"/>
+                <outlet property="oneBtn" destination="eT2-mE-Uhp" id="YHR-GT-Sn4"/>
+                <outlet property="thisView" destination="iN0-l3-epB" id="L1s-Rv-5PH"/>
+                <outlet property="twoBtn" destination="6LS-OT-ctA" id="Fqa-d3-BJ8"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zI2-gg-qhq">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="奖牌" translatesAutoresizingMaskIntoConstraints="NO" id="pCG-CX-z1L">
+                            <rect key="frame" x="30" y="0.0" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="pCG-CX-z1L" secondAttribute="height" multiplier="1:1" id="1ef-VB-lp1"/>
+                                <constraint firstAttribute="width" constant="40" id="9Q0-U1-Qbq"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="排行榜" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLJ-6f-K4l">
+                            <rect key="frame" x="184" y="0.0" width="46" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" id="fda-ZC-M8Y"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8OR-Rn-5eP">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="15" maxY="0.0"/>
+                            <state key="normal" title=" 天津" image="定位"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.13019037246704102" green="0.44343599677085876" blue="0.9462929368019104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="8OR-Rn-5eP" firstAttribute="leading" secondItem="zI2-gg-qhq" secondAttribute="leading" id="0za-Ym-oPk"/>
+                        <constraint firstAttribute="bottom" secondItem="HLJ-6f-K4l" secondAttribute="bottom" id="7jf-gY-K3G"/>
+                        <constraint firstItem="8OR-Rn-5eP" firstAttribute="top" secondItem="zI2-gg-qhq" secondAttribute="top" id="FU5-4n-rfE"/>
+                        <constraint firstItem="pCG-CX-z1L" firstAttribute="top" secondItem="zI2-gg-qhq" secondAttribute="top" id="IJo-vV-TVG"/>
+                        <constraint firstItem="HLJ-6f-K4l" firstAttribute="top" secondItem="zI2-gg-qhq" secondAttribute="top" id="Ka6-yf-PHM"/>
+                        <constraint firstItem="pCG-CX-z1L" firstAttribute="leading" secondItem="zI2-gg-qhq" secondAttribute="leading" constant="30" id="Sqy-IK-iJX"/>
+                        <constraint firstAttribute="height" constant="50" id="TxK-3p-UxC"/>
+                        <constraint firstAttribute="bottom" secondItem="8OR-Rn-5eP" secondAttribute="bottom" id="cWr-6A-NPt"/>
+                        <constraint firstItem="HLJ-6f-K4l" firstAttribute="centerX" secondItem="zI2-gg-qhq" secondAttribute="centerX" id="mK5-XR-Wfz"/>
+                        <constraint firstAttribute="trailing" secondItem="8OR-Rn-5eP" secondAttribute="trailing" id="z7W-fp-nlK"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0di-Bo-Dse">
+                    <rect key="frame" x="0.0" y="50" width="414" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eT2-mE-Uhp">
+                            <rect key="frame" x="87" y="0.0" width="100" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="qLq-Cf-0WP"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="分享榜">
+                                <color key="titleColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6LS-OT-ctA">
+                            <rect key="frame" x="227" y="0.0" width="100" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="AkC-uu-gwm"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="推荐榜">
+                                <color key="titleColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="6LS-OT-ctA" secondAttribute="bottom" id="3d1-d0-03u"/>
+                        <constraint firstItem="eT2-mE-Uhp" firstAttribute="top" secondItem="0di-Bo-Dse" secondAttribute="top" id="Mu5-nv-J50"/>
+                        <constraint firstAttribute="height" constant="40" id="RZb-QJ-KWd"/>
+                        <constraint firstItem="6LS-OT-ctA" firstAttribute="centerX" secondItem="0di-Bo-Dse" secondAttribute="centerX" constant="70" id="U6s-Z4-Fhg"/>
+                        <constraint firstItem="6LS-OT-ctA" firstAttribute="top" secondItem="0di-Bo-Dse" secondAttribute="top" id="tGL-0q-Vin"/>
+                        <constraint firstAttribute="bottom" secondItem="eT2-mE-Uhp" secondAttribute="bottom" id="woZ-hR-2ub"/>
+                        <constraint firstItem="eT2-mE-Uhp" firstAttribute="centerX" secondItem="0di-Bo-Dse" secondAttribute="centerX" constant="-70" id="xrs-Hx-9Dp"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="zI2-gg-qhq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="B8E-mB-TMg"/>
+                <constraint firstItem="zI2-gg-qhq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="DFu-z3-sSv"/>
+                <constraint firstAttribute="trailing" secondItem="zI2-gg-qhq" secondAttribute="trailing" id="Qo0-9X-XFc"/>
+                <constraint firstItem="0di-Bo-Dse" firstAttribute="top" secondItem="zI2-gg-qhq" secondAttribute="bottom" id="UpD-Uj-W5b"/>
+                <constraint firstAttribute="trailing" secondItem="0di-Bo-Dse" secondAttribute="trailing" id="ZkF-c1-DRr"/>
+                <constraint firstItem="0di-Bo-Dse" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="eZd-Tc-fAl"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="奖牌" width="58" height="58"/>
+        <image name="定位" width="12" height="12"/>
+    </resources>
+</document>

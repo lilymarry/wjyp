@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CommonMoreView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="emk-qF-H87">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fis-PW-ubC">
+                            <rect key="frame" x="0.0" y="567" width="375" height="100"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="2d4-1k-RHc"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsZ-2L-6md">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <connections>
+                                <action selector="backEvent:" destination="iN0-l3-epB" eventType="touchUpInside" id="meG-5W-kkH"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hnK-kH-GYh">
+                            <rect key="frame" x="32.5" y="582" width="70" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="70" id="5sI-lY-RaJ"/>
+                                <constraint firstAttribute="width" secondItem="hnK-kH-GYh" secondAttribute="height" multiplier="1:1" id="HIV-iL-8W7"/>
+                            </constraints>
+                            <state key="normal" image="首页汽车购"/>
+                            <connections>
+                                <action selector="btnPushEvent:" destination="iN0-l3-epB" eventType="touchUpInside" id="inH-kN-j0J"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tt2-15-a5K">
+                            <rect key="frame" x="112.5" y="582" width="70" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="Tt2-15-a5K" secondAttribute="height" multiplier="1:1" id="Ago-uP-u0q"/>
+                                <constraint firstAttribute="width" constant="70" id="oqo-LQ-jlQ"/>
+                            </constraints>
+                            <state key="normal" image="福利社"/>
+                            <connections>
+                                <action selector="btnPushEvent:" destination="iN0-l3-epB" eventType="touchUpInside" id="tMp-bT-Uff"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="353-xu-6Ly">
+                            <rect key="frame" x="192" y="582" width="70" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="353-xu-6Ly" secondAttribute="height" multiplier="1:1" id="Ppk-Eh-CFr"/>
+                                <constraint firstAttribute="width" constant="70" id="nlL-Wv-Tp4"/>
+                            </constraints>
+                            <state key="normal" image="上市孵化"/>
+                            <connections>
+                                <action selector="btnPushEvent:" destination="iN0-l3-epB" eventType="touchUpInside" id="rCh-VU-T4u"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPH-fw-SAR">
+                            <rect key="frame" x="272" y="582" width="70" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="HPH-fw-SAR" secondAttribute="height" multiplier="1:1" id="H9B-1X-6wC"/>
+                                <constraint firstAttribute="width" constant="70" id="Z7V-Hx-T7z"/>
+                            </constraints>
+                            <state key="normal" image="招募股东"/>
+                            <connections>
+                                <action selector="btnPushEvent:" destination="iN0-l3-epB" eventType="touchUpInside" id="6yV-Mf-HQa"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="353-xu-6Ly" firstAttribute="centerX" secondItem="emk-qF-H87" secondAttribute="centerX" constant="40" id="C5y-Fe-lSk"/>
+                        <constraint firstAttribute="bottom" secondItem="hnK-kH-GYh" secondAttribute="bottom" constant="15" id="C8D-qn-aWF"/>
+                        <constraint firstAttribute="bottom" secondItem="fis-PW-ubC" secondAttribute="bottom" id="CGj-zh-Wus"/>
+                        <constraint firstItem="fis-PW-ubC" firstAttribute="leading" secondItem="emk-qF-H87" secondAttribute="leading" id="Des-ok-VaX"/>
+                        <constraint firstItem="Tt2-15-a5K" firstAttribute="leading" secondItem="hnK-kH-GYh" secondAttribute="trailing" constant="10" id="GyC-v5-CAd"/>
+                        <constraint firstItem="gsZ-2L-6md" firstAttribute="top" secondItem="emk-qF-H87" secondAttribute="top" id="If5-bF-hvN"/>
+                        <constraint firstAttribute="bottom" secondItem="Tt2-15-a5K" secondAttribute="bottom" constant="15" id="LXB-NZ-5Rd"/>
+                        <constraint firstAttribute="bottom" secondItem="gsZ-2L-6md" secondAttribute="bottom" id="NYc-Av-BLe"/>
+                        <constraint firstItem="Tt2-15-a5K" firstAttribute="centerX" secondItem="emk-qF-H87" secondAttribute="centerX" constant="-40" id="RXm-zY-KfM"/>
+                        <constraint firstAttribute="bottom" secondItem="HPH-fw-SAR" secondAttribute="bottom" constant="15" id="Zya-ow-Ke5"/>
+                        <constraint firstAttribute="trailing" secondItem="gsZ-2L-6md" secondAttribute="trailing" id="fkR-1X-OfD"/>
+                        <constraint firstAttribute="trailing" secondItem="fis-PW-ubC" secondAttribute="trailing" id="mma-Yu-mvn"/>
+                        <constraint firstItem="gsZ-2L-6md" firstAttribute="leading" secondItem="emk-qF-H87" secondAttribute="leading" id="pXj-oR-fgE"/>
+                        <constraint firstItem="HPH-fw-SAR" firstAttribute="leading" secondItem="353-xu-6Ly" secondAttribute="trailing" constant="10" id="qHE-d4-52C"/>
+                        <constraint firstAttribute="bottom" secondItem="353-xu-6Ly" secondAttribute="bottom" constant="15" id="wXR-il-854"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="emk-qF-H87" secondAttribute="trailing" id="T0t-gK-s3v"/>
+                <constraint firstItem="emk-qF-H87" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="eM2-6O-9pj"/>
+                <constraint firstItem="emk-qF-H87" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="opu-gM-Anf"/>
+                <constraint firstAttribute="bottom" secondItem="emk-qF-H87" secondAttribute="bottom" id="yPQ-xt-dKo"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="backBtn" destination="gsZ-2L-6md" id="3a5-QN-PiK"/>
+                <outlet property="fourBtn" destination="HPH-fw-SAR" id="YxY-kB-nVv"/>
+                <outlet property="oneBtn" destination="hnK-kH-GYh" id="qhE-O2-uBP"/>
+                <outlet property="threeBtn" destination="353-xu-6Ly" id="Xz6-XV-Ahh"/>
+                <outlet property="twoBtn" destination="Tt2-15-a5K" id="lcp-kO-Yvr"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="上市孵化" width="75" height="75"/>
+        <image name="招募股东" width="75" height="75"/>
+        <image name="福利社" width="75" height="75"/>
+        <image name="首页汽车购" width="48" height="48"/>
+    </resources>
+</document>

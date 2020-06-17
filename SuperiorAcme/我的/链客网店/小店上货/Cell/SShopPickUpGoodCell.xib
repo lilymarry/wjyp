@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="SShopPickUpGoodCell">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="159.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="TNh-Nf-9b1">
+                        <rect key="frame" x="10" y="10" width="123" height="123"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="TNh-Nf-9b1" secondAttribute="height" multiplier="1:1" id="JKf-Uf-Dyo"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="康尔馨五星级酒店毛巾纯棉加大加厚面巾洗脸全棉吸水男女成人..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dna-Ou-z1h">
+                        <rect key="frame" x="143" y="10" width="251" height="36"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最多可使用50%代金券" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDM-Cf-aCs">
+                        <rect key="frame" x="143" y="59" width="145" height="21.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="FDM-Cf-aCs" secondAttribute="height" multiplier="135:20" id="1ri-dZ-E7N"/>
+                            <constraint firstAttribute="width" constant="145" id="NLu-GB-COK"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.9882352941176471" green="0.396078431372549" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipQ-ib-aFb">
+                        <rect key="frame" x="143" y="94.5" width="79" height="25.5"/>
+                        <attributedString key="attributedText">
+                            <fragment content="￥">
+                                <attributes>
+                                    <color key="NSBackgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="NSColor" red="0.90588235294117647" green="0.12156862745098039" blue="0.098039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <font key="NSFont" size="13" name="PingFangSC-Regular"/>
+                                    <real key="NSKern" value="0.0"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                        <tabStops/>
+                                    </paragraphStyle>
+                                    <color key="NSStrokeColor" red="0.054899999999999997" green="0.090200000000000002" blue="0.14902000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </attributes>
+                            </fragment>
+                            <fragment content="1380.00">
+                                <attributes>
+                                    <color key="NSBackgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="NSColor" red="0.90588235294117647" green="0.12156862745098039" blue="0.098039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <font key="NSFont" size="18" name="PingFangSC-Regular"/>
+                                    <real key="NSKern" value="0.0"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                        <tabStops/>
+                                    </paragraphStyle>
+                                    <color key="NSStrokeColor" red="0.054899999999999997" green="0.090200000000000002" blue="0.14902000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="送" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qxQ-Pw-4RL">
+                        <rect key="frame" x="239" y="99.5" width="15" height="15"/>
+                        <color key="backgroundColor" red="0.99215686274509807" green="0.50980392156862742" blue="0.078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="qxQ-Pw-4RL" secondAttribute="height" multiplier="1:1" id="Cxb-sb-oXF"/>
+                            <constraint firstAttribute="width" constant="15" id="TKs-Ih-ZVi"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1u-J1-RCc">
+                        <rect key="frame" x="260" y="98" width="58.5" height="18.5"/>
+                        <attributedString key="attributedText">
+                            <fragment content="10.00">
+                                <attributes>
+                                    <color key="NSBackgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="NSColor" red="0.99215686274509807" green="0.50980392156862742" blue="0.078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <font key="NSFont" size="13" name="PingFangSC-Regular"/>
+                                    <real key="NSKern" value="0.0"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                        <tabStops/>
+                                    </paragraphStyle>
+                                    <color key="NSStrokeColor" red="0.054899999999999997" green="0.090200000000000002" blue="0.14902000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </attributes>
+                            </fragment>
+                            <fragment content="积分">
+                                <attributes>
+                                    <color key="NSBackgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="NSColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <font key="NSFont" size="13" name="PingFangSC-Regular"/>
+                                    <real key="NSKern" value="0.0"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                        <tabStops/>
+                                    </paragraphStyle>
+                                    <color key="NSStrokeColor" red="0.054899999999999997" green="0.090200000000000002" blue="0.14902000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hb3-GF-oLw">
+                        <rect key="frame" x="323" y="116" width="91" height="27"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Hb3-GF-oLw" secondAttribute="height" multiplier="91:27" id="PMW-Oo-gF3"/>
+                        </constraints>
+                        <state key="normal" image="矢量智能对象"/>
+                        <connections>
+                            <action selector="putawayGoodsMethod:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="tz0-hM-xd9"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c3K-Gy-iML" userLabel="SeparatorLineView">
+                        <rect key="frame" x="0.0" y="158.5" width="414" height="1"/>
+                        <color key="backgroundColor" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="bxW-pk-iqC"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VpJ-JJ-gx8">
+                        <rect key="frame" x="143" y="122" width="172" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.55294117649999996" green="0.55294117649999996" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="J1u-J1-RCc" firstAttribute="centerY" secondItem="qxQ-Pw-4RL" secondAttribute="centerY" id="0xO-eS-p0k"/>
+                    <constraint firstItem="Dna-Ou-z1h" firstAttribute="top" secondItem="TNh-Nf-9b1" secondAttribute="top" id="35f-9K-yMt"/>
+                    <constraint firstAttribute="trailing" secondItem="c3K-Gy-iML" secondAttribute="trailing" id="4cv-XO-6iD"/>
+                    <constraint firstItem="FDM-Cf-aCs" firstAttribute="top" secondItem="Dna-Ou-z1h" secondAttribute="bottom" constant="13" id="8hU-ei-S1w"/>
+                    <constraint firstItem="Hb3-GF-oLw" firstAttribute="bottom" secondItem="TNh-Nf-9b1" secondAttribute="bottom" constant="10" id="HsT-z7-tw9"/>
+                    <constraint firstItem="J1u-J1-RCc" firstAttribute="leading" secondItem="qxQ-Pw-4RL" secondAttribute="trailing" constant="6" id="M6q-Rt-ze8"/>
+                    <constraint firstItem="qxQ-Pw-4RL" firstAttribute="centerY" secondItem="ipQ-ib-aFb" secondAttribute="centerY" id="NhK-00-8T4"/>
+                    <constraint firstItem="TNh-Nf-9b1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="UCk-WY-FVf"/>
+                    <constraint firstAttribute="trailing" secondItem="Dna-Ou-z1h" secondAttribute="trailing" constant="20" id="Z0f-K7-ddA"/>
+                    <constraint firstItem="c3K-Gy-iML" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="hF9-Fg-XLO"/>
+                    <constraint firstItem="qxQ-Pw-4RL" firstAttribute="leading" secondItem="ipQ-ib-aFb" secondAttribute="trailing" constant="17" id="o0Z-Ym-uuB"/>
+                    <constraint firstItem="ipQ-ib-aFb" firstAttribute="leading" secondItem="FDM-Cf-aCs" secondAttribute="leading" id="oEV-Dc-RtE"/>
+                    <constraint firstItem="ipQ-ib-aFb" firstAttribute="top" secondItem="FDM-Cf-aCs" secondAttribute="bottom" constant="14" id="qsX-jW-nTH"/>
+                    <constraint firstItem="TNh-Nf-9b1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="rdd-s1-zVg"/>
+                    <constraint firstAttribute="bottom" secondItem="c3K-Gy-iML" secondAttribute="bottom" id="sP2-fc-JAY"/>
+                    <constraint firstItem="FDM-Cf-aCs" firstAttribute="leading" secondItem="Dna-Ou-z1h" secondAttribute="leading" id="xZR-cZ-OvP"/>
+                    <constraint firstAttribute="trailing" secondItem="Hb3-GF-oLw" secondAttribute="trailing" id="y3q-gy-0fN"/>
+                    <constraint firstItem="Dna-Ou-z1h" firstAttribute="leading" secondItem="TNh-Nf-9b1" secondAttribute="trailing" constant="10" id="zFo-fv-jpA"/>
+                </constraints>
+            </tableViewCellContentView>
+            <constraints>
+                <constraint firstItem="Hb3-GF-oLw" firstAttribute="width" secondItem="KGk-i7-Jjw" secondAttribute="width" multiplier="91:414" id="Le0-Po-j7n"/>
+                <constraint firstItem="TNh-Nf-9b1" firstAttribute="height" secondItem="KGk-i7-Jjw" secondAttribute="height" multiplier="123:160" id="hxO-b7-rg6"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="cellNumLab" destination="VpJ-JJ-gx8" id="GYA-dh-fVG"/>
+                <outlet property="goodAvilableCashCouponLabel" destination="FDM-Cf-aCs" id="tz1-OY-dbC"/>
+                <outlet property="goodGiveIntegralLabel" destination="J1u-J1-RCc" id="2G5-sn-fH0"/>
+                <outlet property="goodGiveIntegralTipLabel" destination="qxQ-Pw-4RL" id="joQ-CE-4bJ"/>
+                <outlet property="goodIconImageView" destination="TNh-Nf-9b1" id="hVu-bQ-rog"/>
+                <outlet property="goodOnShelfBtn" destination="Hb3-GF-oLw" id="ioP-0d-kMu"/>
+                <outlet property="goodPriceLabel" destination="ipQ-ib-aFb" id="o5d-tq-cHM"/>
+                <outlet property="goodTitleLabel" destination="Dna-Ou-z1h" id="5Hs-Lk-elK"/>
+            </connections>
+            <point key="canvasLocation" x="-165" y="62"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon" width="200" height="200"/>
+        <image name="矢量智能对象" width="91" height="27"/>
+    </resources>
+</document>

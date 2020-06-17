@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SgiftListCell">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="252"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="200" height="252"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RY9-a7-r9o">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="252"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NxE-JN-KDf">
+                                <rect key="frame" x="8" y="32" width="184" height="162.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162.5" id="lgQ-v0-siZ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="海鸥手表男士自动机械表海鸥手表男士自动机械表海鸥手表男士自动机械表海鸥手表男士自动机械表表男士自动机械表海鸥手表男士自动机械表海鸥手表男士自动机械表" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ia-tj-2Vd">
+                                <rect key="frame" x="8" y="196" width="184" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="cUW-TR-9An"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="赠品券价 ¥99.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJN-8S-Oac">
+                                <rect key="frame" x="8" y="230" width="184" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="iFN-OE-byv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.97254901960784312" green="0.18823529411764706" blue="0.22352941176470589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gC3-uY-g3X">
+                                <rect key="frame" x="8" y="4" width="40" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="geO-Cf-sfW"/>
+                                    <constraint firstAttribute="height" constant="24" id="l7t-oF-Wdu"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="6Ia-tj-2Vd" secondAttribute="trailing" constant="8" id="4SW-oS-uEg"/>
+                            <constraint firstAttribute="trailing" secondItem="NxE-JN-KDf" secondAttribute="trailing" constant="8" id="6q2-iS-l7A"/>
+                            <constraint firstItem="gC3-uY-g3X" firstAttribute="leading" secondItem="RY9-a7-r9o" secondAttribute="leading" constant="8" id="F0C-x4-Q0I"/>
+                            <constraint firstItem="gC3-uY-g3X" firstAttribute="top" secondItem="RY9-a7-r9o" secondAttribute="top" constant="4" id="Pji-my-HxG"/>
+                            <constraint firstAttribute="trailing" secondItem="cJN-8S-Oac" secondAttribute="trailing" constant="8" id="R9m-gE-3pE"/>
+                            <constraint firstItem="cJN-8S-Oac" firstAttribute="top" secondItem="6Ia-tj-2Vd" secondAttribute="bottom" constant="2" id="ZQj-eo-oSL"/>
+                            <constraint firstItem="cJN-8S-Oac" firstAttribute="leading" secondItem="RY9-a7-r9o" secondAttribute="leading" constant="8" id="c9I-Fn-aEo"/>
+                            <constraint firstItem="NxE-JN-KDf" firstAttribute="leading" secondItem="RY9-a7-r9o" secondAttribute="leading" constant="8" id="ghb-3r-aXp"/>
+                            <constraint firstItem="NxE-JN-KDf" firstAttribute="top" secondItem="gC3-uY-g3X" secondAttribute="bottom" constant="4" id="vG1-QH-amv"/>
+                            <constraint firstItem="6Ia-tj-2Vd" firstAttribute="top" secondItem="NxE-JN-KDf" secondAttribute="bottom" constant="1.5" id="whN-nh-FtE"/>
+                            <constraint firstItem="6Ia-tj-2Vd" firstAttribute="leading" secondItem="RY9-a7-r9o" secondAttribute="leading" constant="8" id="xJg-iH-aUd"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="RY9-a7-r9o" secondAttribute="trailing" id="Av2-6i-BlP"/>
+                <constraint firstItem="RY9-a7-r9o" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Rc9-MV-ef0"/>
+                <constraint firstItem="RY9-a7-r9o" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="s8V-YR-CJg"/>
+                <constraint firstAttribute="bottom" secondItem="RY9-a7-r9o" secondAttribute="bottom" id="yRG-JF-Gd4"/>
+            </constraints>
+            <size key="customSize" width="150" height="171"/>
+            <connections>
+                <outlet property="backView" destination="RY9-a7-r9o" id="gsF-RH-sxc"/>
+                <outlet property="country_logo" destination="gC3-uY-g3X" id="G0Z-tR-iPF"/>
+                <outlet property="goodName" destination="6Ia-tj-2Vd" id="L33-PV-9Dw"/>
+                <outlet property="googImag" destination="NxE-JN-KDf" id="HIi-Xn-igF"/>
+                <outlet property="lab_use_voucher" destination="cJN-8S-Oac" id="yT8-MM-YSF"/>
+            </connections>
+            <point key="canvasLocation" x="75" y="111.97183098591549"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateSeniorMemberViewController">
+            <connections>
+                <outlet property="image" destination="m3n-J9-0g1" id="ZhU-u3-81q"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m3n-J9-0g1">
+                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gG6-AM-mGh">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <connections>
+                        <action selector="gotoBuyMember:" destination="-1" eventType="touchUpInside" id="j4D-77-CgL"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="m3n-J9-0g1" secondAttribute="bottom" id="45F-A3-N2W"/>
+                <constraint firstItem="m3n-J9-0g1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="Axr-yl-baO"/>
+                <constraint firstItem="gG6-AM-mGh" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="I8i-iD-hDp"/>
+                <constraint firstItem="m3n-J9-0g1" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="TGB-7L-rgX"/>
+                <constraint firstItem="gG6-AM-mGh" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="TaL-JZ-pAE"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="gG6-AM-mGh" secondAttribute="trailing" id="dlw-kZ-NzK"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="gG6-AM-mGh" secondAttribute="bottom" id="elj-I8-YLK"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="m3n-J9-0g1" secondAttribute="trailing" id="tJm-u0-Jan"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+        </view>
+    </objects>
+</document>

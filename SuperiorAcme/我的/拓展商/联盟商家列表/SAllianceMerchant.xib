@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SAllianceMerchant">
+            <connections>
+                <outlet property="mTable" destination="J22-vc-V41" id="8GY-Nx-ebf"/>
+                <outlet property="submitBtn" destination="zS5-XF-9xM" id="eNu-wD-paG"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zS5-XF-9xM">
+                    <rect key="frame" x="10" y="617" width="355" height="40"/>
+                    <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="0s6-PS-bhZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="推 荐">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="submitBtn:" destination="-1" eventType="touchUpInside" id="l75-bZ-IL5"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="J22-vc-V41">
+                    <rect key="frame" x="0.0" y="74" width="375" height="533"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="qe7-nA-Lpx"/>
+                        <outlet property="delegate" destination="-1" id="2YE-CK-zBe"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gq2-3b-X5h">
+                    <rect key="frame" x="0.0" y="64" width="375" height="10"/>
+                    <color key="backgroundColor" red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="xjY-3Z-sJ5"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="zS5-XF-9xM" secondAttribute="bottom" constant="10" id="2Av-to-22g"/>
+                <constraint firstItem="zS5-XF-9xM" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="10" id="9BD-el-Wdo"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="zS5-XF-9xM" secondAttribute="trailing" constant="10" id="B2z-f4-QkS"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="J22-vc-V41" secondAttribute="trailing" id="CyG-43-3YW"/>
+                <constraint firstItem="gq2-3b-X5h" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="E6m-WP-fA9"/>
+                <constraint firstItem="J22-vc-V41" firstAttribute="top" secondItem="gq2-3b-X5h" secondAttribute="bottom" id="awi-rQ-A3O"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="gq2-3b-X5h" secondAttribute="trailing" id="eRJ-qV-iEq"/>
+                <constraint firstItem="gq2-3b-X5h" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="eXq-xn-ibx"/>
+                <constraint firstItem="J22-vc-V41" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="qks-jY-wQn"/>
+                <constraint firstItem="zS5-XF-9xM" firstAttribute="top" secondItem="J22-vc-V41" secondAttribute="bottom" constant="10" id="tY7-qs-VqW"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+        </view>
+    </objects>
+</document>

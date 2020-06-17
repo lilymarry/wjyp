@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SShopCoupon">
+            <connections>
+                <outlet property="mTable" destination="lbh-Lu-q5j" id="TNz-tr-eZt"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V47-Z6-21W">
+                    <rect key="frame" x="0.0" y="64" width="414" height="0.6666666666666714"/>
+                    <color key="backgroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="x5Y-fg-pl1"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="lbh-Lu-q5j">
+                    <rect key="frame" x="0.0" y="64.666666666666686" width="414" height="671.33333333333326"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="ues-ya-OzW"/>
+                        <outlet property="delegate" destination="-1" id="fLP-HG-iMQ"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="V47-Z6-21W" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="BS3-sf-uUt"/>
+                <constraint firstAttribute="trailing" secondItem="V47-Z6-21W" secondAttribute="trailing" id="DLI-cd-T5P"/>
+                <constraint firstAttribute="bottom" secondItem="lbh-Lu-q5j" secondAttribute="bottom" id="KCb-wZ-kLg"/>
+                <constraint firstItem="lbh-Lu-q5j" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Mb4-cj-jBA"/>
+                <constraint firstItem="V47-Z6-21W" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pgp-yV-zZv"/>
+                <constraint firstAttribute="trailing" secondItem="lbh-Lu-q5j" secondAttribute="trailing" id="tsz-jY-YS8"/>
+                <constraint firstItem="lbh-Lu-q5j" firstAttribute="top" secondItem="V47-Z6-21W" secondAttribute="bottom" id="upC-Qt-wLc"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

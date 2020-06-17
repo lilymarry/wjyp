@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CollectionAccountVC">
+            <connections>
+                <outlet property="alipayAccountTextField" destination="kd1-JS-WV6" id="oDF-z3-Pcw"/>
+                <outlet property="alipaySelectImage" destination="rh1-EQ-umc" id="DHu-S2-3Q9"/>
+                <outlet property="alipayVerifyButton" destination="Uv7-FH-Llf" id="Atv-HU-89g"/>
+                <outlet property="platformAccountLabel" destination="XYG-7G-NRC" id="RWV-e0-6cZ"/>
+                <outlet property="platformSelectImage" destination="Ghf-4H-EOU" id="Zzt-GN-Cok"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="wxAccountLabel" destination="dnC-ZV-Fcg" id="qGj-mY-nmw"/>
+                <outlet property="wxSelectImage" destination="qhH-Vk-tAN" id="z76-DM-mtZ"/>
+                <outlet property="wxVerifyButton" destination="ofh-MQ-PKY" id="02U-TQ-4mB"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jY8-29-WRt" userLabel="platformView">
+                    <rect key="frame" x="24" y="64" width="327" height="93.5"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="三方账户平台" translatesAutoresizingMaskIntoConstraints="NO" id="tb9-AN-dGu" userLabel="platformImage">
+                            <rect key="frame" x="13" y="21" width="18" height="18"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="tb9-AN-dGu" secondAttribute="height" multiplier="1:1" id="pH7-Ba-9Lb"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="平台收款账户" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ypc-Gc-idO" userLabel="platformLabel">
+                            <rect key="frame" x="37" y="18" width="145" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="145" id="3q4-Se-43w"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="三方账户未选中" highlightedImage="三方账户选中" translatesAutoresizingMaskIntoConstraints="NO" id="Ghf-4H-EOU" userLabel="platformSelectImage">
+                            <rect key="frame" x="295.5" y="36" width="21.5" height="21.5"/>
+                            <gestureRecognizers/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="Ghf-4H-EOU" secondAttribute="height" multiplier="1:1" id="SXo-3V-yEA"/>
+                            </constraints>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="UlI-Cm-U74" appends="YES" id="QeT-Tw-KGp"/>
+                            </connections>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYG-7G-NRC" userLabel="platformAccountLabel">
+                            <rect key="frame" x="13" y="62" width="150" height="0.0"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="150" id="nPu-un-ivq"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="tb9-AN-dGu" firstAttribute="width" secondItem="jY8-29-WRt" secondAttribute="width" multiplier="20:367" id="9Op-GA-Atk"/>
+                        <constraint firstItem="Ypc-Gc-idO" firstAttribute="centerY" secondItem="tb9-AN-dGu" secondAttribute="centerY" id="EBo-fa-FPW"/>
+                        <constraint firstItem="tb9-AN-dGu" firstAttribute="top" secondItem="jY8-29-WRt" secondAttribute="top" constant="21" id="HPN-bF-GYu"/>
+                        <constraint firstItem="Ghf-4H-EOU" firstAttribute="width" secondItem="jY8-29-WRt" secondAttribute="width" multiplier="24:367" id="JOF-fV-SAa"/>
+                        <constraint firstAttribute="width" secondItem="jY8-29-WRt" secondAttribute="height" multiplier="367:105" id="ZFf-r1-j2i"/>
+                        <constraint firstItem="Ghf-4H-EOU" firstAttribute="centerY" secondItem="jY8-29-WRt" secondAttribute="centerY" id="dGe-xf-zcz"/>
+                        <constraint firstAttribute="trailing" secondItem="Ghf-4H-EOU" secondAttribute="trailing" constant="10" id="jTv-8n-REv"/>
+                        <constraint firstItem="XYG-7G-NRC" firstAttribute="leading" secondItem="tb9-AN-dGu" secondAttribute="leading" id="mWI-Ub-HWB"/>
+                        <constraint firstItem="tb9-AN-dGu" firstAttribute="leading" secondItem="jY8-29-WRt" secondAttribute="leading" constant="13" id="mgQ-AK-NrV"/>
+                        <constraint firstItem="Ypc-Gc-idO" firstAttribute="leading" secondItem="tb9-AN-dGu" secondAttribute="trailing" constant="6" id="obx-AV-k6Y"/>
+                        <constraint firstItem="XYG-7G-NRC" firstAttribute="top" secondItem="Ypc-Gc-idO" secondAttribute="bottom" constant="20" id="zTw-Pf-aiN"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="7"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ggq-MI-LaW" userLabel="wxView">
+                    <rect key="frame" x="24" y="170.5" width="327" height="93.5"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="三方账户微信" translatesAutoresizingMaskIntoConstraints="NO" id="iTu-Nj-JLb" userLabel="wxImage">
+                            <rect key="frame" x="13" y="21" width="18" height="18"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="iTu-Nj-JLb" secondAttribute="height" multiplier="1:1" id="qoh-Rp-zx6"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="微信收款账户" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6a-Cj-Q63" userLabel="wxLabel">
+                            <rect key="frame" x="37" y="18" width="145" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="145" id="EQy-hb-7Ht"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView hidden="YES" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="三方账户未选中" highlightedImage="三方账户选中" translatesAutoresizingMaskIntoConstraints="NO" id="qhH-Vk-tAN" userLabel="wxSelectImage">
+                            <rect key="frame" x="295.5" y="36" width="21.5" height="21.5"/>
+                            <gestureRecognizers/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="qhH-Vk-tAN" secondAttribute="height" multiplier="1:1" id="FEN-dO-hx5"/>
+                            </constraints>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="jAV-jv-6Hk" appends="YES" id="P4Z-FN-rZY"/>
+                            </connections>
+                        </imageView>
+                        <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofh-MQ-PKY" userLabel="wxVerifyButton">
+                            <rect key="frame" x="197" y="34.5" width="120" height="25"/>
+                            <color key="backgroundColor" red="1" green="0.34901960784313724" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="120" id="E5l-l1-phL"/>
+                                <constraint firstAttribute="height" constant="25" id="JHQ-Jo-GYM"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="点击验证微信账户"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="12"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="bindAccount:" destination="-1" eventType="touchUpInside" id="0De-cq-XXd"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="微信收款账户信息" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnC-ZV-Fcg" userLabel="wxAccountLabel">
+                            <rect key="frame" x="13" y="62" width="150" height="18"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="150" id="dy8-AN-KaH"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="qhH-Vk-tAN" secondAttribute="trailing" constant="10" id="3g7-Xq-lwU"/>
+                        <constraint firstItem="T6a-Cj-Q63" firstAttribute="centerY" secondItem="iTu-Nj-JLb" secondAttribute="centerY" id="6XN-c3-Dag"/>
+                        <constraint firstItem="iTu-Nj-JLb" firstAttribute="width" secondItem="Ggq-MI-LaW" secondAttribute="width" multiplier="20:367" id="8bc-6a-dNg"/>
+                        <constraint firstItem="dnC-ZV-Fcg" firstAttribute="top" secondItem="T6a-Cj-Q63" secondAttribute="bottom" constant="20" id="BWW-RN-blt"/>
+                        <constraint firstItem="iTu-Nj-JLb" firstAttribute="top" secondItem="Ggq-MI-LaW" secondAttribute="top" constant="21" id="DDB-YJ-4FR"/>
+                        <constraint firstItem="iTu-Nj-JLb" firstAttribute="leading" secondItem="Ggq-MI-LaW" secondAttribute="leading" constant="13" id="O8K-hw-4qs"/>
+                        <constraint firstItem="qhH-Vk-tAN" firstAttribute="centerY" secondItem="Ggq-MI-LaW" secondAttribute="centerY" id="RbO-wq-fEs"/>
+                        <constraint firstItem="T6a-Cj-Q63" firstAttribute="leading" secondItem="iTu-Nj-JLb" secondAttribute="trailing" constant="6" id="SB5-lS-HEZ"/>
+                        <constraint firstItem="ofh-MQ-PKY" firstAttribute="centerY" secondItem="Ggq-MI-LaW" secondAttribute="centerY" id="e2K-dn-Ivl"/>
+                        <constraint firstItem="qhH-Vk-tAN" firstAttribute="width" secondItem="Ggq-MI-LaW" secondAttribute="width" multiplier="24:367" id="edO-E2-Nvg"/>
+                        <constraint firstItem="dnC-ZV-Fcg" firstAttribute="leading" secondItem="iTu-Nj-JLb" secondAttribute="leading" id="hbT-iG-JMX"/>
+                        <constraint firstAttribute="trailing" secondItem="ofh-MQ-PKY" secondAttribute="trailing" constant="10" id="psU-DT-LWh"/>
+                        <constraint firstAttribute="width" secondItem="Ggq-MI-LaW" secondAttribute="height" multiplier="367:105" id="qFD-1x-qoQ"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="7"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8a0-CZ-gdC" userLabel="alipayView">
+                    <rect key="frame" x="24" y="277" width="327" height="93.5"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="三方账户支付宝" translatesAutoresizingMaskIntoConstraints="NO" id="YHS-9r-fhs" userLabel="alipayImage">
+                            <rect key="frame" x="13" y="21" width="18" height="18"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="YHS-9r-fhs" secondAttribute="height" multiplier="1:1" id="sFm-Ct-8cZ"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="支付宝收款账户" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckI-Bl-No4" userLabel="alipayLabel">
+                            <rect key="frame" x="37" y="18" width="150" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="150" id="b3L-y5-i6j"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView hidden="YES" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="三方账户未选中" highlightedImage="三方账户选中" translatesAutoresizingMaskIntoConstraints="NO" id="rh1-EQ-umc" userLabel="alipaySelectImage">
+                            <rect key="frame" x="295.5" y="36" width="21.5" height="21.5"/>
+                            <gestureRecognizers/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="rh1-EQ-umc" secondAttribute="height" multiplier="1:1" id="Usy-6n-bDM"/>
+                            </constraints>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="ePn-G5-Wjx" appends="YES" id="cHQ-tQ-Uz8"/>
+                            </connections>
+                        </imageView>
+                        <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uv7-FH-Llf" userLabel="alipayVerifyButton">
+                            <rect key="frame" x="187" y="34.5" width="130" height="25"/>
+                            <color key="backgroundColor" red="1" green="0.34901960780000002" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="130" id="6j6-gs-TFI"/>
+                                <constraint firstAttribute="height" constant="25" id="EJf-tZ-52x"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="点击验证支付宝账户"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="12"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="bindAccount:" destination="-1" eventType="touchUpInside" id="bV3-yO-LPB"/>
+                            </connections>
+                        </button>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入支付宝账户" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kd1-JS-WV6" userLabel="alipayAccountTextField">
+                            <rect key="frame" x="13" y="62" width="165" height="17"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="165" id="Isa-1x-sN1"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="ckI-Bl-No4" firstAttribute="leading" secondItem="YHS-9r-fhs" secondAttribute="trailing" constant="6" id="4PR-Qx-gN5"/>
+                        <constraint firstItem="kd1-JS-WV6" firstAttribute="top" secondItem="ckI-Bl-No4" secondAttribute="bottom" constant="20" id="96J-Ql-euM"/>
+                        <constraint firstItem="ckI-Bl-No4" firstAttribute="centerY" secondItem="YHS-9r-fhs" secondAttribute="centerY" id="9fv-QQ-lvt"/>
+                        <constraint firstAttribute="trailing" secondItem="rh1-EQ-umc" secondAttribute="trailing" constant="10" id="IJz-xy-EM0"/>
+                        <constraint firstItem="Uv7-FH-Llf" firstAttribute="centerY" secondItem="8a0-CZ-gdC" secondAttribute="centerY" id="Rbd-pv-VPi"/>
+                        <constraint firstAttribute="trailing" secondItem="Uv7-FH-Llf" secondAttribute="trailing" constant="10" id="S8K-7n-db9"/>
+                        <constraint firstItem="YHS-9r-fhs" firstAttribute="width" secondItem="8a0-CZ-gdC" secondAttribute="width" multiplier="20:367" id="TSX-JN-beM"/>
+                        <constraint firstItem="rh1-EQ-umc" firstAttribute="centerY" secondItem="8a0-CZ-gdC" secondAttribute="centerY" id="acl-es-3dJ"/>
+                        <constraint firstItem="YHS-9r-fhs" firstAttribute="leading" secondItem="8a0-CZ-gdC" secondAttribute="leading" constant="13" id="bxt-Ai-vdY"/>
+                        <constraint firstItem="rh1-EQ-umc" firstAttribute="width" secondItem="8a0-CZ-gdC" secondAttribute="width" multiplier="24:367" id="fqg-4O-FUY"/>
+                        <constraint firstItem="kd1-JS-WV6" firstAttribute="leading" secondItem="YHS-9r-fhs" secondAttribute="leading" id="ii6-bZ-q4f"/>
+                        <constraint firstItem="YHS-9r-fhs" firstAttribute="top" secondItem="8a0-CZ-gdC" secondAttribute="top" constant="21" id="tJh-EU-qiG"/>
+                        <constraint firstAttribute="width" secondItem="8a0-CZ-gdC" secondAttribute="height" multiplier="367:105" id="tZS-Qz-Gwi"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="7"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="8a0-CZ-gdC" firstAttribute="width" secondItem="8a0-CZ-gdC" secondAttribute="height" multiplier="367:105" id="I3f-zc-wzN"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="jY8-29-WRt" secondAttribute="trailing" constant="24" id="NcW-Bk-AyV"/>
+                <constraint firstItem="jY8-29-WRt" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="44" id="Pk2-G2-Wfm"/>
+                <constraint firstItem="8a0-CZ-gdC" firstAttribute="top" secondItem="Ggq-MI-LaW" secondAttribute="bottom" constant="13" id="Uo3-hE-hWh"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="8a0-CZ-gdC" secondAttribute="trailing" constant="24" id="VpU-SQ-y3F"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="Ggq-MI-LaW" secondAttribute="trailing" constant="24" id="Z2n-h3-D3s"/>
+                <constraint firstItem="jY8-29-WRt" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="24" id="ZBW-D0-YyN"/>
+                <constraint firstItem="Ggq-MI-LaW" firstAttribute="width" secondItem="Ggq-MI-LaW" secondAttribute="height" multiplier="367:105" id="dV5-hO-JBV"/>
+                <constraint firstItem="Ggq-MI-LaW" firstAttribute="top" secondItem="jY8-29-WRt" secondAttribute="bottom" constant="13" id="ein-6S-Lel"/>
+                <constraint firstItem="8a0-CZ-gdC" firstAttribute="width" secondItem="8a0-CZ-gdC" secondAttribute="height" multiplier="367:105" id="j9p-I5-6Sk"/>
+                <constraint firstItem="8a0-CZ-gdC" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="24" id="kwF-0U-tWB"/>
+                <constraint firstItem="Ggq-MI-LaW" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="24" id="um3-G1-dhS"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
+        </view>
+        <tapGestureRecognizer id="UlI-Cm-U74" userLabel="platformTGR">
+            <connections>
+                <action selector="selectDefault:" destination="-1" id="hpu-Rb-d3T"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="jAV-jv-6Hk" userLabel="wxTGR">
+            <connections>
+                <action selector="selectDefault:" destination="-1" id="yM4-sB-1qq"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="ePn-G5-Wjx" userLabel="aliTGR">
+            <connections>
+                <action selector="selectDefault:" destination="-1" id="cos-hx-agc"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="三方账户平台" width="20" height="20"/>
+        <image name="三方账户微信" width="20" height="20"/>
+        <image name="三方账户支付宝" width="20" height="20"/>
+        <image name="三方账户未选中" width="24" height="24"/>
+        <image name="三方账户选中" width="24" height="24"/>
+    </resources>
+</document>

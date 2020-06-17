@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PDGUserProtcolView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pdgGongLue_BG" translatesAutoresizingMaskIntoConstraints="NO" id="St4-WE-bCY">
+                    <rect key="frame" x="0.0" y="73" width="375" height="520"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="St4-WE-bCY" secondAttribute="height" multiplier="75:104" id="o8S-pZ-ckH"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRE-aX-dTS">
+                    <rect key="frame" x="165.5" y="549" width="44" height="44"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="DYw-hV-mrB"/>
+                        <constraint firstAttribute="width" secondItem="qRE-aX-dTS" secondAttribute="height" id="PqQ-gl-BUk"/>
+                    </constraints>
+                    <state key="normal" title="5s"/>
+                    <connections>
+                        <action selector="sureBtnAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="e6t-Lf-8Zr"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pdgGongLue_header" translatesAutoresizingMaskIntoConstraints="NO" id="OyQ-qA-JB2">
+                    <rect key="frame" x="98" y="83.5" width="179" height="42"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="179" id="0PB-HD-lui"/>
+                        <constraint firstAttribute="height" constant="42" id="7qe-hX-Y2L"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.82850837435214042" green="0.82850837435214042" blue="0.82850837435214042" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="St4-WE-bCY" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="47u-AF-PMC"/>
+                <constraint firstItem="OyQ-qA-JB2" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Jls-PC-Tr8"/>
+                <constraint firstItem="qRE-aX-dTS" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Sgk-XC-NTf"/>
+                <constraint firstItem="St4-WE-bCY" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Sr2-cE-2TO"/>
+                <constraint firstItem="OyQ-qA-JB2" firstAttribute="top" secondItem="St4-WE-bCY" secondAttribute="top" constant="10" id="aFs-BQ-lcb"/>
+                <constraint firstItem="qRE-aX-dTS" firstAttribute="bottom" secondItem="St4-WE-bCY" secondAttribute="bottom" id="ep1-U9-ino"/>
+                <constraint firstItem="St4-WE-bCY" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="mtl-kn-BHq"/>
+                <constraint firstItem="St4-WE-bCY" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="zom-Xa-7vG"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="headerImgV" destination="OyQ-qA-JB2" id="csO-gR-cvA"/>
+                <outlet property="sureBtn" destination="qRE-aX-dTS" id="efe-Js-C88"/>
+                <outlet property="webView_bgV" destination="St4-WE-bCY" id="4le-Ge-yiV"/>
+            </connections>
+            <point key="canvasLocation" x="-43.5" y="-84.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="pdgGongLue_BG" width="414" height="599"/>
+        <image name="pdgGongLue_header" width="179" height="42"/>
+    </resources>
+</document>

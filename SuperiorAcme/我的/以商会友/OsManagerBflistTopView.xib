@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OsManagerBflistTopView">
+            <connections>
+                <outlet property="labView" destination="fxr-Uu-WlI" id="t4n-ic-AVm"/>
+                <outlet property="labViewHHH" destination="XlW-4O-XRR" id="Ma5-QO-iZE"/>
+                <outlet property="nameLab" destination="5uv-7X-2X6" id="zvE-UG-jSK"/>
+                <outlet property="searchTf" destination="4Lk-op-hW9" id="P5Y-kn-PJ0"/>
+                <outlet property="searchView" destination="zng-na-cfv" id="uHc-0B-HBi"/>
+                <outlet property="thisView" destination="i5M-Pr-FkT" id="f74-vb-dua"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="363" height="95"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zng-na-cfv">
+                    <rect key="frame" x="16" y="6" width="331" height="38"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="搜索商友 请输入昵称/手机号/ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Lk-op-hW9">
+                            <rect key="frame" x="31" y="0.0" width="286" height="38"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="放大镜灰" translatesAutoresizingMaskIntoConstraints="NO" id="3UN-SL-8nG">
+                            <rect key="frame" x="8" y="11" width="15" height="15"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="15" id="AeL-NK-2m1"/>
+                                <constraint firstAttribute="width" constant="15" id="QI3-Ru-rKk"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="38" id="2HF-cm-Kd7"/>
+                        <constraint firstItem="4Lk-op-hW9" firstAttribute="top" secondItem="zng-na-cfv" secondAttribute="top" id="AAr-zz-lrg"/>
+                        <constraint firstItem="3UN-SL-8nG" firstAttribute="top" secondItem="zng-na-cfv" secondAttribute="top" constant="11" id="apP-rI-E1w"/>
+                        <constraint firstAttribute="trailing" secondItem="4Lk-op-hW9" secondAttribute="trailing" constant="14" id="jlS-uk-Hf9"/>
+                        <constraint firstItem="3UN-SL-8nG" firstAttribute="leading" secondItem="zng-na-cfv" secondAttribute="leading" constant="8" id="skb-nM-pg0"/>
+                        <constraint firstItem="4Lk-op-hW9" firstAttribute="leading" secondItem="3UN-SL-8nG" secondAttribute="trailing" constant="8" id="yrL-0h-JSj"/>
+                        <constraint firstAttribute="bottom" secondItem="4Lk-op-hW9" secondAttribute="bottom" id="zi5-Ga-fr3"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fxr-Uu-WlI">
+                    <rect key="frame" x="0.0" y="55" width="363" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5uv-7X-2X6">
+                            <rect key="frame" x="15" y="0.0" width="333" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Oj1-eE-5AK"/>
+                                <constraint firstAttribute="height" constant="40" id="OxN-rt-7QO"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="5uv-7X-2X6" firstAttribute="leading" secondItem="fxr-Uu-WlI" secondAttribute="leading" constant="15" id="1fK-xp-HXr"/>
+                        <constraint firstAttribute="trailing" secondItem="5uv-7X-2X6" secondAttribute="trailing" constant="15" id="C0T-9b-4D6"/>
+                        <constraint firstAttribute="trailing" secondItem="5uv-7X-2X6" secondAttribute="trailing" constant="15" id="CDi-mB-ocP"/>
+                        <constraint firstItem="5uv-7X-2X6" firstAttribute="leading" secondItem="fxr-Uu-WlI" secondAttribute="leading" constant="15" id="URh-Zf-Ql8"/>
+                        <constraint firstAttribute="height" constant="40" id="XlW-4O-XRR"/>
+                        <constraint firstAttribute="bottom" secondItem="5uv-7X-2X6" secondAttribute="bottom" id="hhl-Gn-W7r"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fxr-Uu-WlI" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="6y0-aN-XB6"/>
+                <constraint firstItem="fxr-Uu-WlI" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="GQO-bC-hiJ"/>
+                <constraint firstItem="zng-na-cfv" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="M0q-Jp-rne"/>
+                <constraint firstItem="fxr-Uu-WlI" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="c97-3w-YXG"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="zng-na-cfv" secondAttribute="trailing" constant="16" id="eon-3Z-Xsf"/>
+                <constraint firstItem="zng-na-cfv" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="6" id="hGn-Et-0yx"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="122.40000000000001" y="-126.38680659670166"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="放大镜灰" width="13" height="13"/>
+    </resources>
+</document>

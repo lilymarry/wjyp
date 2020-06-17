@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SHelp_header">
+            <connections>
+                <outlet property="openBtn" destination="KhY-84-U3p" id="0Fy-Rh-LFZ"/>
+                <outlet property="thisTitle" destination="fN8-V1-L10" id="u3H-Mb-8qb"/>
+                <outlet property="thisView" destination="iN0-l3-epB" id="ewi-OG-UTb"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xF9-oN-7ZX">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.标题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fN8-V1-L10">
+                            <rect key="frame" x="15" y="0.0" width="379" height="50"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KhY-84-U3p">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                            <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="15" maxY="0.0"/>
+                            <state key="normal" image="灰色下箭头"/>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Glw-yd-S5k">
+                            <rect key="frame" x="0.0" y="49.333333333333343" width="414" height="0.6666666666666643"/>
+                            <color key="backgroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="0.5" id="nu7-5Y-UwU"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Glw-yd-S5k" secondAttribute="bottom" id="0Hc-Zn-MPL"/>
+                        <constraint firstAttribute="bottom" secondItem="KhY-84-U3p" secondAttribute="bottom" id="BSr-i6-xoV"/>
+                        <constraint firstItem="KhY-84-U3p" firstAttribute="leading" secondItem="xF9-oN-7ZX" secondAttribute="leading" id="FMR-xv-EXm"/>
+                        <constraint firstAttribute="trailing" secondItem="Glw-yd-S5k" secondAttribute="trailing" id="MW8-mU-4Mg"/>
+                        <constraint firstAttribute="bottom" secondItem="fN8-V1-L10" secondAttribute="bottom" id="Mhd-oS-ZE4"/>
+                        <constraint firstItem="fN8-V1-L10" firstAttribute="leading" secondItem="xF9-oN-7ZX" secondAttribute="leading" constant="15" id="QbU-A7-Dql"/>
+                        <constraint firstItem="KhY-84-U3p" firstAttribute="top" secondItem="xF9-oN-7ZX" secondAttribute="top" id="SBr-uN-VaF"/>
+                        <constraint firstAttribute="height" constant="50" id="YVL-Np-IAE"/>
+                        <constraint firstItem="Glw-yd-S5k" firstAttribute="leading" secondItem="xF9-oN-7ZX" secondAttribute="leading" id="aj1-V8-hpt"/>
+                        <constraint firstItem="fN8-V1-L10" firstAttribute="top" secondItem="xF9-oN-7ZX" secondAttribute="top" id="hbv-hM-OPX"/>
+                        <constraint firstAttribute="trailing" secondItem="fN8-V1-L10" secondAttribute="trailing" constant="20" id="xXI-hs-U8M"/>
+                        <constraint firstAttribute="trailing" secondItem="KhY-84-U3p" secondAttribute="trailing" id="y9l-u8-4GB"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="xF9-oN-7ZX" secondAttribute="trailing" id="5kE-hp-vco"/>
+                <constraint firstItem="xF9-oN-7ZX" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="7cV-pI-ePb"/>
+                <constraint firstItem="xF9-oN-7ZX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="kkQ-Wr-70p"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="灰色下箭头" width="13" height="13"/>
+    </resources>
+</document>

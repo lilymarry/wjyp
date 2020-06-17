@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WARoomGoods">
+            <connections>
+                <outlet property="OKBtn" destination="lK0-pL-Wb7" id="qXB-OH-JGe"/>
+                <outlet property="thisView" destination="i5M-Pr-FkT" id="mlD-b6-mdJ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W7G-nj-PfL">
+                    <rect key="frame" x="49.5" y="145.5" width="276" height="376"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="娃娃展示图" translatesAutoresizingMaskIntoConstraints="NO" id="GYT-nt-ad2">
+                            <rect key="frame" x="10" y="8" width="256" height="309"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lK0-pL-Wb7">
+                            <rect key="frame" x="122.5" y="325" width="31" height="31"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="31" id="sz9-8n-dNZ"/>
+                                <constraint firstAttribute="width" constant="31" id="wow-Xn-Ffw"/>
+                            </constraints>
+                            <state key="normal" image="关闭"/>
+                            <connections>
+                                <action selector="surePress:" destination="-1" eventType="touchUpInside" id="nzv-eI-CiN"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="GYT-nt-ad2" firstAttribute="leading" secondItem="W7G-nj-PfL" secondAttribute="leading" constant="10" id="7sc-P4-vi3"/>
+                        <constraint firstAttribute="height" constant="376" id="AGi-KD-KuC"/>
+                        <constraint firstItem="lK0-pL-Wb7" firstAttribute="centerX" secondItem="W7G-nj-PfL" secondAttribute="centerX" id="DnH-me-MLB"/>
+                        <constraint firstItem="lK0-pL-Wb7" firstAttribute="top" secondItem="GYT-nt-ad2" secondAttribute="bottom" constant="8" id="IIU-12-zRd"/>
+                        <constraint firstItem="GYT-nt-ad2" firstAttribute="centerX" secondItem="W7G-nj-PfL" secondAttribute="centerX" id="KXc-gO-u3w"/>
+                        <constraint firstAttribute="bottom" secondItem="lK0-pL-Wb7" secondAttribute="bottom" constant="20" id="QiU-fh-zVw"/>
+                        <constraint firstAttribute="width" constant="276" id="R3u-50-gIs"/>
+                        <constraint firstItem="GYT-nt-ad2" firstAttribute="top" secondItem="W7G-nj-PfL" secondAttribute="top" constant="8" id="aCk-01-LFA"/>
+                        <constraint firstAttribute="trailing" secondItem="GYT-nt-ad2" secondAttribute="trailing" constant="10" id="efU-Ca-Cff"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="W7G-nj-PfL" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="thn-Dr-bwL"/>
+                <constraint firstItem="W7G-nj-PfL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="zQR-cT-U3A"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="116" y="52.623688155922046"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="关闭" width="66" height="66"/>
+        <image name="娃娃展示图" width="123" height="178"/>
+    </resources>
+</document>

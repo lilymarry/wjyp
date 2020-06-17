@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SharePopViewController">
+            <connections>
+                <outlet property="QQBtn" destination="mRb-nF-B3b" id="292-Kp-GUl"/>
+                <outlet property="SinaBtn" destination="o06-l4-1w5" id="gJ8-p4-Cj9"/>
+                <outlet property="WeChatBtn" destination="SUh-hl-BYB" id="htZ-4h-CFC"/>
+                <outlet property="WeChatFriendBtn" destination="4OK-DH-hBH" id="2Wr-t2-lxj"/>
+                <outlet property="containView" destination="yN8-CP-MrY" id="TPR-eJ-eVt"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u4b-GL-UWG">
+                    <rect key="frame" x="0.0" y="669" width="414" height="67"/>
+                    <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="u4b-GL-UWG" secondAttribute="height" multiplier="414:67" id="fHL-Ee-9Xl"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <state key="normal" title="取消">
+                        <color key="titleColor" red="0.20784313725490194" green="0.20784313725490194" blue="0.20784313725490194" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="cancelShareGoodClick:" destination="-1" eventType="touchUpInside" id="ehg-rc-iPz"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yN8-CP-MrY">
+                    <rect key="frame" x="0.0" y="519" width="414" height="150"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SUh-hl-BYB" customClass="ReLayoutSubViewButton">
+                            <rect key="frame" x="0.0" y="0.0" width="103.66666666666667" height="150"/>
+                            <state key="normal" title="微信" image="微信">
+                                <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="WeChatShare:" destination="-1" eventType="touchUpInside" id="n0I-bS-dte"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRb-nF-B3b" customClass="ReLayoutSubViewButton">
+                            <rect key="frame" x="206.99999999999997" y="0.0" width="103.66666666666666" height="150"/>
+                            <state key="normal" title="QQ" image="QQ好友">
+                                <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="QQSahreClick:" destination="-1" eventType="touchUpInside" id="uGd-eR-f8D"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o06-l4-1w5" customClass="ReLayoutSubViewButton">
+                            <rect key="frame" x="310.66666666666669" y="0.0" width="103.33333333333331" height="150"/>
+                            <state key="normal" title="微博" image="新浪">
+                                <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="SinaShareClick:" destination="-1" eventType="touchUpInside" id="cQo-1q-E94"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4OK-DH-hBH" customClass="ReLayoutSubViewButton">
+                            <rect key="frame" x="103.66666666666669" y="0.0" width="103.33333333333331" height="150"/>
+                            <state key="normal" title="朋友圈" image="朋友圈">
+                                <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="WeChatFriendClick:" destination="-1" eventType="touchUpInside" id="2KO-qZ-sMJ"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="o06-l4-1w5" secondAttribute="trailing" id="0Ks-FN-DHi"/>
+                        <constraint firstItem="4OK-DH-hBH" firstAttribute="leading" secondItem="SUh-hl-BYB" secondAttribute="trailing" id="1EM-Na-x0f"/>
+                        <constraint firstItem="mRb-nF-B3b" firstAttribute="leading" secondItem="4OK-DH-hBH" secondAttribute="trailing" id="3j0-sh-Ea2"/>
+                        <constraint firstItem="mRb-nF-B3b" firstAttribute="width" secondItem="SUh-hl-BYB" secondAttribute="width" id="9Ib-qr-zVn"/>
+                        <constraint firstAttribute="bottom" secondItem="SUh-hl-BYB" secondAttribute="bottom" id="CIC-vA-OT8"/>
+                        <constraint firstItem="4OK-DH-hBH" firstAttribute="width" secondItem="SUh-hl-BYB" secondAttribute="width" id="GWr-fF-uj2"/>
+                        <constraint firstItem="SUh-hl-BYB" firstAttribute="top" secondItem="yN8-CP-MrY" secondAttribute="top" id="Gc3-BL-cxZ"/>
+                        <constraint firstItem="SUh-hl-BYB" firstAttribute="leading" secondItem="yN8-CP-MrY" secondAttribute="leading" id="Ksc-FL-fJq"/>
+                        <constraint firstAttribute="bottom" secondItem="mRb-nF-B3b" secondAttribute="bottom" id="OQZ-OQ-1i3"/>
+                        <constraint firstItem="mRb-nF-B3b" firstAttribute="top" secondItem="yN8-CP-MrY" secondAttribute="top" id="QAv-2b-neo"/>
+                        <constraint firstItem="o06-l4-1w5" firstAttribute="top" secondItem="yN8-CP-MrY" secondAttribute="top" id="ZV9-lP-USe"/>
+                        <constraint firstItem="o06-l4-1w5" firstAttribute="width" secondItem="SUh-hl-BYB" secondAttribute="width" id="aGg-dd-Xej"/>
+                        <constraint firstAttribute="bottom" secondItem="o06-l4-1w5" secondAttribute="bottom" id="bC3-o5-PfH"/>
+                        <constraint firstItem="4OK-DH-hBH" firstAttribute="top" secondItem="yN8-CP-MrY" secondAttribute="top" id="bdX-00-ITf"/>
+                        <constraint firstItem="mRb-nF-B3b" firstAttribute="centerY" secondItem="SUh-hl-BYB" secondAttribute="centerY" id="c0t-42-Xpl"/>
+                        <constraint firstItem="o06-l4-1w5" firstAttribute="leading" secondItem="mRb-nF-B3b" secondAttribute="trailing" id="d57-xh-Fbd"/>
+                        <constraint firstItem="4OK-DH-hBH" firstAttribute="centerY" secondItem="SUh-hl-BYB" secondAttribute="centerY" id="fIr-6y-bk3"/>
+                        <constraint firstItem="o06-l4-1w5" firstAttribute="centerY" secondItem="SUh-hl-BYB" secondAttribute="centerY" id="kpK-1P-esl"/>
+                        <constraint firstAttribute="width" secondItem="yN8-CP-MrY" secondAttribute="height" multiplier="414:150" id="pHT-57-a2H"/>
+                        <constraint firstAttribute="bottom" secondItem="4OK-DH-hBH" secondAttribute="bottom" id="qXu-G4-uSJ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="yN8-CP-MrY" secondAttribute="trailing" id="Fu0-kV-ivG"/>
+                <constraint firstAttribute="trailing" secondItem="u4b-GL-UWG" secondAttribute="trailing" id="MNr-LJ-1op"/>
+                <constraint firstItem="yN8-CP-MrY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="XxA-UN-qaH"/>
+                <constraint firstItem="u4b-GL-UWG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="lj1-aq-ixF"/>
+                <constraint firstAttribute="bottom" secondItem="u4b-GL-UWG" secondAttribute="bottom" id="m9d-wg-9RJ"/>
+                <constraint firstItem="u4b-GL-UWG" firstAttribute="top" secondItem="yN8-CP-MrY" secondAttribute="bottom" id="wXp-Oq-Gqx"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="kvW-ft-Mva" appends="YES" id="Ivb-de-8oi"/>
+            </connections>
+            <point key="canvasLocation" x="-82" y="43"/>
+        </view>
+        <tapGestureRecognizer id="kvW-ft-Mva">
+            <connections>
+                <action selector="HiddenShareView:" destination="-1" id="wFD-wT-Wqq"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="QQ好友" width="59" height="58"/>
+        <image name="微信" width="58" height="58"/>
+        <image name="新浪" width="58" height="58"/>
+        <image name="朋友圈" width="58" height="58"/>
+    </resources>
+</document>

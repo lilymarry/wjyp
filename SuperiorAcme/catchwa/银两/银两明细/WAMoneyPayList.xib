@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WAMoneyPayList">
+            <connections>
+                <outlet property="Sview" destination="L2Y-mo-If9" id="ufs-d3-XEH"/>
+                <outlet property="line0" destination="N3N-oj-I27" id="vYY-G8-UYU"/>
+                <outlet property="mTable" destination="G6O-jZ-ooO" id="XH3-OC-qR0"/>
+                <outlet property="segment" destination="w9q-em-ytz" id="Dc2-p5-bdi"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewHH" destination="0l3-Kl-0Uo" id="uTF-xX-Dy9"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G6O-jZ-ooO">
+                    <rect key="frame" x="0.0" y="71" width="375" height="596"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="bU0-QE-Uoz"/>
+                        <outlet property="delegate" destination="-1" id="SWF-xm-YQ8"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L2Y-mo-If9">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YVK-1L-3F5">
+                            <rect key="frame" x="5" y="64" width="365" height="1"/>
+                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="xha-yB-UNo"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N3N-oj-I27">
+                            <rect key="frame" x="67" y="64" width="63" height="1"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.96078431372549022" green="0.27450980392156865" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
+                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="w9q-em-ytz">
+                            <rect key="frame" x="20" y="28" width="335" height="29"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="28" id="5Rg-3f-ZV7"/>
+                            </constraints>
+                            <segments>
+                                <segment title="获得银两"/>
+                                <segment title="消耗银两"/>
+                            </segments>
+                            <connections>
+                                <action selector="change:" destination="-1" eventType="valueChanged" id="uSG-9N-QEK"/>
+                            </connections>
+                        </segmentedControl>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="68" id="0l3-Kl-0Uo"/>
+                        <constraint firstItem="w9q-em-ytz" firstAttribute="top" secondItem="L2Y-mo-If9" secondAttribute="top" constant="28" id="1V8-SR-EwX"/>
+                        <constraint firstAttribute="bottom" secondItem="YVK-1L-3F5" secondAttribute="bottom" constant="3" id="H8F-b9-oKv"/>
+                        <constraint firstItem="YVK-1L-3F5" firstAttribute="leading" secondItem="L2Y-mo-If9" secondAttribute="leading" constant="5" id="RMX-wQ-oSR"/>
+                        <constraint firstAttribute="trailing" secondItem="w9q-em-ytz" secondAttribute="trailing" constant="20" id="daW-VE-yET"/>
+                        <constraint firstAttribute="trailing" secondItem="YVK-1L-3F5" secondAttribute="trailing" constant="5" id="hBr-ON-RN2"/>
+                        <constraint firstItem="w9q-em-ytz" firstAttribute="leading" secondItem="L2Y-mo-If9" secondAttribute="leading" constant="20" id="zCm-ni-oDG"/>
+                    </constraints>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zZp-YX-eBQ">
+                    <rect key="frame" x="67.5" y="215.5" width="240" height="236"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="银两记录空图" translatesAutoresizingMaskIntoConstraints="NO" id="A1l-RG-76h">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="199"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="暂无银两记录哦~" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FAT-UQ-kei">
+                            <rect key="frame" x="0.0" y="207" width="240" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <viewLayoutGuide key="safeArea" id="WBK-AL-TL2"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="L2Y-mo-If9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="8XL-yi-nQS"/>
+                <constraint firstItem="L2Y-mo-If9" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="C1W-XR-dwu"/>
+                <constraint firstItem="G6O-jZ-ooO" firstAttribute="top" secondItem="L2Y-mo-If9" secondAttribute="bottom" constant="3" id="DUo-SZ-hlk"/>
+                <constraint firstItem="G6O-jZ-ooO" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="Dbx-Yv-V90"/>
+                <constraint firstItem="G6O-jZ-ooO" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="PUr-dK-8b1"/>
+                <constraint firstItem="G6O-jZ-ooO" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="PZn-EY-4Oj"/>
+                <constraint firstItem="L2Y-mo-If9" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="RV1-gb-zQM"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="74.400000000000006" y="57.121439280359823"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="银两记录空图" width="339" height="319"/>
+    </resources>
+</document>

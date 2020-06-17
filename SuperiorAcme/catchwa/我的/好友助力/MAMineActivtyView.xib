@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MAMineActivtyView">
+            <connections>
+                <outlet property="thisView" destination="i5M-Pr-FkT" id="8g1-t3-sg8"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tsP-kQ-sXd">
+                    <rect key="frame" x="42" y="146.5" width="291" height="374"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cbw-MJ-UJC">
+                            <rect key="frame" x="0.0" y="0.0" width="291" height="333"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hzw-dy-BI5">
+                                    <rect key="frame" x="0.0" y="0.0" width="291" height="53"/>
+                                    <state key="normal" title="抓娃娃活动细则" backgroundImage="活动细则">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWM-Qt-3Sa">
+                                    <rect key="frame" x="0.0" y="61" width="291" height="272"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <mutableString key="text"> 1、首先注册成为无界优品会员，即可免费获赠贰拾银两。
+2、每日签到可获得贰银两；连续签到10天，之后每天签到均可额外获得贰银两，直至连续签到中断为止。
+3、每天分享“抓娃娃”活动给好友助力，每分享一次即可获得贰银两，在Wap端做分享每天一次封顶，在App端做分享每天五次封顶。
+4、每成功邀请一名好友助力，即可至少获得贰银两，具体奖励方式详见活动页说明。
+5、若好友注册参与抓娃娃活动，您还可额外获得贰拾银两，同时您的好友也将获得签到抓娃娃资格
+6、如银两不足，支持在线充值购买所需银两。
+7、每抓取一次娃娃消耗贰银两起，具体所需银两数见活动详情页说明。
+                        </mutableString>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="aWM-Qt-3Sa" secondAttribute="trailing" id="8zj-dX-VKl"/>
+                                <constraint firstAttribute="bottom" secondItem="aWM-Qt-3Sa" secondAttribute="bottom" id="AfT-Jg-04R"/>
+                                <constraint firstAttribute="trailing" secondItem="Hzw-dy-BI5" secondAttribute="trailing" id="RZq-oM-fIs"/>
+                                <constraint firstItem="aWM-Qt-3Sa" firstAttribute="top" secondItem="Hzw-dy-BI5" secondAttribute="bottom" constant="8" id="TbF-Io-Z3l"/>
+                                <constraint firstItem="aWM-Qt-3Sa" firstAttribute="leading" secondItem="cbw-MJ-UJC" secondAttribute="leading" id="Tk8-wl-syl"/>
+                                <constraint firstItem="Hzw-dy-BI5" firstAttribute="top" secondItem="cbw-MJ-UJC" secondAttribute="top" id="dIZ-WC-I6a"/>
+                                <constraint firstItem="aWM-Qt-3Sa" firstAttribute="top" secondItem="Hzw-dy-BI5" secondAttribute="bottom" constant="8" id="lIf-Pf-jUj"/>
+                                <constraint firstItem="Hzw-dy-BI5" firstAttribute="leading" secondItem="cbw-MJ-UJC" secondAttribute="leading" id="omg-Fq-RAY"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ycb-ch-GQ5">
+                            <rect key="frame" x="129" y="341" width="33" height="33"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="33" id="DPw-5I-2n1"/>
+                                <constraint firstAttribute="width" constant="33" id="rXQ-AC-dFF"/>
+                            </constraints>
+                            <state key="normal" image="关闭"/>
+                            <connections>
+                                <action selector="surePress:" destination="-1" eventType="touchUpInside" id="Nbd-X2-r7R"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="291" id="24e-SL-7jD"/>
+                        <constraint firstAttribute="height" constant="374" id="7DR-pv-CBR"/>
+                        <constraint firstAttribute="bottom" secondItem="ycb-ch-GQ5" secondAttribute="bottom" id="CfD-9T-wpz"/>
+                        <constraint firstAttribute="trailing" secondItem="cbw-MJ-UJC" secondAttribute="trailing" id="Lev-qx-EoK"/>
+                        <constraint firstItem="ycb-ch-GQ5" firstAttribute="centerX" secondItem="tsP-kQ-sXd" secondAttribute="centerX" id="czK-rr-ZAv"/>
+                        <constraint firstItem="cbw-MJ-UJC" firstAttribute="top" secondItem="tsP-kQ-sXd" secondAttribute="top" id="gpp-8y-5Ck"/>
+                        <constraint firstItem="cbw-MJ-UJC" firstAttribute="leading" secondItem="tsP-kQ-sXd" secondAttribute="leading" id="s3X-8s-nLP"/>
+                        <constraint firstItem="ycb-ch-GQ5" firstAttribute="top" secondItem="cbw-MJ-UJC" secondAttribute="bottom" constant="8" id="xrO-w1-vKC"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="tsP-kQ-sXd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Mea-3o-fgr"/>
+                <constraint firstItem="tsP-kQ-sXd" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="ZXI-57-2bA"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="114.40000000000001" y="52.623688155922046"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="关闭" width="66" height="66"/>
+        <image name="活动细则" width="193" height="53"/>
+    </resources>
+</document>

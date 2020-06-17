@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="MySgiftVoucherDetailCell">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="68"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="67.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名称123" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hX-Sn-Xim">
+                        <rect key="frame" x="60" y="4" width="334" height="34"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="34" id="EFc-Pg-r2S"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019-02-02 13:12:12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IMw-ML-RI6">
+                        <rect key="frame" x="60" y="43" width="149" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="149" id="Zul-bf-R11"/>
+                            <constraint firstAttribute="height" constant="16" id="aXh-gJ-irT"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+6666000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNe-lx-rqv">
+                        <rect key="frame" x="217" y="41.5" width="177" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="RKW-ZJ-vab"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.8784313725490196" green="0.070588235294117646" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jUw-hv-o7c">
+                        <rect key="frame" x="0.0" y="65.5" width="414" height="1"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="2Ng-KT-eo2"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zH2-vx-bJw">
+                        <rect key="frame" x="12" y="13" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="16r-aK-MXS"/>
+                            <constraint firstAttribute="width" constant="40" id="O5z-yj-iJf"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="MNe-lx-rqv" firstAttribute="leading" secondItem="IMw-ML-RI6" secondAttribute="trailing" constant="8" id="44H-8F-j7I"/>
+                    <constraint firstItem="jUw-hv-o7c" firstAttribute="top" secondItem="MNe-lx-rqv" secondAttribute="bottom" constant="8" id="7uL-a5-EeW"/>
+                    <constraint firstItem="jUw-hv-o7c" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="EBP-Eu-Ko9"/>
+                    <constraint firstAttribute="trailing" secondItem="6hX-Sn-Xim" secondAttribute="trailing" constant="20" id="HNc-Om-oCA"/>
+                    <constraint firstItem="IMw-ML-RI6" firstAttribute="leading" secondItem="zH2-vx-bJw" secondAttribute="trailing" constant="8" id="ObJ-6E-9pZ"/>
+                    <constraint firstItem="zH2-vx-bJw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="OgE-dz-GQi"/>
+                    <constraint firstItem="6hX-Sn-Xim" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="VVM-VO-4L0"/>
+                    <constraint firstItem="IMw-ML-RI6" firstAttribute="top" secondItem="6hX-Sn-Xim" secondAttribute="bottom" constant="5" id="gMQ-CD-M1g"/>
+                    <constraint firstAttribute="trailing" secondItem="jUw-hv-o7c" secondAttribute="trailing" id="gOk-Zs-3bA"/>
+                    <constraint firstItem="6hX-Sn-Xim" firstAttribute="leading" secondItem="zH2-vx-bJw" secondAttribute="trailing" constant="8" id="iDa-1f-QAK"/>
+                    <constraint firstItem="zH2-vx-bJw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="php-04-Bvo"/>
+                    <constraint firstAttribute="bottom" secondItem="jUw-hv-o7c" secondAttribute="bottom" constant="1" id="r0j-2S-cGR"/>
+                    <constraint firstAttribute="trailing" secondItem="MNe-lx-rqv" secondAttribute="trailing" constant="20" id="rEY-t8-rsN"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="imaviewLoad" destination="zH2-vx-bJw" id="52h-IP-TOb"/>
+                <outlet property="moneyLab" destination="MNe-lx-rqv" id="SkE-Vu-4BE"/>
+                <outlet property="nameLab" destination="6hX-Sn-Xim" id="pxD-qn-Pec"/>
+                <outlet property="timeLab" destination="IMw-ML-RI6" id="V58-rQ-q1E"/>
+            </connections>
+            <point key="canvasLocation" x="132.80000000000001" y="154.72263868065968"/>
+        </tableViewCell>
+    </objects>
+</document>

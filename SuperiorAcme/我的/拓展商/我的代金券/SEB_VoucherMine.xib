@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SEB_VoucherMine">
+            <connections>
+                <outlet property="headerImage" destination="UdR-VB-W6S" id="sqS-cb-p0b"/>
+                <outlet property="mScoll_viewHHH" destination="LBK-T6-jDZ" id="yZm-F0-pMm"/>
+                <outlet property="mScroll" destination="UOa-wi-rbf" id="Mxr-Wi-cua"/>
+                <outlet property="mScroll_view" destination="oT4-pw-I9S" id="rXL-Wj-oTv"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UOa-wi-rbf">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oT4-pw-I9S">
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="700"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t6O-AR-8bA">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="212.5"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="拓展商底纹" translatesAutoresizingMaskIntoConstraints="NO" id="Ipa-4S-fbN">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="212.5"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="头像2" translatesAutoresizingMaskIntoConstraints="NO" id="UdR-VB-W6S">
+                                            <rect key="frame" x="151.5" y="74" width="70" height="70"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="70" id="a2C-BK-Fea"/>
+                                                <constraint firstAttribute="height" constant="70" id="ugD-DR-3qk"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="lllllllllllll" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mO3-wb-Oxl">
+                                            <rect key="frame" x="0.0" y="144" width="374" height="68.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="mO3-wb-Oxl" firstAttribute="leading" secondItem="t6O-AR-8bA" secondAttribute="leading" id="Hpu-hN-TvN"/>
+                                        <constraint firstItem="Ipa-4S-fbN" firstAttribute="leading" secondItem="t6O-AR-8bA" secondAttribute="leading" id="Kjx-D6-5V6"/>
+                                        <constraint firstAttribute="trailing" secondItem="mO3-wb-Oxl" secondAttribute="trailing" id="Pnw-Ch-ngi"/>
+                                        <constraint firstItem="mO3-wb-Oxl" firstAttribute="top" secondItem="UdR-VB-W6S" secondAttribute="bottom" id="YE8-PP-8gv"/>
+                                        <constraint firstItem="Ipa-4S-fbN" firstAttribute="top" secondItem="t6O-AR-8bA" secondAttribute="top" id="bX9-cV-ZLo"/>
+                                        <constraint firstAttribute="trailing" secondItem="Ipa-4S-fbN" secondAttribute="trailing" id="dBy-Xc-CVP"/>
+                                        <constraint firstItem="UdR-VB-W6S" firstAttribute="centerX" secondItem="t6O-AR-8bA" secondAttribute="centerX" id="kiJ-oA-lA3"/>
+                                        <constraint firstAttribute="bottom" secondItem="mO3-wb-Oxl" secondAttribute="bottom" id="siq-Pq-PBn"/>
+                                        <constraint firstAttribute="bottom" secondItem="Ipa-4S-fbN" secondAttribute="bottom" id="tjA-IY-Ydm"/>
+                                        <constraint firstItem="UdR-VB-W6S" firstAttribute="top" secondItem="t6O-AR-8bA" secondAttribute="top" constant="74" id="viw-pN-aKb"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="700" id="LBK-T6-jDZ"/>
+                                <constraint firstItem="t6O-AR-8bA" firstAttribute="width" secondItem="t6O-AR-8bA" secondAttribute="height" multiplier="125:71" id="VxE-VH-jMw"/>
+                                <constraint firstItem="t6O-AR-8bA" firstAttribute="leading" secondItem="oT4-pw-I9S" secondAttribute="leading" id="jKX-Ik-Vyb"/>
+                                <constraint firstItem="t6O-AR-8bA" firstAttribute="top" secondItem="oT4-pw-I9S" secondAttribute="top" id="lhz-j5-bqE"/>
+                                <constraint firstAttribute="trailing" secondItem="t6O-AR-8bA" secondAttribute="trailing" id="oVp-5X-Xez"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="oT4-pw-I9S" firstAttribute="centerX" secondItem="UOa-wi-rbf" secondAttribute="centerX" id="7Bk-zj-JPB"/>
+                        <constraint firstItem="oT4-pw-I9S" firstAttribute="top" secondItem="UOa-wi-rbf" secondAttribute="top" id="Fuc-JV-xwT"/>
+                        <constraint firstAttribute="bottom" secondItem="oT4-pw-I9S" secondAttribute="bottom" id="hQI-O6-aWe"/>
+                        <constraint firstItem="oT4-pw-I9S" firstAttribute="leading" secondItem="UOa-wi-rbf" secondAttribute="leading" id="m4F-Fl-e0h"/>
+                        <constraint firstAttribute="trailing" secondItem="oT4-pw-I9S" secondAttribute="trailing" id="qSn-py-OZJ"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="UOa-wi-rbf" secondAttribute="bottom" id="Ea3-WB-Nvr"/>
+                <constraint firstItem="UOa-wi-rbf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="HRV-lj-SXO"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="UOa-wi-rbf" secondAttribute="trailing" id="ldB-gN-XQm"/>
+                <constraint firstItem="UOa-wi-rbf" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="rNV-Td-YS8"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="头像2" width="29" height="29"/>
+        <image name="拓展商底纹" width="414" height="213"/>
+    </resources>
+</document>

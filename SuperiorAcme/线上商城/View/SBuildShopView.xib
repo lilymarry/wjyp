@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SBuildShopView">
+            <connections>
+                <outlet property="fourBtn" destination="OvE-E3-ThC" id="C0n-9y-v8g"/>
+                <outlet property="oneBtn" destination="dET-c1-gsV" id="E8B-4P-SME"/>
+                <outlet property="thisView" destination="iN0-l3-epB" id="WtI-wZ-E2r"/>
+                <outlet property="threeBtn" destination="LHY-2f-Gj3" id="aDi-32-d4E"/>
+                <outlet property="twoBtn" destination="Fa9-JD-xWO" id="b8i-d3-kOo"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bqo-z0-SEs">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dET-c1-gsV">
+                            <rect key="frame" x="0.0" y="0.0" width="103.66666666666667" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="综合">
+                                <color key="titleColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fa9-JD-xWO">
+                            <rect key="frame" x="103.66666666666666" y="0.0" width="103.66666666666666" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="30" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="60" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="产权" image="升降默认">
+                                <color key="titleColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHY-2f-Gj3">
+                            <rect key="frame" x="207.33333333333334" y="0.0" width="103.66666666666666" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="30" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="60" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="距离" image="升降默认">
+                                <color key="titleColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OvE-E3-ThC">
+                            <rect key="frame" x="311" y="0.0" width="103" height="40"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="30" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="60" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="价格" image="升降默认">
+                                <color key="titleColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="dET-c1-gsV" firstAttribute="width" secondItem="bqo-z0-SEs" secondAttribute="width" multiplier="1:4" id="0ue-Dd-pkH"/>
+                        <constraint firstItem="dET-c1-gsV" firstAttribute="top" secondItem="bqo-z0-SEs" secondAttribute="top" id="2Hs-cC-lcC"/>
+                        <constraint firstItem="LHY-2f-Gj3" firstAttribute="top" secondItem="bqo-z0-SEs" secondAttribute="top" id="2XV-dj-XDU"/>
+                        <constraint firstItem="Fa9-JD-xWO" firstAttribute="top" secondItem="bqo-z0-SEs" secondAttribute="top" id="3GI-te-zQh"/>
+                        <constraint firstItem="Fa9-JD-xWO" firstAttribute="leading" secondItem="dET-c1-gsV" secondAttribute="trailing" id="3XF-MG-pDR"/>
+                        <constraint firstAttribute="height" constant="40" id="6Bc-Ih-6Lo"/>
+                        <constraint firstAttribute="bottom" secondItem="LHY-2f-Gj3" secondAttribute="bottom" id="7bm-wo-PhT"/>
+                        <constraint firstAttribute="bottom" secondItem="Fa9-JD-xWO" secondAttribute="bottom" id="BCJ-6i-aHf"/>
+                        <constraint firstItem="OvE-E3-ThC" firstAttribute="top" secondItem="bqo-z0-SEs" secondAttribute="top" id="GdR-dE-QBq"/>
+                        <constraint firstItem="LHY-2f-Gj3" firstAttribute="leading" secondItem="Fa9-JD-xWO" secondAttribute="trailing" id="atZ-5l-mc8"/>
+                        <constraint firstItem="OvE-E3-ThC" firstAttribute="leading" secondItem="LHY-2f-Gj3" secondAttribute="trailing" id="c96-QO-ocO"/>
+                        <constraint firstItem="LHY-2f-Gj3" firstAttribute="width" secondItem="Fa9-JD-xWO" secondAttribute="width" id="ceU-eo-O2z"/>
+                        <constraint firstItem="Fa9-JD-xWO" firstAttribute="width" secondItem="dET-c1-gsV" secondAttribute="width" id="fzo-lv-NWt"/>
+                        <constraint firstAttribute="trailing" secondItem="OvE-E3-ThC" secondAttribute="trailing" id="hbt-3x-RlV"/>
+                        <constraint firstItem="dET-c1-gsV" firstAttribute="leading" secondItem="bqo-z0-SEs" secondAttribute="leading" id="iOk-de-hHd"/>
+                        <constraint firstAttribute="bottom" secondItem="dET-c1-gsV" secondAttribute="bottom" id="rBC-ss-BQH"/>
+                        <constraint firstAttribute="bottom" secondItem="OvE-E3-ThC" secondAttribute="bottom" id="rL1-jC-xaO"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="bqo-z0-SEs" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="EVh-68-qz9"/>
+                <constraint firstItem="bqo-z0-SEs" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="bG9-gi-FqZ"/>
+                <constraint firstAttribute="trailing" secondItem="bqo-z0-SEs" secondAttribute="trailing" id="qlI-w6-KGe"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="升降默认" width="12" height="12"/>
+    </resources>
+</document>

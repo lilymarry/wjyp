@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SGoodsInfor_first_oneCell">
+            <rect key="frame" x="0.0" y="0.0" width="365" height="66"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="365" height="66"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WDX-YZ-9BA">
+                        <rect key="frame" x="20" y="64" width="345" height="2"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="2" id="McY-w9-D2o"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 代金券 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZe-sQ-lKY">
+                        <rect key="frame" x="20" y="23.5" width="47" height="20"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="7g4-nm-bwh"/>
+                            <constraint firstAttribute="width" constant="47" id="ysW-Lw-bhW"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="本产品最多可以使用1元红券抵扣现金，您现在有2元红券" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8RJ-cj-0PR">
+                        <rect key="frame" x="77" y="0.0" width="278" height="64"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="8RJ-cj-0PR" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="0CL-tC-3cN"/>
+                <constraint firstAttribute="trailing" secondItem="8RJ-cj-0PR" secondAttribute="trailing" constant="10" id="2az-jV-dRw"/>
+                <constraint firstItem="hZe-sQ-lKY" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="5fP-lY-kEa"/>
+                <constraint firstItem="hZe-sQ-lKY" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="BcC-Jf-7HR"/>
+                <constraint firstItem="WDX-YZ-9BA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="HXd-Bp-e70"/>
+                <constraint firstItem="WDX-YZ-9BA" firstAttribute="top" secondItem="8RJ-cj-0PR" secondAttribute="bottom" id="LuJ-JV-Fnd"/>
+                <constraint firstItem="8RJ-cj-0PR" firstAttribute="leading" secondItem="hZe-sQ-lKY" secondAttribute="trailing" constant="10" id="YOa-wc-ysA"/>
+                <constraint firstAttribute="trailing" secondItem="WDX-YZ-9BA" secondAttribute="trailing" id="qUa-dz-7rg"/>
+                <constraint firstAttribute="bottom" secondItem="WDX-YZ-9BA" secondAttribute="bottom" id="yrg-r8-agi"/>
+            </constraints>
+            <size key="customSize" width="365" height="66"/>
+            <connections>
+                <outlet property="discount_desc" destination="8RJ-cj-0PR" id="FTq-4k-eaz"/>
+                <outlet property="lineImage" destination="WDX-YZ-9BA" id="unr-17-Ae7"/>
+                <outlet property="redR" destination="hZe-sQ-lKY" id="cju-5q-BoX"/>
+            </connections>
+            <point key="canvasLocation" x="214.5" y="68"/>
+        </collectionViewCell>
+    </objects>
+</document>

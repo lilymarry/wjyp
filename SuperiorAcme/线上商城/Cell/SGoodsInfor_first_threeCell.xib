@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SGoodsInfor_first_threeCell">
+            <rect key="frame" x="0.0" y="0.0" width="323" height="131"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="323" height="131"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PNo-VZ-btr">
+                        <rect key="frame" x="10" y="62" width="7" height="7"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="7" id="07y-XT-GPK"/>
+                            <constraint firstAttribute="width" constant="7" id="Pzg-PV-WDi"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="南开华苑站 库存15 距您15km" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lwS-Qr-RY2">
+                        <rect key="frame" x="27" y="0.0" width="206" height="131"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="进入驿站" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8l-bS-XtU">
+                        <rect key="frame" x="243" y="55.5" width="70" height="20"/>
+                        <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="9Xw-Kf-wVp"/>
+                            <constraint firstAttribute="height" constant="20" id="APQ-0H-RtH"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="PNo-VZ-btr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="HQb-Js-VCf"/>
+                <constraint firstItem="lwS-Qr-RY2" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="OeC-nS-kHN"/>
+                <constraint firstItem="k8l-bS-XtU" firstAttribute="leading" secondItem="lwS-Qr-RY2" secondAttribute="trailing" constant="10" id="R8V-yy-ceG"/>
+                <constraint firstAttribute="bottom" secondItem="lwS-Qr-RY2" secondAttribute="bottom" id="Zbp-3l-YUP"/>
+                <constraint firstItem="lwS-Qr-RY2" firstAttribute="leading" secondItem="PNo-VZ-btr" secondAttribute="trailing" constant="10" id="e8z-Xc-2iq"/>
+                <constraint firstAttribute="trailing" secondItem="k8l-bS-XtU" secondAttribute="trailing" constant="10" id="tAr-dr-Hng"/>
+                <constraint firstItem="PNo-VZ-btr" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="wrs-VQ-m1p"/>
+                <constraint firstItem="k8l-bS-XtU" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="yIP-u4-SsV"/>
+            </constraints>
+            <size key="customSize" width="323" height="131"/>
+            <connections>
+                <outlet property="rightR" destination="k8l-bS-XtU" id="etw-Vg-e6q"/>
+                <outlet property="roundR" destination="PNo-VZ-btr" id="RbV-jT-QFV"/>
+                <outlet property="thistitle" destination="lwS-Qr-RY2" id="jwl-mW-olx"/>
+            </connections>
+            <point key="canvasLocation" x="170.5" y="94.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

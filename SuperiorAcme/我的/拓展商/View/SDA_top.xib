@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SDA_top">
+            <connections>
+                <outlet property="thisView" destination="iN0-l3-epB" id="n5r-fp-tRd"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uOU-PY-LGC">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="213"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="拓展商底纹" translatesAutoresizingMaskIntoConstraints="NO" id="oto-hG-lhf">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="213"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="头像2" translatesAutoresizingMaskIntoConstraints="NO" id="mJN-P9-yDN">
+                            <rect key="frame" x="152" y="74" width="70" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="70" id="D4y-d6-gzg"/>
+                                <constraint firstAttribute="width" constant="70" id="ecl-YM-Coh"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="lllllllllllll" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nw0-BP-Wlb">
+                            <rect key="frame" x="0.0" y="144" width="375" height="69"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Nw0-BP-Wlb" secondAttribute="bottom" id="2g2-tX-fRD"/>
+                        <constraint firstItem="oto-hG-lhf" firstAttribute="top" secondItem="uOU-PY-LGC" secondAttribute="top" id="GW1-IM-Yiq"/>
+                        <constraint firstItem="Nw0-BP-Wlb" firstAttribute="leading" secondItem="uOU-PY-LGC" secondAttribute="leading" id="bpK-2X-gvD"/>
+                        <constraint firstAttribute="bottom" secondItem="oto-hG-lhf" secondAttribute="bottom" id="jV6-n6-3yh"/>
+                        <constraint firstItem="oto-hG-lhf" firstAttribute="leading" secondItem="uOU-PY-LGC" secondAttribute="leading" id="l7H-mu-DJf"/>
+                        <constraint firstAttribute="trailing" secondItem="Nw0-BP-Wlb" secondAttribute="trailing" id="leK-oS-WYB"/>
+                        <constraint firstAttribute="trailing" secondItem="oto-hG-lhf" secondAttribute="trailing" id="ppc-9f-rnT"/>
+                        <constraint firstItem="mJN-P9-yDN" firstAttribute="top" secondItem="uOU-PY-LGC" secondAttribute="top" constant="74" id="qJY-8Y-ak7"/>
+                        <constraint firstItem="Nw0-BP-Wlb" firstAttribute="top" secondItem="mJN-P9-yDN" secondAttribute="bottom" id="vbt-MW-X4u"/>
+                        <constraint firstItem="mJN-P9-yDN" firstAttribute="centerX" secondItem="uOU-PY-LGC" secondAttribute="centerX" id="wCG-0h-T3j"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wCb-sn-WZa">
+                    <rect key="frame" x="0.0" y="223" width="375" height="50"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="拓展员管理-下级机构" translatesAutoresizingMaskIntoConstraints="NO" id="roQ-fJ-6Te">
+                            <rect key="frame" x="10" y="13.5" width="23" height="23"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="23" id="3nm-0X-7s4"/>
+                                <constraint firstAttribute="height" constant="23" id="aAE-cm-nKV"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="直属下级 4 位" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ax-nK-bJQ">
+                            <rect key="frame" x="43" y="0.0" width="322" height="50"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="5ax-nK-bJQ" firstAttribute="top" secondItem="wCb-sn-WZa" secondAttribute="top" id="K9N-pP-vHX"/>
+                        <constraint firstItem="5ax-nK-bJQ" firstAttribute="leading" secondItem="roQ-fJ-6Te" secondAttribute="trailing" constant="10" id="Ozx-nc-EJ2"/>
+                        <constraint firstItem="roQ-fJ-6Te" firstAttribute="leading" secondItem="wCb-sn-WZa" secondAttribute="leading" constant="10" id="bkv-pE-q7n"/>
+                        <constraint firstAttribute="height" constant="50" id="nGr-XS-r3o"/>
+                        <constraint firstAttribute="trailing" secondItem="5ax-nK-bJQ" secondAttribute="trailing" constant="10" id="scn-0I-rAc"/>
+                        <constraint firstAttribute="bottom" secondItem="5ax-nK-bJQ" secondAttribute="bottom" id="wac-0j-G7b"/>
+                        <constraint firstItem="roQ-fJ-6Te" firstAttribute="centerY" secondItem="wCb-sn-WZa" secondAttribute="centerY" id="zvk-6d-9bZ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="uOU-PY-LGC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="3HG-NB-2sH"/>
+                <constraint firstAttribute="trailing" secondItem="uOU-PY-LGC" secondAttribute="trailing" id="7wB-mZ-MxB"/>
+                <constraint firstItem="uOU-PY-LGC" firstAttribute="width" secondItem="uOU-PY-LGC" secondAttribute="height" multiplier="125:71" id="SlL-tr-7Ll"/>
+                <constraint firstAttribute="trailing" secondItem="wCb-sn-WZa" secondAttribute="trailing" id="eQL-Il-iWc"/>
+                <constraint firstItem="uOU-PY-LGC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ffA-Eu-njq"/>
+                <constraint firstItem="wCb-sn-WZa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ocT-vs-hwq"/>
+                <constraint firstItem="wCb-sn-WZa" firstAttribute="top" secondItem="uOU-PY-LGC" secondAttribute="bottom" constant="10" id="xtz-yu-IdG"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="头像2" width="29" height="29"/>
+        <image name="拓展员管理-下级机构" width="23" height="23"/>
+        <image name="拓展商底纹" width="414" height="213"/>
+    </resources>
+</document>

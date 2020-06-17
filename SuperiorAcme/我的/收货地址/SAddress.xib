@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SAddress">
+            <connections>
+                <outlet property="mTable" destination="8iy-0C-L23" id="hdG-Vx-xSO"/>
+                <outlet property="submitBtn" destination="okL-Q3-CaT" id="V3V-M6-pOt"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehh-CE-m15">
+                    <rect key="frame" x="0.0" y="64" width="414" height="0.6666666666666714"/>
+                    <color key="backgroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="dke-8U-jNt"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="okL-Q3-CaT">
+                    <rect key="frame" x="0.0" y="686" width="414" height="50"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="E5L-Ja-cBi"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="新增地址">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8iy-0C-L23">
+                    <rect key="frame" x="0.0" y="64.666666666666686" width="414" height="621.33333333333326"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="MUC-tb-HCu"/>
+                        <outlet property="delegate" destination="-1" id="bzB-EH-cB9"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="okL-Q3-CaT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="DH6-n3-Wxl"/>
+                <constraint firstItem="okL-Q3-CaT" firstAttribute="top" secondItem="8iy-0C-L23" secondAttribute="bottom" id="HuS-uS-YEA"/>
+                <constraint firstAttribute="trailing" secondItem="okL-Q3-CaT" secondAttribute="trailing" id="LNG-ZZ-79R"/>
+                <constraint firstItem="ehh-CE-m15" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Njz-Ai-wUg"/>
+                <constraint firstAttribute="trailing" secondItem="ehh-CE-m15" secondAttribute="trailing" id="VFx-0W-KSt"/>
+                <constraint firstAttribute="bottom" secondItem="okL-Q3-CaT" secondAttribute="bottom" id="YTC-cJ-UNS"/>
+                <constraint firstItem="ehh-CE-m15" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="cFL-uj-I1I"/>
+                <constraint firstItem="8iy-0C-L23" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="cTF-4e-dwB"/>
+                <constraint firstAttribute="trailing" secondItem="8iy-0C-L23" secondAttribute="trailing" id="fkj-MS-iZR"/>
+                <constraint firstItem="8iy-0C-L23" firstAttribute="top" secondItem="ehh-CE-m15" secondAttribute="bottom" id="vBP-kt-ltx"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

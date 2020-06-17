@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SCarShopTopCell">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MVP默认" translatesAutoresizingMaskIntoConstraints="NO" id="kIR-XP-S8x">
+                        <rect key="frame" x="0.0" y="16.666666666666664" width="100" height="36.666666666666671"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="kIR-XP-S8x" secondAttribute="height" multiplier="220:80" id="LTa-YK-uUP"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUV" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0yx-BD-iMG">
+                        <rect key="frame" x="0.0" y="53.333333333333343" width="100" height="46.666666666666657"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="0yx-BD-iMG" secondAttribute="bottom" id="53M-sX-OYH"/>
+                <constraint firstItem="kIR-XP-S8x" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Bi8-ob-WPi"/>
+                <constraint firstAttribute="trailing" secondItem="0yx-BD-iMG" secondAttribute="trailing" id="GFQ-Vj-QVZ"/>
+                <constraint firstItem="kIR-XP-S8x" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" constant="-15" id="KV2-HY-L7s"/>
+                <constraint firstItem="0yx-BD-iMG" firstAttribute="top" secondItem="kIR-XP-S8x" secondAttribute="bottom" id="Tkb-pC-dBW"/>
+                <constraint firstItem="0yx-BD-iMG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="p5Y-66-nIV"/>
+                <constraint firstAttribute="trailing" secondItem="kIR-XP-S8x" secondAttribute="trailing" id="q3C-Ra-Cmd"/>
+                <constraint firstItem="kIR-XP-S8x" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="xLL-kf-Lzm"/>
+            </constraints>
+            <size key="customSize" width="144" height="130"/>
+            <connections>
+                <outlet property="thisImage" destination="kIR-XP-S8x" id="SHy-ya-J7l"/>
+                <outlet property="thisTitle" destination="0yx-BD-iMG" id="FTI-8U-0S3"/>
+            </connections>
+            <point key="canvasLocation" x="81" y="94"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="MVP默认" width="73" height="26"/>
+    </resources>
+</document>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SOnlineShop_ClassViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="119" height="117"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="119" height="117"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPC-Rl-h7e">
+                        <rect key="frame" x="0.0" y="0.0" width="119" height="117"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="67B-LC-tNy">
+                        <rect key="frame" x="0.0" y="115" width="119" height="2"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="2" id="mUc-73-blQ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="YPC-Rl-h7e" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="6JO-6R-dr0"/>
+                <constraint firstItem="67B-LC-tNy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="8Tr-c3-lNK"/>
+                <constraint firstAttribute="trailing" secondItem="YPC-Rl-h7e" secondAttribute="trailing" id="9gy-Y9-pcC"/>
+                <constraint firstAttribute="trailing" secondItem="67B-LC-tNy" secondAttribute="trailing" id="CRx-bq-Prp"/>
+                <constraint firstItem="YPC-Rl-h7e" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Umg-qh-ECv"/>
+                <constraint firstAttribute="bottom" secondItem="YPC-Rl-h7e" secondAttribute="bottom" id="l5d-ij-gKV"/>
+                <constraint firstAttribute="bottom" secondItem="67B-LC-tNy" secondAttribute="bottom" id="l93-ta-Qsl"/>
+            </constraints>
+            <size key="customSize" width="119" height="117"/>
+            <connections>
+                <outlet property="thisSelect" destination="67B-LC-tNy" id="C2k-a5-4er"/>
+                <outlet property="thisTitle" destination="YPC-Rl-h7e" id="xpJ-as-EaT"/>
+            </connections>
+            <point key="canvasLocation" x="68.5" y="107.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

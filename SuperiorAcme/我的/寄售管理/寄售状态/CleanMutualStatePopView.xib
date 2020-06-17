@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CleanMutualStatePopView">
+            <connections>
+                <outlet property="fourBtn" destination="ROx-zi-Ebh" id="hod-WE-sia"/>
+                <outlet property="oneBtn" destination="Ybk-cj-q1a" id="XhK-w8-dLn"/>
+                <outlet property="thisView" destination="i5M-Pr-FkT" id="8dl-SM-SDl"/>
+                <outlet property="threeBtn" destination="Ldq-gA-0Po" id="BHI-xh-xVi"/>
+                <outlet property="twoBtn" destination="amY-Ic-dbr" id="aJD-H1-aNy"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="236" height="60"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0cM-l2-6DZ">
+                    <rect key="frame" x="0.0" y="0.0" width="236" height="60"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="黑色弹框" translatesAutoresizingMaskIntoConstraints="NO" id="ggQ-vD-dp5">
+                            <rect key="frame" x="0.0" y="0.0" width="236" height="60"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ybk-cj-q1a">
+                            <rect key="frame" x="8" y="7" width="49" height="46"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <inset key="titleEdgeInsets" minX="-25" minY="29" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="16" minY="-17" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="详情" image="互清库存-详情"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amY-Ic-dbr">
+                            <rect key="frame" x="59" y="7" width="49" height="46"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <inset key="titleEdgeInsets" minX="-25" minY="29" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="12" minY="-17" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="提货" image="互清库存-提货"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ldq-gA-0Po">
+                            <rect key="frame" x="110" y="7" width="49" height="46"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <inset key="titleEdgeInsets" minX="-25" minY="29" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="12" minY="-17" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="退款" image="互清库存-退款"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ROx-zi-Ebh">
+                            <rect key="frame" x="162" y="7" width="49" height="46"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <inset key="titleEdgeInsets" minX="-25" minY="29" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="16" minY="-17" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="分享" image="互清库存-分享"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="amY-Ic-dbr" firstAttribute="leading" secondItem="Ybk-cj-q1a" secondAttribute="trailing" constant="2" id="4Wd-Bv-CzB"/>
+                        <constraint firstItem="ggQ-vD-dp5" firstAttribute="top" secondItem="0cM-l2-6DZ" secondAttribute="top" id="6oQ-XY-6YP"/>
+                        <constraint firstItem="ROx-zi-Ebh" firstAttribute="width" secondItem="Ybk-cj-q1a" secondAttribute="width" id="DGe-9D-krm"/>
+                        <constraint firstItem="Ldq-gA-0Po" firstAttribute="width" secondItem="Ybk-cj-q1a" secondAttribute="width" id="EbR-dz-pxb"/>
+                        <constraint firstItem="Ldq-gA-0Po" firstAttribute="baseline" secondItem="ROx-zi-Ebh" secondAttribute="baseline" id="HJP-3l-ety"/>
+                        <constraint firstItem="Ldq-gA-0Po" firstAttribute="leading" secondItem="amY-Ic-dbr" secondAttribute="trailing" constant="2" id="Kgx-Hg-5ZI"/>
+                        <constraint firstItem="Ybk-cj-q1a" firstAttribute="top" secondItem="0cM-l2-6DZ" secondAttribute="top" constant="7" id="LxB-QF-296"/>
+                        <constraint firstItem="amY-Ic-dbr" firstAttribute="height" secondItem="Ybk-cj-q1a" secondAttribute="height" id="NGx-ZH-a1Z"/>
+                        <constraint firstItem="amY-Ic-dbr" firstAttribute="baseline" secondItem="Ldq-gA-0Po" secondAttribute="baseline" id="OOZ-lS-sdT"/>
+                        <constraint firstItem="ROx-zi-Ebh" firstAttribute="height" secondItem="Ybk-cj-q1a" secondAttribute="height" id="PHo-ZK-3lm"/>
+                        <constraint firstItem="Ybk-cj-q1a" firstAttribute="leading" secondItem="0cM-l2-6DZ" secondAttribute="leading" constant="8" id="QYC-u8-d38"/>
+                        <constraint firstAttribute="bottom" secondItem="Ybk-cj-q1a" secondAttribute="bottom" constant="7" id="TVm-pV-xCD"/>
+                        <constraint firstItem="Ldq-gA-0Po" firstAttribute="height" secondItem="Ybk-cj-q1a" secondAttribute="height" id="WUQ-ds-fqU"/>
+                        <constraint firstAttribute="trailing" secondItem="ggQ-vD-dp5" secondAttribute="trailing" id="XLc-7L-ouD"/>
+                        <constraint firstItem="amY-Ic-dbr" firstAttribute="top" secondItem="Ybk-cj-q1a" secondAttribute="top" id="fVx-Jw-zUd"/>
+                        <constraint firstItem="ROx-zi-Ebh" firstAttribute="leading" secondItem="Ldq-gA-0Po" secondAttribute="trailing" constant="3" id="hgI-qA-dgz"/>
+                        <constraint firstAttribute="bottom" secondItem="ggQ-vD-dp5" secondAttribute="bottom" id="mh2-cx-ckN"/>
+                        <constraint firstItem="ggQ-vD-dp5" firstAttribute="leading" secondItem="0cM-l2-6DZ" secondAttribute="leading" id="o5D-Xd-Upk"/>
+                        <constraint firstItem="amY-Ic-dbr" firstAttribute="width" secondItem="Ybk-cj-q1a" secondAttribute="width" id="pIE-2Z-YTJ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="0cM-l2-6DZ" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="4Jn-0x-ijE"/>
+                <constraint firstItem="0cM-l2-6DZ" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="DKi-OG-Mkt"/>
+                <constraint firstItem="0cM-l2-6DZ" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="SSV-jj-xa4"/>
+                <constraint firstItem="0cM-l2-6DZ" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="hg3-F3-P95"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="20.800000000000001" y="-112.44377811094454"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="互清库存-分享" width="20" height="21"/>
+        <image name="互清库存-提货" width="20" height="24"/>
+        <image name="互清库存-详情" width="20" height="20"/>
+        <image name="互清库存-退款" width="20" height="22"/>
+        <image name="黑色弹框" width="391" height="98"/>
+    </resources>
+</document>

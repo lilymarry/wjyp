@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SMemberOrderView">
+            <connections>
+                <outlet property="mTable" destination="3MI-dD-83x" id="ngA-m2-DLt"/>
+                <outlet property="thisView" destination="iN0-l3-epB" id="hCq-ck-7z1"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oYq-Ij-Egx">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="0.5"/>
+                    <color key="backgroundColor" red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="hvc-HP-QVu"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="3MI-dD-83x">
+                    <rect key="frame" x="0.0" y="0.5" width="375" height="666.5"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="hL3-qc-UiP"/>
+                        <outlet property="delegate" destination="-1" id="uNC-6Q-p7Z"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="oYq-Ij-Egx" secondAttribute="trailing" id="9FU-9b-UFx"/>
+                <constraint firstItem="oYq-Ij-Egx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Fym-5A-EP3"/>
+                <constraint firstItem="oYq-Ij-Egx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="PDm-vj-CPr"/>
+                <constraint firstAttribute="bottom" secondItem="3MI-dD-83x" secondAttribute="bottom" id="Rpk-CT-I7S"/>
+                <constraint firstItem="3MI-dD-83x" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ayd-rn-NQX"/>
+                <constraint firstAttribute="trailing" secondItem="3MI-dD-83x" secondAttribute="trailing" id="btf-nr-FDo"/>
+                <constraint firstItem="3MI-dD-83x" firstAttribute="top" secondItem="oYq-Ij-Egx" secondAttribute="bottom" id="yPx-OU-kQN"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

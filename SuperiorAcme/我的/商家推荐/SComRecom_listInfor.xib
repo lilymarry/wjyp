@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SComRecom_listInfor">
+            <connections>
+                <outlet property="mCollect" destination="tO4-yK-q1V" id="75Q-5Z-Gls"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PZD-i5-8hB">
+                    <rect key="frame" x="0.0" y="64" width="414" height="10"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="3GO-Sf-gc4"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="tO4-yK-q1V">
+                    <rect key="frame" x="0.0" y="74" width="414" height="662"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="O2Y-Ss-uuH">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="rfA-jI-z4h"/>
+                        <outlet property="delegate" destination="-1" id="UbP-7q-s8a"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="PZD-i5-8hB" secondAttribute="trailing" id="BJU-Cm-KpT"/>
+                <constraint firstItem="tO4-yK-q1V" firstAttribute="top" secondItem="PZD-i5-8hB" secondAttribute="bottom" id="Ig5-61-MUc"/>
+                <constraint firstAttribute="bottom" secondItem="tO4-yK-q1V" secondAttribute="bottom" id="RC5-fc-80J"/>
+                <constraint firstAttribute="trailing" secondItem="tO4-yK-q1V" secondAttribute="trailing" id="Utc-Yx-yY1"/>
+                <constraint firstItem="PZD-i5-8hB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="c6J-oY-UpE"/>
+                <constraint firstItem="PZD-i5-8hB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gCg-pg-cfg"/>
+                <constraint firstItem="tO4-yK-q1V" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="qPg-kS-VEi"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

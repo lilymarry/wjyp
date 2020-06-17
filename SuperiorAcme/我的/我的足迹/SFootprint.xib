@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SFootprint">
+            <connections>
+                <outlet property="allBtn" destination="iOa-jn-DGL" id="DIx-bF-AGt"/>
+                <outlet property="delBtn" destination="Cb8-Ob-DlC" id="GWD-lu-NQC"/>
+                <outlet property="downView" destination="EaZ-tH-1FK" id="Wtj-b2-Fsg"/>
+                <outlet property="fourTable" destination="0SO-Rk-LKo" id="9ry-Yt-gwX"/>
+                <outlet property="fourTable_HHH" destination="Aey-kR-DFd" id="wrd-cB-T0d"/>
+                <outlet property="mCollect" destination="pOD-gD-exy" id="a5p-E3-e1L"/>
+                <outlet property="mCollect_HHH" destination="hk4-NT-k9H" id="sTs-Jf-HRM"/>
+                <outlet property="mTable" destination="RuH-OQ-h10" id="EgN-a1-2uU"/>
+                <outlet property="mTable_HHH" destination="sem-tp-DJq" id="oLA-Uu-tv0"/>
+                <outlet property="threeTable" destination="jdy-L7-yrf" id="Lai-GC-p3F"/>
+                <outlet property="threeTable_HHH" destination="Lcv-rm-3Tg" id="QoF-C1-krh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9lT-8s-dTd">
+                    <rect key="frame" x="0.0" y="63.999999999999993" width="414" height="0.6666666666666643"/>
+                    <color key="backgroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="nd2-kB-G6s"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="pOD-gD-exy">
+                    <rect key="frame" x="0.0" y="64.666666666666686" width="414" height="671.33333333333326"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vdO-t3-M5c">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="gfL-dT-H7k"/>
+                        <outlet property="delegate" destination="-1" id="bg9-Kz-nCV"/>
+                    </connections>
+                </collectionView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="RuH-OQ-h10">
+                    <rect key="frame" x="0.0" y="64.666666666666686" width="414" height="671.33333333333326"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="3rp-zi-wgH"/>
+                        <outlet property="delegate" destination="-1" id="ogR-bz-vAr"/>
+                    </connections>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="jdy-L7-yrf">
+                    <rect key="frame" x="0.0" y="64.666666666666686" width="414" height="670.66666666666652"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="gXr-6S-Vbm"/>
+                        <outlet property="delegate" destination="-1" id="yYr-Ex-WFk"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EaZ-tH-1FK">
+                    <rect key="frame" x="0.0" y="686" width="414" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cb8-Ob-DlC">
+                            <rect key="frame" x="294" y="0.0" width="120" height="50"/>
+                            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="120" id="FNs-51-JP9"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="删除">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iOa-jn-DGL">
+                            <rect key="frame" x="0.0" y="0.0" width="120" height="50"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="120" id="oSB-Nb-6Cr"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title=" 全选" image="R默认">
+                                <color key="titleColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="iOa-jn-DGL" firstAttribute="leading" secondItem="EaZ-tH-1FK" secondAttribute="leading" id="3y4-kI-Lqa"/>
+                        <constraint firstAttribute="bottom" secondItem="iOa-jn-DGL" secondAttribute="bottom" id="4xr-cv-6ha"/>
+                        <constraint firstAttribute="bottom" secondItem="Cb8-Ob-DlC" secondAttribute="bottom" id="7wX-9S-rNI"/>
+                        <constraint firstItem="Cb8-Ob-DlC" firstAttribute="top" secondItem="EaZ-tH-1FK" secondAttribute="top" id="Bsr-G6-MeE"/>
+                        <constraint firstItem="iOa-jn-DGL" firstAttribute="top" secondItem="EaZ-tH-1FK" secondAttribute="top" id="Sau-uo-lz0"/>
+                        <constraint firstAttribute="height" constant="50" id="iFP-Fe-UfA"/>
+                        <constraint firstAttribute="trailing" secondItem="Cb8-Ob-DlC" secondAttribute="trailing" id="meg-pB-ucJ"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0SO-Rk-LKo">
+                    <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="LrG-Js-ZnY"/>
+                        <outlet property="delegate" destination="-1" id="nQv-A2-IJz"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="pOD-gD-exy" secondAttribute="trailing" id="2YA-U5-jdH"/>
+                <constraint firstItem="0SO-Rk-LKo" firstAttribute="top" secondItem="9lT-8s-dTd" secondAttribute="bottom" id="7vf-vj-HcX"/>
+                <constraint firstItem="RuH-OQ-h10" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="A9S-gP-Tkj"/>
+                <constraint firstAttribute="bottom" secondItem="0SO-Rk-LKo" secondAttribute="bottom" id="Aey-kR-DFd"/>
+                <constraint firstItem="9lT-8s-dTd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="Faa-gI-FH0"/>
+                <constraint firstAttribute="bottom" secondItem="jdy-L7-yrf" secondAttribute="bottom" id="Lcv-rm-3Tg"/>
+                <constraint firstAttribute="trailing" secondItem="0SO-Rk-LKo" secondAttribute="trailing" id="P1g-J1-0cE"/>
+                <constraint firstItem="pOD-gD-exy" firstAttribute="top" secondItem="9lT-8s-dTd" secondAttribute="bottom" id="QYP-ew-n0q"/>
+                <constraint firstItem="0SO-Rk-LKo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="SS8-gr-Nl2"/>
+                <constraint firstItem="EaZ-tH-1FK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Y3a-pO-F7d"/>
+                <constraint firstAttribute="trailing" secondItem="RuH-OQ-h10" secondAttribute="trailing" id="aF6-S6-wba"/>
+                <constraint firstAttribute="trailing" secondItem="jdy-L7-yrf" secondAttribute="trailing" id="e8a-3H-Mtu"/>
+                <constraint firstAttribute="trailing" secondItem="EaZ-tH-1FK" secondAttribute="trailing" id="fAt-TF-5lf"/>
+                <constraint firstAttribute="bottom" secondItem="pOD-gD-exy" secondAttribute="bottom" id="hk4-NT-k9H"/>
+                <constraint firstItem="jdy-L7-yrf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="inL-Ya-fvi"/>
+                <constraint firstAttribute="trailing" secondItem="9lT-8s-dTd" secondAttribute="trailing" id="kLB-vt-FdM"/>
+                <constraint firstItem="jdy-L7-yrf" firstAttribute="top" secondItem="9lT-8s-dTd" secondAttribute="bottom" id="kmO-xy-W03"/>
+                <constraint firstAttribute="bottom" secondItem="EaZ-tH-1FK" secondAttribute="bottom" id="mtt-gV-JFR"/>
+                <constraint firstItem="pOD-gD-exy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="qia-hY-pUj"/>
+                <constraint firstItem="9lT-8s-dTd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rcf-Ol-OKn"/>
+                <constraint firstAttribute="bottom" secondItem="RuH-OQ-h10" secondAttribute="bottom" id="sem-tp-DJq"/>
+                <constraint firstItem="RuH-OQ-h10" firstAttribute="top" secondItem="9lT-8s-dTd" secondAttribute="bottom" id="vig-zs-2nu"/>
+            </constraints>
+            <point key="canvasLocation" x="-104" y="-119"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="R默认" width="21" height="21"/>
+    </resources>
+</document>

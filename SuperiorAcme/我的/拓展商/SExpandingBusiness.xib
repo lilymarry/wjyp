@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SExpandingBusiness">
+            <connections>
+                <outlet property="applyStatus" destination="7yx-61-HWc" id="qWr-Rl-hdt"/>
+                <outlet property="mTable" destination="5lU-jS-NYQ" id="8ns-4s-9PG"/>
+                <outlet property="submitBtn" destination="onG-uE-QqQ" id="2eR-CU-SJL"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5i3-FP-jEj">
+                    <rect key="frame" x="0.0" y="20" width="375" height="10"/>
+                    <color key="backgroundColor" red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="ulW-Co-Vb5"/>
+                    </constraints>
+                </view>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PAr-WS-lH1">
+                    <rect key="frame" x="0.0" y="30" width="375" height="577"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </webView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a4Y-l0-kVb">
+                    <rect key="frame" x="0.0" y="30" width="375" height="587"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="认证成功待支付" translatesAutoresizingMaskIntoConstraints="NO" id="GFe-Bs-7El">
+                            <rect key="frame" x="137" y="143.5" width="100" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="dHn-zf-YDg"/>
+                                <constraint firstAttribute="height" constant="100" id="uEc-Mc-a0l"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="拓展商申请信息\n正在审核中\n不要着急哦~" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yx-61-HWc">
+                            <rect key="frame" x="0.0" y="243.5" width="375" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="L8d-Sa-dsN"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="7yx-61-HWc" firstAttribute="top" secondItem="GFe-Bs-7El" secondAttribute="bottom" id="27D-cA-N3C"/>
+                        <constraint firstAttribute="trailing" secondItem="7yx-61-HWc" secondAttribute="trailing" id="2jb-d6-mcL"/>
+                        <constraint firstItem="GFe-Bs-7El" firstAttribute="centerX" secondItem="a4Y-l0-kVb" secondAttribute="centerX" id="RCr-1a-lOj"/>
+                        <constraint firstItem="GFe-Bs-7El" firstAttribute="centerY" secondItem="a4Y-l0-kVb" secondAttribute="centerY" constant="-100" id="efW-Gm-b42"/>
+                        <constraint firstItem="7yx-61-HWc" firstAttribute="leading" secondItem="a4Y-l0-kVb" secondAttribute="leading" id="h5i-6t-QGb"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onG-uE-QqQ">
+                    <rect key="frame" x="10" y="617" width="355" height="40"/>
+                    <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="5dQ-qb-bqH"/>
+                    </constraints>
+                    <state key="normal" title="申请成为拓展商">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="submitBtn:" destination="-1" eventType="touchUpInside" id="mjE-Yj-tWc"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="5lU-jS-NYQ">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="dwL-0M-41H"/>
+                        <outlet property="delegate" destination="-1" id="Egx-PP-mb6"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="5lU-jS-NYQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="0kA-dZ-Jx7"/>
+                <constraint firstAttribute="trailing" secondItem="5i3-FP-jEj" secondAttribute="trailing" id="12j-1c-R5L"/>
+                <constraint firstItem="5i3-FP-jEj" firstAttribute="top" secondItem="iGv-54-pTA" secondAttribute="top" id="190-YV-aFj"/>
+                <constraint firstItem="PAr-WS-lH1" firstAttribute="top" secondItem="5i3-FP-jEj" secondAttribute="bottom" id="46Y-FY-RQN"/>
+                <constraint firstItem="onG-uE-QqQ" firstAttribute="top" secondItem="a4Y-l0-kVb" secondAttribute="bottom" id="8io-tf-8jF"/>
+                <constraint firstItem="a4Y-l0-kVb" firstAttribute="top" secondItem="5i3-FP-jEj" secondAttribute="bottom" id="Bwa-pw-u8H"/>
+                <constraint firstItem="5lU-jS-NYQ" firstAttribute="leading" secondItem="iGv-54-pTA" secondAttribute="leading" id="CA4-R8-YYB"/>
+                <constraint firstItem="5i3-FP-jEj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Hyg-gT-elY"/>
+                <constraint firstAttribute="trailing" secondItem="onG-uE-QqQ" secondAttribute="trailing" constant="10" id="KBe-hG-pxD"/>
+                <constraint firstItem="onG-uE-QqQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="aX2-tO-83f"/>
+                <constraint firstAttribute="trailing" secondItem="PAr-WS-lH1" secondAttribute="trailing" id="exT-xE-sW1"/>
+                <constraint firstItem="iGv-54-pTA" firstAttribute="bottom" secondItem="onG-uE-QqQ" secondAttribute="bottom" constant="10" id="gdS-JP-Nvh"/>
+                <constraint firstItem="onG-uE-QqQ" firstAttribute="top" secondItem="PAr-WS-lH1" secondAttribute="bottom" constant="10" id="ifu-KK-jiN"/>
+                <constraint firstItem="a4Y-l0-kVb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="lIm-Qd-0Pz"/>
+                <constraint firstItem="PAr-WS-lH1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ltB-9Z-5rD"/>
+                <constraint firstItem="iGv-54-pTA" firstAttribute="trailing" secondItem="5lU-jS-NYQ" secondAttribute="trailing" id="qpS-9b-38D"/>
+                <constraint firstAttribute="trailing" secondItem="a4Y-l0-kVb" secondAttribute="trailing" id="x2s-5k-F2S"/>
+                <constraint firstItem="iGv-54-pTA" firstAttribute="bottom" secondItem="5lU-jS-NYQ" secondAttribute="bottom" id="yE3-Sz-hee"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="iGv-54-pTA"/>
+            <point key="canvasLocation" x="-6" y="91"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="认证成功待支付" width="116" height="116"/>
+    </resources>
+</document>

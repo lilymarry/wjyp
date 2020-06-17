@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SAuctionCollectionView">
+            <connections>
+                <outlet property="oneBtn" destination="FrN-YQ-hdd" id="4GW-Dm-EfQ"/>
+                <outlet property="thisContentView" destination="adh-zX-Hdo" id="uAb-gR-qH7"/>
+                <outlet property="thisView" destination="iN0-l3-epB" id="EM0-Ky-YHD"/>
+                <outlet property="twoBtn" destination="ubk-nh-fBo" id="nzH-JH-eZb"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="adh-zX-Hdo">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FrN-YQ-hdd">
+                            <rect key="frame" x="0.0" y="0.0" width="207" height="40"/>
+                            <state key="normal" title="今日比价">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ubk-nh-fBo">
+                            <rect key="frame" x="207" y="0.0" width="207" height="40"/>
+                            <state key="normal" title="比价预展">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="FrN-YQ-hdd" firstAttribute="width" secondItem="adh-zX-Hdo" secondAttribute="width" multiplier="1:2" id="1Bu-OY-FPO"/>
+                        <constraint firstAttribute="trailing" secondItem="ubk-nh-fBo" secondAttribute="trailing" id="1C7-qc-6BY"/>
+                        <constraint firstAttribute="bottom" secondItem="FrN-YQ-hdd" secondAttribute="bottom" id="BXw-fW-JIa"/>
+                        <constraint firstItem="ubk-nh-fBo" firstAttribute="leading" secondItem="FrN-YQ-hdd" secondAttribute="trailing" id="Dia-qk-Eoc"/>
+                        <constraint firstItem="FrN-YQ-hdd" firstAttribute="top" secondItem="adh-zX-Hdo" secondAttribute="top" id="Gcl-4I-ZAt"/>
+                        <constraint firstItem="ubk-nh-fBo" firstAttribute="top" secondItem="adh-zX-Hdo" secondAttribute="top" id="bi3-FD-60q"/>
+                        <constraint firstAttribute="height" constant="40" id="nA3-bq-6fm"/>
+                        <constraint firstItem="FrN-YQ-hdd" firstAttribute="leading" secondItem="adh-zX-Hdo" secondAttribute="leading" id="qK3-AQ-TaP"/>
+                        <constraint firstAttribute="bottom" secondItem="ubk-nh-fBo" secondAttribute="bottom" id="qSf-Se-aBu"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="adh-zX-Hdo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="08H-6c-ecf"/>
+                <constraint firstItem="adh-zX-Hdo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="1yU-Ig-ZP4"/>
+                <constraint firstAttribute="trailing" secondItem="adh-zX-Hdo" secondAttribute="trailing" id="UYW-Kj-czR"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

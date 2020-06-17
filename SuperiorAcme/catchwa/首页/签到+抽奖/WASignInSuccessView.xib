@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WASignInSuccessView">
+            <connections>
+                <outlet property="OKBtn" destination="DNJ-ZF-jSr" id="mHG-B5-R1e"/>
+                <outlet property="contentIma" destination="gCW-El-Jny" id="BZs-TV-uxa"/>
+                <outlet property="nameLab" destination="6pr-Vx-Fka" id="Nt1-HI-XZT"/>
+                <outlet property="thisView" destination="i5M-Pr-FkT" id="yW3-FV-8qy"/>
+                <outlet property="titleLab" destination="QNi-3O-paL" id="GGa-FX-pRn"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jfB-we-sR1">
+                    <rect key="frame" x="69" y="219.5" width="237" height="228"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="签到成功back" translatesAutoresizingMaskIntoConstraints="NO" id="Zpi-aa-w6P">
+                            <rect key="frame" x="0.0" y="-20" width="237" height="90"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="90" id="A2c-H0-s7f"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="签到成功" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QNi-3O-paL">
+                            <rect key="frame" x="72" y="37" width="101" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="NIX-Wm-Led"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6pr-Vx-Fka">
+                            <rect key="frame" x="20" y="147" width="197" height="16"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="16" id="FL9-CT-5I1"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNJ-ZF-jSr">
+                            <rect key="frame" x="51" y="175" width="135" height="30"/>
+                            <color key="backgroundColor" red="0.9882352941176471" green="0.28627450980392155" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="LHf-bF-zIA"/>
+                            </constraints>
+                            <state key="normal" title="我知道了">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="surePress:" destination="-1" eventType="touchUpInside" id="UFP-ZF-1cq"/>
+                            </connections>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="无界优品默认空视图" translatesAutoresizingMaskIntoConstraints="NO" id="gCW-El-Jny">
+                            <rect key="frame" x="91" y="78" width="55" height="55"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="55" id="F5f-lS-RhF"/>
+                                <constraint firstAttribute="width" constant="55" id="g7b-Y5-39R"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="DNJ-ZF-jSr" firstAttribute="top" secondItem="6pr-Vx-Fka" secondAttribute="bottom" constant="12" id="10B-nn-iQS"/>
+                        <constraint firstItem="Zpi-aa-w6P" firstAttribute="top" secondItem="jfB-we-sR1" secondAttribute="top" constant="-20" id="2Se-cg-TXh"/>
+                        <constraint firstItem="DNJ-ZF-jSr" firstAttribute="leading" secondItem="jfB-we-sR1" secondAttribute="leading" constant="51" id="8l5-XW-Sh7"/>
+                        <constraint firstItem="QNi-3O-paL" firstAttribute="leading" secondItem="jfB-we-sR1" secondAttribute="leading" constant="72" id="BnD-Ks-7pA"/>
+                        <constraint firstAttribute="trailing" secondItem="Zpi-aa-w6P" secondAttribute="trailing" id="Mj1-p2-1na"/>
+                        <constraint firstAttribute="bottom" secondItem="DNJ-ZF-jSr" secondAttribute="bottom" constant="23" id="QOo-NS-1Hn"/>
+                        <constraint firstItem="6pr-Vx-Fka" firstAttribute="centerX" secondItem="jfB-we-sR1" secondAttribute="centerX" id="Qa6-j3-eob"/>
+                        <constraint firstAttribute="trailing" secondItem="6pr-Vx-Fka" secondAttribute="trailing" constant="20" id="Twb-vr-yWg"/>
+                        <constraint firstAttribute="width" constant="237" id="VaB-lt-L0N"/>
+                        <constraint firstItem="6pr-Vx-Fka" firstAttribute="top" secondItem="gCW-El-Jny" secondAttribute="bottom" constant="14" id="WjQ-o2-gCg"/>
+                        <constraint firstAttribute="trailing" secondItem="DNJ-ZF-jSr" secondAttribute="trailing" constant="51" id="ZIv-ht-m3p"/>
+                        <constraint firstItem="gCW-El-Jny" firstAttribute="centerX" secondItem="jfB-we-sR1" secondAttribute="centerX" id="ajX-aB-mqp"/>
+                        <constraint firstAttribute="trailing" secondItem="QNi-3O-paL" secondAttribute="trailing" constant="64" id="fHw-43-Ov4"/>
+                        <constraint firstItem="QNi-3O-paL" firstAttribute="top" secondItem="jfB-we-sR1" secondAttribute="top" constant="37" id="m1U-zj-Jix"/>
+                        <constraint firstItem="6pr-Vx-Fka" firstAttribute="leading" secondItem="jfB-we-sR1" secondAttribute="leading" constant="20" id="nD6-3s-JXt"/>
+                        <constraint firstItem="Zpi-aa-w6P" firstAttribute="leading" secondItem="jfB-we-sR1" secondAttribute="leading" id="nsa-9I-13d"/>
+                        <constraint firstAttribute="height" constant="228" id="vdY-57-JlK"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="jfB-we-sR1" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="K2Y-VR-20G"/>
+                <constraint firstItem="jfB-we-sR1" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="OHj-wQ-Svi"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="39.200000000000003" y="46.326836581709152"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="无界优品默认空视图" width="414" height="250"/>
+        <image name="签到成功back" width="540" height="212"/>
+    </resources>
+</document>

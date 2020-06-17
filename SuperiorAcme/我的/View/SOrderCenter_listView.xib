@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SOrderCenter_listView">
+            <connections>
+                <outlet property="mTable" destination="pOy-iN-rg2" id="zZe-xo-hjp"/>
+                <outlet property="thisView" destination="iN0-l3-epB" id="oJk-pp-4Ab"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="pOy-iN-rg2">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="ORo-Bh-UVT"/>
+                        <outlet property="delegate" destination="-1" id="1Pt-Lr-9U7"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="pOy-iN-rg2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="WyG-zg-bwf"/>
+                <constraint firstItem="pOy-iN-rg2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Z0g-qD-14u"/>
+                <constraint firstAttribute="bottom" secondItem="pOy-iN-rg2" secondAttribute="bottom" id="oFB-0l-Eg9"/>
+                <constraint firstAttribute="trailing" secondItem="pOy-iN-rg2" secondAttribute="trailing" id="sha-5d-aLX"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

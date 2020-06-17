@@ -1,0 +1,495 @@
+//
+//  SNPayManager.m
+//  SNPay
+//
+//  Created by wangsen on 16/8/20.
+//  Copyright © 2016年 wangsen. All rights reserved.
+//
+
+#import "SNPayManager.h"
+#include <arpa/inet.h>
+#include <ifaddrs.h>
+#include <ifaddrs.h>
+#include <arpa/inet.h>
+#include <net/if.h>
+#import "APAuthInfo.h"
+#define Domain @"com.sn.payResults"
+
+NSString * const SNPaySuccess = @"SN_paysuccess";
+NSString * const SNPayFailure = @"SN_payfailure";
+
+static SNPayManager * _manager = nil;
+
+@interface SNPayManager ()
+{
+    //支付宝
+    NSString * _alipay_partnerID;
+    NSString * _alipay_seller;
+    NSString * _alipay_appScheme;
+    NSString * _alipay_privateKey;
+    //微信
+    NSString * _wechat_appID;
+    NSString * _wechat_secretKey;
+    NSString * _wechat_shopID;
+}
+@property (nonatomic, copy) SNAlipayResultsBlock alipayResultsBlock;
+@property (nonatomic, copy) SNWechatResultsBlock wechatResultsBlock;
+@property (nonatomic, copy) SNAlipayLoginResultsBlock alipayLoginResultsBlock;
+@end
+@implementation SNPayManager
++ (instancetype)sharePayManager {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _manager = [[self alloc] init];
+    });
+    return _manager;
+}
+
+#pragma mark - 注册支付宝 微信
+- (void)registerAlipayPatenerID:(NSString *)partner
+                         seller:(NSString *)seller
+                      appScheme:(NSString *)appScheme
+                     privateKey:(NSString *)private_key {
+    _alipay_partnerID = partner;
+    _alipay_seller    = seller;
+    _alipay_appScheme = appScheme;
+    _alipay_privateKey= private_key;
+
+}
+
+- (void)registerWechatAppID:(NSString *)appID
+                  secretKey:(NSString *)secretKey
+                     shopID:(NSString *)shopID {
+    [WXApi registerApp:appID];
+    _wechat_appID    = appID;
+    _wechat_secretKey= secretKey;
+    _wechat_shopID   = shopID;
+}
+
+- (void)registerWechatAppID:(NSString *)appID {
+    [WXApi registerApp:appID];
+    _wechat_appID    = appID;
+}
+
+#pragma mark - IP地址获取
+- (NSString *)fetchIPAddress {
+    NSString *address = @"0.0.0.0";
+    struct ifaddrs *interfaces = NULL;
+    struct ifaddrs *temp_addr = NULL;
+    int success = 0;
+    // retrieve the current interfaces - returns 0 on success
+    success = getifaddrs(&interfaces);
+    if (success == 0) {
+        // Loop through linked list of interfaces
+        temp_addr = interfaces;
+        while(temp_addr != NULL) {
+            if(temp_addr->ifa_addr->sa_family == AF_INET) {
+                // Check if interface is en0 which is the wifi connection on the iPhone
+                if([[NSString stringWithUTF8String:temp_addr->ifa_name] isEqualToString:@"en0"]) {
+                    // Get NSString from C String
+                    address = [NSString stringWithUTF8String:inet_ntoa(((struct sockaddr_in *)temp_addr->ifa_addr)->sin_addr)];
+                }
+            }
+            temp_addr = temp_addr->ifa_next;
+        }
+    }
+    // Free memory
+    freeifaddrs(interfaces);
+    return address;
+}
+
+- (NSString *)deviceIp {
+    return [self fetchIPAddress];
+}
+
+@end
+
+#pragma mark - 支付宝
+@implementation SNPayManager(sn_alipayPay)
+
+- (void)sn_openTheAlipayPay:(SNAlipayResultsBlock)alipayResultsBlock {
+    if (!_useNotication) {
+        _alipayResultsBlock = [alipayResultsBlock copy];
+    }
+    /*
+     *生成订单信息及签名
+     */
+    //将商品信息赋予AlixPayOrder的成员变量
+    Order* order = [[Order alloc] init];
+    
+    // NOTE: app_id设置
+    order.app_id = _alipay_partnerID;
+    
+    // NOTE: 支付接口名称
+    order.method = @"alipay.trade.app.pay";
+    
+    // NOTE: 参数编码格式
+    order.charset = @"utf-8";
+    
+    // NOTE: 当前时间点
+    NSDateFormatter* formatter = [NSDateFormatter new];
+    [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    order.timestamp = [formatter stringFromDate:[NSDate date]];
+    
+    // NOTE: 支付版本
+    order.version = @"1.0";
+    
+    // NOTE: sign_type 根据商户设置的私钥来决定
+    order.sign_type = @"RSA";//RSA RSA2 暂用RSA
+    
+    // NOTE: 商品数据
+    order.biz_content = [[BizContent alloc] init];
+    order.biz_content.body = _order_description;
+    order.biz_content.subject = _order_name; //商品标题;
+    order.biz_content.out_trade_no = _order_no; //订单ID（由商家自行制定）
+    order.biz_content.timeout_express = @"30m"; //超时时间设置
+    order.biz_content.total_amount = [NSString stringWithFormat:@"%.2f",[_order_price floatValue]]; //商品价格
+    
+    //将商品信息拼接成字符串
+    NSString *orderInfo = [order orderInfoEncoded:NO];
+    NSString *orderInfoEncoded = [order orderInfoEncoded:YES];
+    NSLog(@"orderSpec = %@",orderInfo);
+    
+    // NOTE: 获取私钥并将商户信息签名，外部商户的加签过程请务必放在服务端，防止公私钥数据泄露；
+    //       需要遵循RSA签名规范，并将签名字符串base64编码和UrlEncode
+    NSString *signedString = nil;
+    
+    //RSA RSA2 暂用RSA
+    RSADataSigner* signer = [[RSADataSigner alloc] initWithPrivateKey:_alipay_privateKey];
+    
+    //RSA RSA2 暂用RSA
+//    signedString = [signer signString:orderInfo withRSA2:YES];
+    signedString = [signer signString:orderInfo withRSA2:NO];
+    
+    // NOTE: 如果加签成功，则继续执行支付
+    if (signedString != nil) {
+        //应用注册scheme,在AliSDKDemo-Info.plist定义URL types
+        NSString *appScheme = _alipay_appScheme;
+        
+        // NOTE: 将签名成功字符串格式化为订单字符串,请严格按照该格式
+        NSString *orderString = [NSString stringWithFormat:@"%@&sign=%@",
+                                 orderInfoEncoded, signedString];
+        // NOTE: 调用支付结果开始支付
+        [[AlipaySDK defaultService] payOrder:orderString fromScheme:appScheme callback:^(NSDictionary *resultDic) {
+            NSLog(@"callback ===>> %@",resultDic);
+            if ([resultDic[@"resultStatus"] integerValue] == 9000) {
+                if (_useNotication) {
+                    [[NSNotificationCenter defaultCenter] postNotificationName:SNPaySuccess object:self];
+                } else {
+                    if (_alipayResultsBlock) {
+                        _alipayResultsBlock(nil);
+                    }
+                }
+            } else {
+                if (_useNotication) {
+                    [[NSNotificationCenter defaultCenter] postNotificationName:SNPayFailure object:self];
+                } else {
+                    if (_alipayResultsBlock) {
+                        _alipayResultsBlock([NSError errorWithDomain:Domain code:1 userInfo:@{NSLocalizedDescriptionKey:resultDic[@"memo"]}]);
+                        
+                    }
+                }
+            }
+        }];
+    } else {
+        if (_useNotication) {
+            [[NSNotificationCenter defaultCenter] postNotificationName:SNPayFailure object:self];
+        } else {
+            if (_alipayResultsBlock) {
+                _alipayResultsBlock([NSError errorWithDomain:Domain code:1 userInfo:@{NSLocalizedDescriptionKey:@"调起支付宝失败，请重试"}]);
+            }
+        }
+    }
+}
+
+- (void)sn_openTheAlipayOrderString:(NSString *)orderString WithServicePay:(SNAlipayResultsBlock)alipayResultsBlock {
+    if (!_useNotication) {
+        _alipayResultsBlock = [alipayResultsBlock copy];
+    }
+    if (orderString != nil) {
+                // NOTE: 调用支付结果开始支付
+        [[AlipaySDK defaultService] payOrder:orderString fromScheme:_alipay_appScheme callback:^(NSDictionary *resultDic) {
+            NSLog(@"callback ===>> %@",resultDic);
+            if ([resultDic[@"resultStatus"] integerValue] == 9000) {
+                if (_useNotication) {
+                    [[NSNotificationCenter defaultCenter] postNotificationName:SNPaySuccess object:self];
+                } else {
+                    if (_alipayResultsBlock) {
+                        _alipayResultsBlock(nil);
+                    }
+                }
+            } else {
+                if (_useNotication) {
+                    [[NSNotificationCenter defaultCenter] postNotificationName:SNPayFailure object:self];
+                } else {
+                    if (_alipayResultsBlock) {
+                        _alipayResultsBlock([NSError errorWithDomain:Domain code:1 userInfo:@{NSLocalizedDescriptionKey:resultDic[@"memo"]}]);
+                        
+                    }
+                }
+            }
+        }];
+    } else {
+        if (_useNotication) {
+            [[NSNotificationCenter defaultCenter] postNotificationName:SNPayFailure object:self];
+        } else {
+            if (_alipayResultsBlock) {
+                _alipayResultsBlock([NSError errorWithDomain:Domain code:1 userInfo:@{NSLocalizedDescriptionKey:@"调起支付宝失败，请重试"}]);
+            }
+        }
+    }
+}
+
+- (void)sn_alipayHandleOpenURL:(NSURL *)url {
+    //如果极简开发包不可用，会跳转支付宝钱包进行支付，需要将支付宝钱包的支付结果回传给开发包
+    if ([url.host isEqualToString:@"safepay"]) {
+        [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
+            NSLog(@"openURL ===>> %@",resultDic);
+            //【由于在跳转支付宝客户端支付的过程中，商户app在后台很可能被系统kill了，所以pay接口的callback就会失效，请商户对standbyCallback返回的回调结果进行处理,就是在这个方法里面处理跟callback一样的逻辑】
+            if ([resultDic[@"resultStatus"] integerValue] == 9000) {
+                if (_useNotication) {
+                    [[NSNotificationCenter defaultCenter] postNotificationName:SNPaySuccess object:self];
+                } else {
+                    if (_alipayResultsBlock) {
+                        _alipayResultsBlock(nil);
+                    }
+                }
+            } else {
+                if (_useNotication) {
+                    [[NSNotificationCenter defaultCenter] postNotificationName:SNPayFailure object:self];
+                } else {
+                    if (_alipayResultsBlock) {
+                        _alipayResultsBlock([NSError errorWithDomain:Domain code:1 userInfo:@{NSLocalizedDescriptionKey:resultDic[@"memo"]}]);
+                    }
+                }
+            }
+        }];
+        // 授权跳转支付宝钱包进行支付，处理支付结果
+        [[AlipaySDK defaultService] processAuth_V2Result:url standbyCallback:^(NSDictionary *resultDic) {
+            NSLog(@"result = %@",resultDic);
+            // 解析 auth code
+            NSString *result = resultDic[@"result"];
+            NSString *authCode = nil;
+            if (result.length>0) {
+                NSArray *resultArr = [result componentsSeparatedByString:@"&"];
+                for (NSString *subResult in resultArr) {
+                    if (subResult.length > 10 && [subResult hasPrefix:@"auth_code="]) {
+                        authCode = [subResult substringFromIndex:10];
+                        break;
+                    }
+                }
+            }
+            NSLog(@"授权结果 authCode = %@", authCode?:@"");
+            if (_alipayLoginResultsBlock) {
+                _alipayLoginResultsBlock(resultDic);;
+            }
+        }];
+    }
+    if ([url.host isEqualToString:@"platformapi"]){//支付宝钱包快登授权返回authCode
+        [[AlipaySDK defaultService] processAuthResult:url standbyCallback:^(NSDictionary *resultDic) {
+            NSLog(@"openURL ===>> %@",resultDic);
+            //【由于在跳转支付宝客户端支付的过程中，商户app在后台很可能被系统kill了，所以pay接口的callback就会失效，请商户对standbyCallback返回的回调结果进行处理,就是在这个方法里面处理跟callback一样的逻辑】
+            if ([resultDic[@"resultStatus"] integerValue] == 9000) {
+                if (_useNotication) {
+                    [[NSNotificationCenter defaultCenter] postNotificationName:SNPaySuccess object:self];
+                } else {
+                    if (_alipayResultsBlock) {
+                        _alipayResultsBlock(nil);
+                    }
+                }
+            } else {
+                if (_useNotication) {
+                    [[NSNotificationCenter defaultCenter] postNotificationName:SNPayFailure object:self];
+                } else {
+                    if (_alipayResultsBlock) {
+                        _alipayResultsBlock([NSError errorWithDomain:Domain code:1 userInfo:@{NSLocalizedDescriptionKey:resultDic[@"memo"]}]);
+                    }
+                }
+            }
+        }];
+    }
+}
+- (void)sn_openTheAlipayLogin:(SNAlipayLoginResultsBlock)alipayResultsBlock
+{
+    _alipayLoginResultsBlock = [alipayResultsBlock copy];
+    NSString *pid = @"2088711981544066";
+    NSString *appID = @"2016052801453164";
+    NSString *rsa2PrivateKey = @"MIICXAIBAAKBgQCcImOej6Yf0SIH/b1ZpILORIPqB9sEhuiQ3pBFkcAMluRvJL9Ch6ZqRzrisRB/2XLY3ctt4qjQzmOaSG51CvgzXExkLXboeO7mNK+fqnIH7hq4na2Vv26J/OB4vo5DyNbw2NBL6+iAxZm+axHl70wIIgcvAissttVSNdylOrt8KQIDAQABAoGAfGfeTooRCQr+/bUNOa8eVrI7Fa+asLm59yyPcg9XIfDdJT33c1BYphgJcHU7O1OM8gWPwQe4EWBR9q297V6HMk6xZnayJbI2NpdlINVPU7OkvEs2IXeNWiYYzrS2gKVGyH/BGfxwyXESa2vWMyEiQy4PY63ieIJEWUrtCXXP53ECQQDLt0TcBD1rnXKXq4cn7VgkwcAkpPIHxjiqqTy4rxlhYDYlv5hn5wrVUaLq3RmIfbtHespU4ZGQPF2yYrz5OryFAkEAxDTfRbfjeOrKcTRQnvOdKEzx+3N1zENnEO4o6SR5dPkINszm4rPAuxOGxQYFBeSH/Dhs/DTDjtGmJFkLW6aUVQJAXk/xpD6eROU2uTsjLnv2c8Xzc8OdfbXqZDBHuWTvRiKpzt4d6/SOEmZiG4PTH1q+SoBxjcyEfJdF9aE6xdPIlQJBAI8q+WR5Cw33XSL/hniF0L5Qbx4JIQKciD9NWSLOD6Yv9TNvjmYLve2EEQoBG3cyS5vaXIQnyC6VggLxypzkz0UCQBEjsdfjJOCnLgKDqt6OrRnd011xBiClAEiMj8zJN5Dkkd/FxD1TG9oigiJY8ZP2+XBN8pf7Mdoq+3OP5wPuQZs=";
+    NSString *rsaPrivateKey = @"MIICXAIBAAKBgQCcImOej6Yf0SIH/b1ZpILORIPqB9sEhuiQ3pBFkcAMluRvJL9Ch6ZqRzrisRB/2XLY3ctt4qjQzmOaSG51CvgzXExkLXboeO7mNK+fqnIH7hq4na2Vv26J/OB4vo5DyNbw2NBL6+iAxZm+axHl70wIIgcvAissttVSNdylOrt8KQIDAQABAoGAfGfeTooRCQr+/bUNOa8eVrI7Fa+asLm59yyPcg9XIfDdJT33c1BYphgJcHU7O1OM8gWPwQe4EWBR9q297V6HMk6xZnayJbI2NpdlINVPU7OkvEs2IXeNWiYYzrS2gKVGyH/BGfxwyXESa2vWMyEiQy4PY63ieIJEWUrtCXXP53ECQQDLt0TcBD1rnXKXq4cn7VgkwcAkpPIHxjiqqTy4rxlhYDYlv5hn5wrVUaLq3RmIfbtHespU4ZGQPF2yYrz5OryFAkEAxDTfRbfjeOrKcTRQnvOdKEzx+3N1zENnEO4o6SR5dPkINszm4rPAuxOGxQYFBeSH/Dhs/DTDjtGmJFkLW6aUVQJAXk/xpD6eROU2uTsjLnv2c8Xzc8OdfbXqZDBHuWTvRiKpzt4d6/SOEmZiG4PTH1q+SoBxjcyEfJdF9aE6xdPIlQJBAI8q+WR5Cw33XSL/hniF0L5Qbx4JIQKciD9NWSLOD6Yv9TNvjmYLve2EEQoBG3cyS5vaXIQnyC6VggLxypzkz0UCQBEjsdfjJOCnLgKDqt6OrRnd011xBiClAEiMj8zJN5Dkkd/FxD1TG9oigiJY8ZP2+XBN8pf7Mdoq+3OP5wPuQZs=";
+    //pid和appID获取失败,提示
+    if ([pid length] == 0 ||
+        [appID length] == 0 ||
+        ([rsa2PrivateKey length] == 0 && [rsaPrivateKey length] == 0))
+    {
+        NSLog(@"缺少pid或者appID或者私钥,请检查参数设置");
+        return;
+    }
+    
+    //生成 auth info 对象
+    APAuthInfo *authInfo = [APAuthInfo new];
+    authInfo.pid = pid;
+    authInfo.appID = appID;
+    
+    //auth type
+    NSString *authType = [[NSUserDefaults standardUserDefaults] objectForKey:@"authType"];
+    if (authType) {
+        authInfo.authType = authType;
+    }
+    
+    //应用注册scheme,在AlixPayDemo-Info.plist定义URL types
+    NSString *appScheme = @"alisdkSuperiorAcme";
+    
+    // 将授权信息拼接成字符串
+    NSString *authInfoStr = [authInfo description];
+    NSLog(@"authInfoStr = %@",authInfoStr);
+    
+    // 获取私钥并将商户信息签名,外部商户可以根据情况存放私钥和签名,只需要遵循RSA签名规范,并将签名字符串base64编码和UrlEncode
+    NSString *signedString = nil;
+    RSADataSigner* signer = [[RSADataSigner alloc] initWithPrivateKey:((rsa2PrivateKey.length > 1)?rsa2PrivateKey:rsaPrivateKey)];
+    if ((rsa2PrivateKey.length > 1)) {
+        signedString = [signer signString:authInfoStr withRSA2:YES];
+    } else {
+        signedString = [signer signString:authInfoStr withRSA2:NO];
+    }
+    
+    // 将签名成功字符串格式化为订单字符串,请严格按照该格式
+    if (signedString.length > 0) {
+        authInfoStr = [NSString stringWithFormat:@"%@&sign=%@&sign_type=%@", authInfoStr, signedString, ((rsa2PrivateKey.length > 1)?@"RSA2":@"RSA")];
+        [[AlipaySDK defaultService] auth_V2WithInfo:authInfoStr
+                                         fromScheme:appScheme
+                                           callback:^(NSDictionary *resultDic) {
+                                               NSLog(@"dfdgfg --- %@",resultDic);
+                                               if (_alipayLoginResultsBlock) {
+                                                 _alipayLoginResultsBlock(resultDic);;
+                                               }
+                                            
+                                           }];
+    }
+    
+}
+@end
+
+#pragma mark - 微信
+@implementation SNPayManager(sn_wechatPay)
+
+//测试查询订单
+//- (void)sign {
+//    payRequsestHandler *req = [[payRequsestHandler alloc] init];
+//    //初始化支付签名对象
+//    [req init:_wechat_appID mch_id:_wechat_shopID];
+//    //设置密钥
+//    [req setKey:_wechat_secretKey];
+//    [req loadSin];
+//}
+
+- (void)sn_openTheWechatPay:(SNWechatResultsBlock)wechatResultsBlock {
+    if (!_useNotication) {
+        _wechatResultsBlock = [wechatResultsBlock copy];
+    }
+    //创建支付签名对象
+    payRequsestHandler *req = [[payRequsestHandler alloc] init];
+    //初始化支付签名对象
+    [req init:_wechat_appID mch_id:_wechat_shopID];
+    //设置密钥
+    [req setKey:_wechat_secretKey];
+    
+    req.notify_url  = _notify_url;
+    req.order_name  = _order_name;
+    req.order_no    = _order_no;
+    req.order_price = [NSString stringWithFormat:@"%.f",[_order_price floatValue] * 100];
+    
+    req.spbill_create_ip = self.deviceIp;
+    
+    //获取到实际调起微信支付的参数后，在app端调起支付
+    
+    NSMutableDictionary *dict = [req sendPay];
+    
+    if(dict == nil){
+        //错误提示
+        NSString *error = [req error];
+        if (_useNotication) {
+            [[NSNotificationCenter defaultCenter] postNotificationName:SNPayFailure object:self];
+        } else {
+            if (_wechatResultsBlock) {
+                _wechatResultsBlock([NSError errorWithDomain:Domain code:1 userInfo:@{NSLocalizedDescriptionKey:error}]);
+            }
+        }
+    }else{
+        NSMutableString *stamp  = [dict objectForKey:@"timestamp"];
+        //调起微信支付
+        PayReq* req             = [[PayReq alloc] init];
+        req.openID              = [dict objectForKey:@"appid"];
+        req.partnerId           = [dict objectForKey:@"partnerid"];
+        req.prepayId            = [dict objectForKey:@"prepayid"];
+        req.nonceStr            = [dict objectForKey:@"noncestr"];
+        req.timeStamp           = stamp.intValue;
+        req.package             = [dict objectForKey:@"package"];
+        req.sign                = [dict objectForKey:@"sign"];
+        
+        [WXApi sendReq:req];
+    }
+}
+
+- (void)sn_openTheWechatWithServicePay:(SNWechatResultsBlock)wechatResultsBlock {
+    if (!_useNotication) {
+        _wechatResultsBlock = [wechatResultsBlock copy];
+    }
+    //调起微信支付
+    PayReq* req             = [[PayReq alloc] init];
+    req.openID              = _wechat_appID;
+    req.partnerId           = _wxPartnerId;
+    req.prepayId            = _wxPrepayId;
+    req.nonceStr            = _wxNonceStr;
+    req.timeStamp           = _wxTimeStamp.intValue;
+    req.package             = @"Sign=WXPay";
+    req.sign                = _wxSign;
+    
+    [WXApi sendReq:req];
+}
+
+
+- (void)sn_wechatHandleOpenURL:(NSURL *)url {
+    [WXApi handleOpenURL:url delegate:self];
+}
+
+- (void)onResp:(BaseResp*)resp {
+    NSString *strMsg = [NSString stringWithFormat:@"errcode:%d", resp.errCode];
+    NSString *strTitle;
+    if([resp isKindOfClass:[SendMessageToWXResp class]]) {
+        strTitle = [NSString stringWithFormat:@"发送媒体消息结果"];
+    }
+    if([resp isKindOfClass:[PayResp class]]){
+        //支付返回结果，实际支付结果需要去微信服务器端查询
+        strTitle = [NSString stringWithFormat:@"支付结果"];
+        switch (resp.errCode) {
+            case WXSuccess:{
+                strMsg = @"支付结果：成功！";
+                NSLog(@"支付成功－PaySuccess，retcode = %d", resp.errCode);
+                if (_useNotication) {
+                    //通过通知中心发送通知
+                    [[NSNotificationCenter defaultCenter] postNotificationName:SNPaySuccess object:self];
+                } else {
+                    if (_wechatResultsBlock) {
+                        _wechatResultsBlock(nil);
+                    }
+                }
+            }
+                break;
+            default:
+                strMsg = [NSString stringWithFormat:@"%@", @"支付不成功哦！"];
+                NSLog(@"错误，retcode = %d, retstr = %@", resp.errCode,resp.errStr);
+                if (_useNotication) {
+                    //通过通知中心发送通知
+                    [[NSNotificationCenter defaultCenter] postNotificationName:SNPayFailure object:self];
+                } else {
+                    if (_wechatResultsBlock) {
+                        _wechatResultsBlock([NSError errorWithDomain:Domain code:1 userInfo:@{NSLocalizedDescriptionKey:@"支付失败"}]);
+                    }
+                }
+                break;
+        }
+    }
+}
+
+
+@end

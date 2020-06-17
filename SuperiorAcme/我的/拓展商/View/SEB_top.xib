@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SEB_top">
+            <connections>
+                <outlet property="groundImage" destination="kwc-FS-Unm" id="LZO-il-QKv"/>
+                <outlet property="headerImage" destination="Pm5-7t-8Gc" id="11N-Vi-JvZ"/>
+                <outlet property="thisView" destination="iN0-l3-epB" id="QSe-OD-sHz"/>
+                <outlet property="upBtn" destination="JGO-ZC-vVw" id="xay-SE-PZX"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JrM-h2-ab8">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="235"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="拓展商底纹" translatesAutoresizingMaskIntoConstraints="NO" id="kwc-FS-Unm">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="235"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="头像2" translatesAutoresizingMaskIntoConstraints="NO" id="Pm5-7t-8Gc">
+                            <rect key="frame" x="171.66666666666666" y="74" width="70" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="70" id="DAm-0T-Rle"/>
+                                <constraint firstAttribute="width" constant="70" id="hCo-J3-U4e"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="lllllllllllll" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0L-eo-3VL">
+                            <rect key="frame" x="0.0" y="144" width="414" height="91"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGO-ZC-vVw">
+                            <rect key="frame" x="271.66666666666669" y="96.666666666666671" width="90" height="25"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="90" id="BA5-Hc-NMk"/>
+                                <constraint firstAttribute="height" constant="25" id="NG0-ls-Y4h"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                            <state key="normal" title=" 升级无界驿站" image="联盟商家-建筑-灰">
+                                <color key="titleColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="kwc-FS-Unm" secondAttribute="trailing" id="H7c-JW-KVg"/>
+                        <constraint firstAttribute="bottom" secondItem="kwc-FS-Unm" secondAttribute="bottom" id="Jjw-tY-QKP"/>
+                        <constraint firstAttribute="trailing" secondItem="j0L-eo-3VL" secondAttribute="trailing" id="KbY-W4-XGo"/>
+                        <constraint firstItem="kwc-FS-Unm" firstAttribute="leading" secondItem="JrM-h2-ab8" secondAttribute="leading" id="TO7-3J-eaa"/>
+                        <constraint firstItem="j0L-eo-3VL" firstAttribute="leading" secondItem="JrM-h2-ab8" secondAttribute="leading" id="Wia-mE-KbQ"/>
+                        <constraint firstItem="JGO-ZC-vVw" firstAttribute="centerY" secondItem="Pm5-7t-8Gc" secondAttribute="centerY" id="aN5-aW-Nkv"/>
+                        <constraint firstItem="j0L-eo-3VL" firstAttribute="top" secondItem="Pm5-7t-8Gc" secondAttribute="bottom" id="ccN-D2-a80"/>
+                        <constraint firstItem="Pm5-7t-8Gc" firstAttribute="top" secondItem="JrM-h2-ab8" secondAttribute="top" constant="74" id="iAB-La-nHF"/>
+                        <constraint firstAttribute="width" secondItem="JrM-h2-ab8" secondAttribute="height" multiplier="125:71" id="iGa-YI-4ap"/>
+                        <constraint firstItem="kwc-FS-Unm" firstAttribute="top" secondItem="JrM-h2-ab8" secondAttribute="top" id="pKk-vn-IuU"/>
+                        <constraint firstItem="JGO-ZC-vVw" firstAttribute="leading" secondItem="Pm5-7t-8Gc" secondAttribute="trailing" constant="30" id="pNu-XY-GJ6"/>
+                        <constraint firstAttribute="bottom" secondItem="j0L-eo-3VL" secondAttribute="bottom" id="us4-tT-7sW"/>
+                        <constraint firstItem="Pm5-7t-8Gc" firstAttribute="centerX" secondItem="JrM-h2-ab8" secondAttribute="centerX" id="vcg-rS-paa"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="JrM-h2-ab8" secondAttribute="trailing" id="AMm-tz-0jD"/>
+                <constraint firstItem="JrM-h2-ab8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="aRg-WQ-9U6"/>
+                <constraint firstItem="JrM-h2-ab8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="fL3-so-NDW"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="头像2" width="29" height="29"/>
+        <image name="拓展商底纹" width="414" height="213"/>
+        <image name="联盟商家-建筑-灰" width="13" height="13"/>
+    </resources>
+</document>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SCarShop">
+            <connections>
+                <outlet property="mCollect" destination="Xck-P0-rpp" id="FIq-Aq-NoK"/>
+                <outlet property="submitBtn" destination="DHe-BL-3Az" id="IAS-eW-bTt"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EWS-mI-b6U">
+                    <rect key="frame" x="0.0" y="64" width="375" height="1"/>
+                    <color key="backgroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="aSd-ea-nhq"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Xck-P0-rpp">
+                    <rect key="frame" x="0.0" y="65" width="375" height="552"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sK7-lA-Djv">
+                        <size key="itemSize" width="50" height="100"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="blb-sm-5w5"/>
+                        <outlet property="delegate" destination="-1" id="NXE-57-SSn"/>
+                    </connections>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DHe-BL-3Az">
+                    <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="筛选">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="DHe-BL-3Az" secondAttribute="bottom" id="9gj-EQ-8ZM"/>
+                <constraint firstItem="EWS-mI-b6U" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="BZS-L9-AuO"/>
+                <constraint firstItem="Xck-P0-rpp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Htj-dl-ECL"/>
+                <constraint firstItem="DHe-BL-3Az" firstAttribute="top" secondItem="Xck-P0-rpp" secondAttribute="bottom" id="KGY-uZ-qX7"/>
+                <constraint firstAttribute="trailing" secondItem="EWS-mI-b6U" secondAttribute="trailing" id="NL1-mv-0Ke"/>
+                <constraint firstItem="EWS-mI-b6U" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="RA6-9B-Jgm"/>
+                <constraint firstAttribute="bottom" secondItem="Xck-P0-rpp" secondAttribute="bottom" constant="50" id="TXs-0q-eqW"/>
+                <constraint firstItem="Xck-P0-rpp" firstAttribute="top" secondItem="EWS-mI-b6U" secondAttribute="bottom" id="Ze1-Kh-LhF"/>
+                <constraint firstAttribute="trailing" secondItem="Xck-P0-rpp" secondAttribute="trailing" id="dtD-HA-qdQ"/>
+                <constraint firstItem="DHe-BL-3Az" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hvF-oK-tt0"/>
+                <constraint firstAttribute="trailing" secondItem="DHe-BL-3Az" secondAttribute="trailing" id="pdN-ny-ybr"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

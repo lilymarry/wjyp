@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="184" id="KGk-i7-Jjw" customClass="WAMoneyTittleCell">
+            <rect key="frame" x="0.0" y="0.0" width="348" height="184"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="348" height="183.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OwU-r6-Aa7">
+                        <rect key="frame" x="16" y="14" width="316" height="154"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gok-Ve-boT">
+                                <rect key="frame" x="0.0" y="0.0" width="316" height="154"/>
+                                <color key="backgroundColor" red="0.96078431372549022" green="0.27450980392156865" blue="0.59215686274509804" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的银两" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CG6-YW-ofo">
+                                <rect key="frame" x="8" y="22" width="70" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="SPg-st-CQ1"/>
+                                    <constraint firstAttribute="height" constant="21" id="e9w-5Q-UhW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y4M-5J-Yhd">
+                                <rect key="frame" x="8" y="85" width="300" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8Z-c2-R1O">
+                                <rect key="frame" x="232" y="15" width="70" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="ZsN-xP-7my"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="28" id="ilK-u5-AVw"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="pRh-Kr-LxL"/>
+                                    <constraint firstAttribute="height" constant="28" id="qIg-Cg-aD8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="银两记录">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="moneyListPress:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="vhJ-BC-ojg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gok-Ve-boT" firstAttribute="leading" secondItem="OwU-r6-Aa7" secondAttribute="leading" id="6qo-7k-qLM"/>
+                            <constraint firstItem="r8Z-c2-R1O" firstAttribute="top" secondItem="OwU-r6-Aa7" secondAttribute="top" constant="15" id="7jc-LY-6Rt"/>
+                            <constraint firstItem="r8Z-c2-R1O" firstAttribute="top" secondItem="OwU-r6-Aa7" secondAttribute="top" constant="15" id="Ckb-Ab-X8Z"/>
+                            <constraint firstAttribute="bottom" secondItem="gok-Ve-boT" secondAttribute="bottom" id="GOK-Fg-C8z"/>
+                            <constraint firstItem="Y4M-5J-Yhd" firstAttribute="leading" secondItem="OwU-r6-Aa7" secondAttribute="leading" constant="8" id="JgP-AZ-dlC"/>
+                            <constraint firstItem="gok-Ve-boT" firstAttribute="top" secondItem="OwU-r6-Aa7" secondAttribute="top" id="NLG-QZ-ysA"/>
+                            <constraint firstAttribute="trailing" secondItem="r8Z-c2-R1O" secondAttribute="trailing" constant="14" id="NgY-WB-WS1"/>
+                            <constraint firstItem="gok-Ve-boT" firstAttribute="leading" secondItem="OwU-r6-Aa7" secondAttribute="leading" id="Vkb-Zu-tBv"/>
+                            <constraint firstAttribute="bottom" secondItem="gok-Ve-boT" secondAttribute="bottom" id="aZc-XY-oMH"/>
+                            <constraint firstItem="Y4M-5J-Yhd" firstAttribute="top" secondItem="CG6-YW-ofo" secondAttribute="bottom" constant="42" id="bO3-fT-nnq"/>
+                            <constraint firstAttribute="trailing" secondItem="Y4M-5J-Yhd" secondAttribute="trailing" constant="8" id="bRb-Ir-VVx"/>
+                            <constraint firstAttribute="trailing" secondItem="r8Z-c2-R1O" secondAttribute="trailing" constant="14" id="c0O-in-IML"/>
+                            <constraint firstAttribute="trailing" secondItem="gok-Ve-boT" secondAttribute="trailing" id="f4e-g5-geq"/>
+                            <constraint firstItem="CG6-YW-ofo" firstAttribute="leading" secondItem="OwU-r6-Aa7" secondAttribute="leading" constant="8" id="hbb-JM-Tba"/>
+                            <constraint firstItem="gok-Ve-boT" firstAttribute="top" secondItem="OwU-r6-Aa7" secondAttribute="top" id="hfd-8d-Lvc"/>
+                            <constraint firstItem="CG6-YW-ofo" firstAttribute="top" secondItem="OwU-r6-Aa7" secondAttribute="top" constant="22" id="oQ0-Ab-IDr"/>
+                            <constraint firstAttribute="trailing" secondItem="gok-Ve-boT" secondAttribute="trailing" id="xZL-Sl-O1N"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="OwU-r6-Aa7" secondAttribute="trailing" constant="16" id="9zi-e2-Q9h"/>
+                    <constraint firstItem="OwU-r6-Aa7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="ImI-hF-3ch"/>
+                    <constraint firstItem="OwU-r6-Aa7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="RCj-fk-RRG"/>
+                    <constraint firstAttribute="bottom" secondItem="OwU-r6-Aa7" secondAttribute="bottom" constant="15.5" id="sIj-jW-rq5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="imaV_back" destination="gok-Ve-boT" id="NhM-1C-R7O"/>
+                <outlet property="moneyBtn" destination="r8Z-c2-R1O" id="ALo-M5-u64"/>
+                <outlet property="moneyLab" destination="Y4M-5J-Yhd" id="LeW-Dp-0sr"/>
+            </connections>
+            <point key="canvasLocation" x="-108.8" y="139.43028485757122"/>
+        </tableViewCell>
+    </objects>
+</document>

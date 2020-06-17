@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="KGk-i7-Jjw" customClass="AddAttr_nameFootCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BpX-Kf-nEi">
+                        <rect key="frame" x="0.0" y="42.5" width="320" height="1"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Ykp-35-uT8"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPl-qX-Bs3">
+                        <rect key="frame" x="85" y="-0.5" width="150" height="44.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="1kb-K1-01g"/>
+                            <constraint firstAttribute="width" constant="150" id="qzx-5U-UkU"/>
+                        </constraints>
+                        <state key="normal" title="+添加规格">
+                            <color key="titleColor" red="0.94117647059999998" green="0.16078431369999999" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="BpX-Kf-nEi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="4oD-z3-ufZ"/>
+                    <constraint firstAttribute="bottom" secondItem="BpX-Kf-nEi" secondAttribute="bottom" id="Sd6-gJ-8x9"/>
+                    <constraint firstItem="vPl-qX-Bs3" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="ZHX-s1-yJz"/>
+                    <constraint firstAttribute="trailing" secondItem="BpX-Kf-nEi" secondAttribute="trailing" id="cKT-Xx-aRn"/>
+                    <constraint firstItem="vPl-qX-Bs3" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="uED-Yx-yFY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="AddBtn" destination="vPl-qX-Bs3" id="4Ae-t3-jIy"/>
+                <outlet property="lineView" destination="BpX-Kf-nEi" id="8Bz-Tm-i9I"/>
+            </connections>
+            <point key="canvasLocation" x="132.80000000000001" y="130.43478260869566"/>
+        </tableViewCell>
+    </objects>
+</document>

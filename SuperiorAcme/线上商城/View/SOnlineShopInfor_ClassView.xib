@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SOnlineShopInfor_ClassView">
+            <connections>
+                <outlet property="mCollect" destination="xgc-TO-M9l" id="789-KB-wId"/>
+                <outlet property="mCollect_HHH" destination="VMS-uD-LUo" id="AaH-30-A2r"/>
+                <outlet property="thisView" destination="iN0-l3-epB" id="2Nh-s0-a8P"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cpO-fX-tV8">
+                    <rect key="frame" x="0.0" y="110" width="375" height="557"/>
+                    <color key="backgroundColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G8h-pI-Ycq">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <connections>
+                        <action selector="backBtn:" destination="-1" eventType="touchUpInside" id="b2V-0h-yRF"/>
+                    </connections>
+                </button>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="xgc-TO-M9l">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="110" id="8gp-kC-A6G"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yGr-YU-8Gs">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Gw8-wC-Gax"/>
+                        <outlet property="delegate" destination="-1" id="Ayd-PZ-hUe"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="G8h-pI-Ycq" secondAttribute="trailing" id="2VJ-E0-fJr"/>
+                <constraint firstAttribute="bottom" secondItem="cpO-fX-tV8" secondAttribute="bottom" id="9iq-Z0-kbx"/>
+                <constraint firstItem="G8h-pI-Ycq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Jd0-tm-tZe"/>
+                <constraint firstAttribute="trailing" secondItem="xgc-TO-M9l" secondAttribute="trailing" id="UPw-AM-z0J"/>
+                <constraint firstItem="xgc-TO-M9l" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="VMS-uD-LUo"/>
+                <constraint firstItem="cpO-fX-tV8" firstAttribute="top" secondItem="xgc-TO-M9l" secondAttribute="bottom" id="aXX-rm-PHE"/>
+                <constraint firstItem="G8h-pI-Ycq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="fNe-TR-TEZ"/>
+                <constraint firstAttribute="trailing" secondItem="cpO-fX-tV8" secondAttribute="trailing" id="gAe-rq-pXs"/>
+                <constraint firstItem="cpO-fX-tV8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="jMN-7C-MWW"/>
+                <constraint firstItem="xgc-TO-M9l" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xy8-dD-N4m"/>
+                <constraint firstAttribute="bottom" secondItem="G8h-pI-Ycq" secondAttribute="bottom" id="xy8-zN-atT"/>
+            </constraints>
+            <point key="canvasLocation" x="56.5" y="100.5"/>
+        </view>
+    </objects>
+</document>

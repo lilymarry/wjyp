@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SBankAdd_type">
+            <connections>
+                <outlet property="mTable" destination="KiK-Jj-T9y" id="ohI-p3-1pg"/>
+                <outlet property="searchTF" destination="ej7-Y6-kGF" id="o12-Vf-FCp"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IB0-Yy-Wr6">
+                    <rect key="frame" x="0.0" y="63.999999999999993" width="414" height="0.6666666666666643"/>
+                    <color key="backgroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="3MS-sF-GqB"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="KiK-Jj-T9y">
+                    <rect key="frame" x="0.0" y="114.66666666666669" width="414" height="621.33333333333326"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="eIC-30-Ceh"/>
+                        <outlet property="delegate" destination="-1" id="WO3-a4-t7a"/>
+                    </connections>
+                </tableView>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="搜索银行" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ej7-Y6-kGF">
+                    <rect key="frame" x="10" y="74.666666666666671" width="394" height="30"/>
+                    <color key="textColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="KiK-Jj-T9y" secondAttribute="bottom" id="1mA-9L-8Po"/>
+                <constraint firstItem="IB0-Yy-Wr6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="3NF-Oq-wyD"/>
+                <constraint firstItem="ej7-Y6-kGF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="BLL-S2-Geg"/>
+                <constraint firstItem="KiK-Jj-T9y" firstAttribute="top" secondItem="IB0-Yy-Wr6" secondAttribute="bottom" constant="50" id="GAR-O4-1tW"/>
+                <constraint firstAttribute="trailing" secondItem="KiK-Jj-T9y" secondAttribute="trailing" id="OvK-Cu-8eV"/>
+                <constraint firstItem="ej7-Y6-kGF" firstAttribute="top" secondItem="IB0-Yy-Wr6" secondAttribute="bottom" constant="10" id="PAq-Hh-VnA"/>
+                <constraint firstAttribute="trailing" secondItem="IB0-Yy-Wr6" secondAttribute="trailing" id="dxq-RD-xuD"/>
+                <constraint firstItem="KiK-Jj-T9y" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="i4a-zn-QX4"/>
+                <constraint firstItem="IB0-Yy-Wr6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="qFr-Ys-EeC"/>
+                <constraint firstAttribute="trailing" secondItem="ej7-Y6-kGF" secondAttribute="trailing" constant="10" id="vlJ-tG-Vep"/>
+                <constraint firstItem="KiK-Jj-T9y" firstAttribute="top" secondItem="ej7-Y6-kGF" secondAttribute="bottom" constant="10" id="wwz-2b-dXa"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
